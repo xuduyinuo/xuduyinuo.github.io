@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>xudu - blog</title><meta name="author" content="xudu"><meta name="copyright" content="xudu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="把苦难当作恶魔果实！！！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xudu">
+<meta property="og:url" content="http://blog.xuduyinuo.cn/index.html">
+<meta property="og:site_name" content="xudu">
+<meta property="og:description" content="把苦难当作恶魔果实！！！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.xuduyinuo.cn/imgs/avatar.png">
+<meta property="article:author" content="xudu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.xuduyinuo.cn/imgs/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "xudu",
+  "alternateName": [
+    "blog",
+    "blog.xuduyinuo.cn"
+  ],
+  "url": "http://blog.xuduyinuo.cn/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.xuduyinuo.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'xudu',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/imgs/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/imgs/index_img.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xudu</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">xudu</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/xuduyinuo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://xudu_yinuo@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/12/09/KG-R1/" title="KG-R1"><img class="post-bg" src="/2025/12/09/KG-R1/KG-R1-freamwork.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="KG-R1"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/12/09/KG-R1/" title="KG-R1">KG-R1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-09T12:22:20.000Z" title="发表于 2025-12-09 20:22:20">2025-12-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a></span></div><div class="content">KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成Sourcecode source ：https://github.com/Jinyeop3110/KG-R1. paper source ：https://arxiv.org/abs/2509.26383 摘要知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/28/How-to-write-related-work/" title="How to write related work"><img class="post-bg" src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to write related work"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/28/How-to-write-related-work/" title="How to write related work">How to write related work</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-28T12:08:48.000Z" title="发表于 2025-11-28 20:08:48">2025-11-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Notes/">Notes</a></span></div><div class="content">How to write related work参考链接：https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/ 相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。 关于如何撰写相关工作部分，  将和你的研究相关联的文献按照渐进式叙述或对比总结式表述，每个文献使用两三句话总结关键点进行介绍； 将你要提及的多个文献整理归类为一个类别进行整体介绍，再在介绍的段落之中插入引用； 精选最重要的文献，并只讨论这些核心文献。使用一个段落详细介绍该文献的内容，表述和你的研究的关联性；  就目前为止，我看的大多数论文还是采用第一种和第二种方法撰写相关工作内容。 表述方式： 渐进式叙述 按时间演进进行叙述：例如：在这一领域，早期主要研究什么方法，但是有什么问题；现有的方法集中于什么什么，取得了什么效果，然而…… 按方法论分别叙述：根...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/11/22/sort-algorithm/" title="十大经典排序算法"><img class="post-bg" src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十大经典排序算法"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/22/sort-algorithm/" title="十大经典排序算法">十大经典排序算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-22T09:59:14.000Z" title="发表于 2025-11-22 17:59:14">2025-11-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/algorithm/">algorithm</a></span></div><div class="content">十大经典排序算法 冒泡排序比较相邻元素，如果顺序不对就交换，每一轮都找到一个最大&#x2F;最小的数移动到末尾或开头 重复完成剩余的待排序元素 代码详解： 12345678910111213141516171819202122232425262728293031323334353637383940/** * 冒泡排序 */public class BubbleSort implements IArraySort&#123;    @Override    public int[] sort(int[] sourceArray) &#123;        //拷贝原数组        int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);        for (int i = 0; i &lt; arr.length - 1; i++) &#123;            // 提前结束标志位            boolean flag = false;            for (int j = 0; j...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/11/14/GCR/" title="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models"><img class="post-bg" src="/2025/11/14/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/14/GCR/" title="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models">Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-14T10:56:20.000Z" title="发表于 2025-11-14 18:56:20">2025-11-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a></span></div><div class="content">Sourcepaper link: https://icml.cc/virtual/2025/poster/45868 Code and data are available at: https://github.com/RManLuo/graph-constrained-reasoning Motivation LLM由于幻觉问题和缺乏特定领域的知识，推理的可靠性不足。 现有的KG增强LLM的方法（基于检索和基于代理的方法），难以准确的从KG中检索知识。  Contribution 提出GCR框架 结合微调的”小“模型的图推理能力和通用大模型的归纳推理能力增强框架的推理性能 在RoG-webqsp和RoG-cwq等五个数据集上进行实验，证明了GCR实现了零幻觉且在当时达到了SOTA。（在无需训练的情况下，在零样本提示中具有广泛的通用性）  ApproachGraph-constrained Reasoning (GCR)将KGs直接引入LLMs的解码过程，实现可靠推理。 由三个主要部分组成：1）知识图Trie构造 2）图约束解码 3）图归纳推理 GCR的总体框架如下图（c）所示...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/11/07/Build_hexo_blog_tutorial/" title="从零开始，使用Hexo搭建个人博客~"><img class="post-bg" src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始，使用Hexo搭建个人博客~"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/11/07/Build_hexo_blog_tutorial/" title="从零开始，使用Hexo搭建个人博客~">从零开始，使用Hexo搭建个人博客~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-07T09:10:16.000Z" title="发表于 2025-11-07 17:10:16">2025-11-07</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">从零开始，使用Hexo搭建个人博客~ 参考文章：https://blog.fiveth.cc/p/bb32/  准备环境及工具1、node.js 环境  node.js下载链接：https://nodejs.org/en/  2、git环境  git下载链接：https://git-scm.com/install/  验证是否下载成功，打开cmd终端，依次输入以下命令 123node -vnpm -v（这个是node附带的）git -v  显示版本号证明安装成功 3、Github 账号 需要新建一个Github仓库 仓库名严格按照以下格式创建 1用户名.github.io  将仓库设置为可公开访问 Public 添加README 最后创建 在Github中添加SSH Key 以方便部署博客 进入任意文件夹，右键空白处然后点Git bash here,输入 1ssh-keygen -t rsa -C &quot;邮件地址&quot;  然后敲4次Enter 然后进入C:\Users\用户名，在里面进入.ssh文件 用记事本打开里面的id_rsa.pub,全选复制里面的代码 然后打开...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/imgs/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">xudu</div><div class="author-info-description">把苦难当作恶魔果实！！！</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xuduyinuo"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xuduyinuo" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://xudu_yinuo@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/12/09/KG-R1/" title="KG-R1"><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="KG-R1"/></a><div class="content"><a class="title" href="/2025/12/09/KG-R1/" title="KG-R1">KG-R1</a><time datetime="2025-12-09T12:22:20.000Z" title="发表于 2025-12-09 20:22:20">2025-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/28/How-to-write-related-work/" title="How to write related work"><img src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="How to write related work"/></a><div class="content"><a class="title" href="/2025/11/28/How-to-write-related-work/" title="How to write related work">How to write related work</a><time datetime="2025-11-28T12:08:48.000Z" title="发表于 2025-11-28 20:08:48">2025-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/22/sort-algorithm/" title="十大经典排序算法"><img src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十大经典排序算法"/></a><div class="content"><a class="title" href="/2025/11/22/sort-algorithm/" title="十大经典排序算法">十大经典排序算法</a><time datetime="2025-11-22T09:59:14.000Z" title="发表于 2025-11-22 17:59:14">2025-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/14/GCR/" title="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models"><img src="/2025/11/14/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models"/></a><div class="content"><a class="title" href="/2025/11/14/GCR/" title="Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models">Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models</a><time datetime="2025-11-14T10:56:20.000Z" title="发表于 2025-11-14 18:56:20">2025-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/07/Build_hexo_blog_tutorial/" title="从零开始，使用Hexo搭建个人博客~"><img src="/imgs/default_cover_img.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始，使用Hexo搭建个人博客~"/></a><div class="content"><a class="title" href="/2025/11/07/Build_hexo_blog_tutorial/" title="从零开始，使用Hexo搭建个人博客~">从零开始，使用Hexo搭建个人博客~</a><time datetime="2025-11-07T09:10:16.000Z" title="发表于 2025-11-07 17:10:16">2025-11-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Notes/"><span class="card-category-list-name">Notes</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/algorithm/"><span class="card-category-list-name">algorithm</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">论文笔记</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/KG-Trie/" style="font-size: 1.1em; color: #999">KG-Trie</a> <a href="/tags/RL/" style="font-size: 1.1em; color: #999">RL</a> <a href="/tags/KG-R1/" style="font-size: 1.1em; color: #999">KG-R1</a> <a href="/tags/LLM/" style="font-size: 1.1em; color: #999">LLM</a> <a href="/tags/related-work/" style="font-size: 1.1em; color: #999">related work</a> <a href="/tags/hexo/" style="font-size: 1.1em; color: #999">hexo</a> <a href="/tags/sort/" style="font-size: 1.1em; color: #999">sort</a> <a href="/tags/KG-RAG/" style="font-size: 1.1em; color: #999">KG-RAG</a> <a href="/tags/tutorial/" style="font-size: 1.1em; color: #999">tutorial</a> <a href="/tags/Knowledge-Graph/" style="font-size: 1.1em; color: #999">Knowledge Graph</a> <a href="/tags/algorithm/" style="font-size: 1.1em; color: #999">algorithm</a> <a href="/tags/thought/" style="font-size: 1.1em; color: #999">thought</a> <a href="/tags/blog/" style="font-size: 1.5em; color: #99a9bf">blog</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              十一月 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-15T01:41:22.439Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By xudu</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
