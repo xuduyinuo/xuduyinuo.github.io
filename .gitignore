@@ -1,0 +1,9 @@
+# 需要忽略的文件夹
+
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
