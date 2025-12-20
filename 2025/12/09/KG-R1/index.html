@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成 | Xudu's Blog</title><meta name="author" content="xudu"><meta name="copyright" content="xudu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="KG-R1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成">
+<meta property="og:url" content="http://blog.xuduyinuo.cn/2025/12/09/KG-R1/index.html">
+<meta property="og:site_name" content="Xudu&#39;s Blog">
+<meta property="og:description" content="KG-R1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://blog.xuduyinuo.cn/2025/12/09/KG-R1/KG-R1-freamwork.png">
+<meta property="article:published_time" content="2025-12-09T12:22:20.000Z">
+<meta property="article:modified_time" content="2025-12-20T07:19:57.334Z">
+<meta property="article:author" content="xudu">
+<meta property="article:tag" content="KG-R1">
+<meta property="article:tag" content="KG-RAG">
+<meta property="article:tag" content="RL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://blog.xuduyinuo.cn/2025/12/09/KG-R1/KG-R1-freamwork.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成",
+  "url": "http://blog.xuduyinuo.cn/2025/12/09/KG-R1/",
+  "image": "http://blog.xuduyinuo.cn/2025/12/09/KG-R1/KG-R1-freamwork.png",
+  "datePublished": "2025-12-09T12:22:20.000Z",
+  "dateModified": "2025-12-20T07:19:57.334Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "xudu",
+      "url": "http://blog.xuduyinuo.cn"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/imgs/favicon.ico"><link rel="canonical" href="http://blog.xuduyinuo.cn/2025/12/09/KG-R1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: xudu","link":"链接: ","source":"来源: Xudu's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/imgs/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/%E5%85%B3%E4%BA%8E%E6%88%91/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/2025/12/09/KG-R1/KG-R1-freamwork.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Xudu's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/%E5%85%B3%E4%BA%8E%E6%88%91/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-09T12:22:20.000Z" title="发表于 2025-12-09 20:22:20">2025-12-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-20T07:19:57.334Z" title="更新于 2025-12-20 15:19:57">2025-12-20</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/">论文笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a target="_blank" rel="noopener" href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
+<p>paper source ：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>典型的KG-RAG采用由四个主要子任务组成的模块化工作流：检索、推理、审查、响应</p>
+<p>1、检索以查询KG中的事实</p>
+<p>2、推理以处理检索到的信息</p>
+<p>3、审查以验证逻辑一致性</p>
+<p>4、响应以综合最终答案</p>
+<p>存在问题：</p>
+<p>1、现有的检索增强生成方法计算成本高：</p>
+<p>基于提示的方法通过多次和LLM进行交互，不可避免的导致LLM call、时延和使用token不断累积</p>
+<p>2、对其他知识图谱或更新后的知识图谱的可迁移性和可泛化性差：</p>
+<p>还有一些基于提示和微调的方法在当前知识图谱中得到了较好的调优结果，当迁移到新的知识图谱时，不能保证性能会完整保留。</p>
+<p>KG-R1，一种采用端到端多轮强化学习的智能体KG-RAG系统。</p>
+<p>KG-R1的体系结构有两个组件：单个轻量模型作为智能体和知识图谱检索服务器（作为环境）。知识图谱检索服务器托管知识图以及一组检索操作。轻量模型智能体迭代地执行推理和生成步骤，然后执行多轮检索操作，每个决策都基于知识图谱检索服务器获取的知识生成，并获取最终答案。</p>
+<h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><p>1、KG-R1框架：引入强化学习使得轻量模型学习到最优的推理策略，使智能体在知识图谱环境中交替进行推理和检索操作得到最终答案。</p>
+<p>2、有效的推理过程：KG-R1在使用轻量开源模型和较低的计算成本之下取得了和比较通用模型（如GPT4等）相同甚至更好的效果。</p>
+<p>3、即插即用，跨知识图谱可迁移性：经过训练的KG-R 可轻松迁移至各种知识图谱，并保持KG-RAG的良好性能。</p>
+<h2 id="KG-R1框架总体概述"><a href="#KG-R1框架总体概述" class="headerlink" title="KG-R1框架总体概述"></a>KG-R1框架总体概述</h2><p>KG-R1将KG-RAG转换为与KG接口（KG检索服务器）的多轮交互。</p>
+<p>作者优先考虑两个设计原则。</p>
+<p>1、设计了一个单代理体系结构，它可以简化部署并实现高效、低成本的推理。</p>
+<p>2、构建了一个与模式无关（schema-agnostic）的知识图谱检索服务器，避免引入针对特定知识图谱的假设，从而在不同的知识图谱之间保持良好的可移植性。 </p>
+<p>问题</p>
+<p>什么是KG-RAG？</p>
+<p>什么叫与模式无关？</p>
+<p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
+<p>KG-R1 Framework</p>
+<p><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
+<p>1、知识图谱检索服务</p>
+<p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
+<p>2、KG-R1智能体</p>
+<p>智能体运行包含两个过程，1、生成过程，2、执行过程</p>
+<p>生成阶段</p>
+<p>包含两个部分响应，一个是思考过程think，一个是检索执行动作 KG Query或者最终答案Answer。</p>
+<p>执行阶段：</p>
+<p>使用一个精确匹配解析器，解析生成阶段的响应并映射到知识图谱检索服务的操作集上（也可能是响应错误或者预测结果答案），如果解析是答案交互终止，如果是在操作集中，则会生成一个观察结果用于下一轮交互。</p>
+<p>提示词如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">You are a helpful assistant. Answer the given question. You can query from knowledge base provided to you to answer the question. You can query knowledge up to [H] <span class="built_in">times</span>. You must first conduct reasoning inside &lt;think&gt;...&lt;/think&gt;. If you need to query knowledge, you can <span class="built_in">set</span> a query statement between &lt;kg-query&gt;...&lt;/kg-query&gt; to query from knowledge base after &lt;think&gt;...&lt;/think&gt;. When you have the final answer, you can output the answer inside &lt;answer&gt;...&lt;/answer&gt;. </span><br><span class="line">KG Query Server Instruction : [KG query server instruction] </span><br><span class="line">Question: [question]. </span><br><span class="line">Assistant:</span><br></pre></td></tr></table></figure>
+
+
+
+<p>两个可验证的命题：</p>
+<p>检索操作集的完整性：对任意推理路径，通过该操作集的检索动作，都可以得到完整的推理路径。</p>
+<p>检索操作无约束可迁移性：对于任何其他的后端知识图谱检索任务，该操作集都可以无缝适用。</p>
+<h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
+<p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
+<p>回合奖励：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
+<p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
+<p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
+<p>把优势分到每一个token：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
+<p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
+<p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
+<p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
+<p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
+<p><img src="/2025/12/09/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
+<p>重要性采样比率：</p>
+<p><img src="/2025/12/09/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
+<p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
+<p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
+<p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
+<ul>
+<li>用 <strong>group-relative turn-level advantage</strong> 说“这一整轮行为好不好”；</li>
+<li>用 ρ​ 和 clip 控制单步更新强度；</li>
+<li>用 KL 把策略拉回到原始 SFT 模型附近，保证稳定；最后对所有 rollout  回合 token 求和，得到整体的 RL 目标 J(θ)​。</li>
+</ul>
+<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>1、测试KG-R1在KG训练集上训练后的性能和效率</p>
+<p>2、测试KG-R1迁移到不同KG到效果</p>
+<p>对比基线:</p>
+<p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
+<p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
+<p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
+<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/2025/12/09/KG-R1/result_comparison.png" alt="result_comparison"></p>
+<h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
+<ol>
+<li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
+<li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
+<li>在全新的数据集上进行测试。</li>
+</ol>
+<p><img src="/2025/12/09/KG-R1/cross_result.png" alt="cross_result"></p>
+<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/2025/12/09/KG-R1/ablation_result.png" alt="ablation_result"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://blog.xuduyinuo.cn">xudu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://blog.xuduyinuo.cn/2025/12/09/KG-R1/">http://blog.xuduyinuo.cn/2025/12/09/KG-R1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://blog.xuduyinuo.cn" target="_blank">Xudu's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/KG-R1/">KG-R1</a><a class="post-meta__tags" href="/tags/RL/">RL</a><a class="post-meta__tags" href="/tags/KG-RAG/">KG-RAG</a></div><div class="post-share"><div class="social-share" data-image="/2025/12/09/KG-R1/KG-R1-freamwork.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/12/18/Multithreading/" title="Java并发编程"><img class="cover" src="/2025/12/18/Multithreading/thread-status.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Java并发编程</div></div><div class="info-2"><div class="info-item-1">Java并发编程</div></div></div></a><a class="pagination-related" href="/2025/11/28/How-to-write-related-work/" title="How to write related work"><img class="cover" src="/imgs/default_cover_img.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">How to write related work</div></div><div class="info-2"><div class="info-item-1">How to write related work</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Source"><span class="toc-number">1.</span> <span class="toc-text">Source</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-number">2.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-number">3.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E6%96%B0%E7%82%B9"><span class="toc-number">4.</span> <span class="toc-text">创新点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KG-R1%E6%A1%86%E6%9E%B6%E6%80%BB%E4%BD%93%E6%A6%82%E8%BF%B0"><span class="toc-number">5.</span> <span class="toc-text">KG-R1框架总体概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KG-R1-Training-With-RL"><span class="toc-number">6.</span> <span class="toc-text">KG-R1 Training With RL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E9%83%A8%E5%88%86"><span class="toc-number">7.</span> <span class="toc-text">实验部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">7.1.</span> <span class="toc-text">对比实验结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%9B%BE%E8%B0%B1%E8%BF%81%E7%A7%BB%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">7.2.</span> <span class="toc-text">跨图谱迁移实验结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E8%9E%8D%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">7.3.</span> <span class="toc-text">消融实验结果</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By xudu</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = {"poweredBy":false,"meta":["nick","mail"],"placeholder":"请填写昵称和邮箱后再评论～"}
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'edBosaMXggSeOloARRgB9Mwi-gzGzoHsz',
+      appKey: 'IVmsqCDwF0rQOqY7k9ab7ayb',
+      avatar: 'monsterid',
+      serverURLs: 'https://edbosamx.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.3/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.1"></script></div></div></body></html>
