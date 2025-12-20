@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>How to write related work</title>
+    <url>/2025/11/28/How-to-write-related-work/</url>
+    <content><![CDATA[<p>参考链接：<a href="https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/">https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/</a></p>
+<p>相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。</p>
+<h2 id="关于如何撰写相关工作部分"><a href="#关于如何撰写相关工作部分" class="headerlink" title="关于如何撰写相关工作部分"></a>关于如何撰写相关工作部分</h2><ol>
+<li>将和你的研究相关联的文献按照渐进式叙述或对比总结式表述，每个文献使用两三句话总结关键点进行介绍；</li>
+<li>将你要提及的多个文献整理归类为一个类别进行整体介绍，再在介绍的段落之中插入引用；</li>
+<li>精选最重要的文献，并只讨论这些核心文献。使用一个段落详细介绍该文献的内容，表述和你的研究的关联性；</li>
+</ol>
+<p>就目前为止，我看的大多数论文还是采用第一种和第二种方法撰写相关工作内容。</p>
+<h2 id="表述方式"><a href="#表述方式" class="headerlink" title="表述方式"></a>表述方式</h2><p>渐进式叙述</p>
+<p>按时间演进进行叙述：例如：在这一领域，早期主要研究什么方法，但是有什么问题；现有的方法集中于什么什么，取得了什么效果，然而……</p>
+<p>按方法论分别叙述：根据你的研究内容将相关联的研究方法分为几类，逐个叙述；</p>
+<p>对比总结，例如：现有方法A是什么思路，用于什么场景，现有方法B采用了另一种思路，取得了什么效果……</p>
+<h2 id="相关工作部分的另一个关键点"><a href="#相关工作部分的另一个关键点" class="headerlink" title="相关工作部分的另一个关键点"></a>相关工作部分的另一个关键点</h2><p>如果你决定提及某篇文献，它必须与你的研究有具体、明确的关联。你应该能够（轻松地）为选择的每一篇文献进行辩护，说明选择它的理由及其重要性。有些文献很容易解释——它们是你研究的基础，或者提供了解决同一问题的其他方案。但有些文献则较难论证。如果发现难以解释其关联性，那么你就需要自问：为什么要纳入这篇文献？它是否真的必要？</p>
+<h2 id="读论文的建议"><a href="#读论文的建议" class="headerlink" title="读论文的建议"></a>读论文的建议</h2><p>建立文献笔记：每阅读一篇论文，就写下简短总结并标注其核心部分。这样，在需要判断相关性时，你可以参考自己的笔记摘要，而无需依赖论文原文的摘要。</p>
+<p>顺藤摸瓜：利用所读论文的参考文献列表来寻找其他相关文献。如果某篇论文与你的课题紧密相关，那么它引用的文献很可能也高度相关，值得一读。</p>
+<p>追踪目标期刊&#x2F;会议：浏览你计划投稿的期刊或会议的过往发表记录，很可能在其中找到与你主题相关的论文。</p>
+<p>明确关联性：在撰写关于某篇文献的段落时，确保你能回答”这项研究如何与我的工作相关联？”这个问题。如果你回答不了，那就需要考虑是否真的有必要将其纳入。</p>
+<p>最后记录一下今天看见的名言：见人皆所见，思人所未思。</p>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+      <tags>
+        <tag>thought</tag>
+        <tag>blog</tag>
+        <tag>related work</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>从零开始，使用Hexo搭建个人博客~</title>
     <url>/2025/11/07/Build_hexo_blog_tutorial/</url>
     <content><![CDATA[<h1 id="从零开始，使用Hexo搭建个人博客"><a href="#从零开始，使用Hexo搭建个人博客" class="headerlink" title="从零开始，使用Hexo搭建个人博客~"></a>从零开始，使用Hexo搭建个人博客~</h1><blockquote>
@@ -258,8 +289,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>blog</tag>
+        <tag>hexo</tag>
         <tag>tutorial</tag>
       </tags>
   </entry>
@@ -324,6 +355,157 @@
         <tag>LLM</tag>
         <tag>Knowledge Graph</tag>
         <tag>KG-Trie</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</title>
+    <url>/2025/12/09/KG-R1/</url>
+    <content><![CDATA[<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
+<p>paper source ：<a href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>典型的KG-RAG采用由四个主要子任务组成的模块化工作流：检索、推理、审查、响应</p>
+<p>1、检索以查询KG中的事实</p>
+<p>2、推理以处理检索到的信息</p>
+<p>3、审查以验证逻辑一致性</p>
+<p>4、响应以综合最终答案</p>
+<p>存在问题：</p>
+<p>1、现有的检索增强生成方法计算成本高：</p>
+<p>基于提示的方法通过多次和LLM进行交互，不可避免的导致LLM call、时延和使用token不断累积</p>
+<p>2、对其他知识图谱或更新后的知识图谱的可迁移性和可泛化性差：</p>
+<p>还有一些基于提示和微调的方法在当前知识图谱中得到了较好的调优结果，当迁移到新的知识图谱时，不能保证性能会完整保留。</p>
+<p>KG-R1，一种采用端到端多轮强化学习的智能体KG-RAG系统。</p>
+<p>KG-R1的体系结构有两个组件：单个轻量模型作为智能体和知识图谱检索服务器（作为环境）。知识图谱检索服务器托管知识图以及一组检索操作。轻量模型智能体迭代地执行推理和生成步骤，然后执行多轮检索操作，每个决策都基于知识图谱检索服务器获取的知识生成，并获取最终答案。</p>
+<h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><p>1、KG-R1框架：引入强化学习使得轻量模型学习到最优的推理策略，使智能体在知识图谱环境中交替进行推理和检索操作得到最终答案。</p>
+<p>2、有效的推理过程：KG-R1在使用轻量开源模型和较低的计算成本之下取得了和比较通用模型（如GPT4等）相同甚至更好的效果。</p>
+<p>3、即插即用，跨知识图谱可迁移性：经过训练的KG-R 可轻松迁移至各种知识图谱，并保持KG-RAG的良好性能。</p>
+<h2 id="KG-R1框架总体概述"><a href="#KG-R1框架总体概述" class="headerlink" title="KG-R1框架总体概述"></a>KG-R1框架总体概述</h2><p>KG-R1将KG-RAG转换为与KG接口（KG检索服务器）的多轮交互。</p>
+<p>作者优先考虑两个设计原则。</p>
+<p>1、设计了一个单代理体系结构，它可以简化部署并实现高效、低成本的推理。</p>
+<p>2、构建了一个与模式无关（schema-agnostic）的知识图谱检索服务器，避免引入针对特定知识图谱的假设，从而在不同的知识图谱之间保持良好的可移植性。 </p>
+<p>问题</p>
+<p>什么是KG-RAG？</p>
+<p>什么叫与模式无关？</p>
+<p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
+<p>KG-R1 Framework</p>
+<p><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
+<p>1、知识图谱检索服务</p>
+<p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
+<p>2、KG-R1智能体</p>
+<p>智能体运行包含两个过程，1、生成过程，2、执行过程</p>
+<p>生成阶段</p>
+<p>包含两个部分响应，一个是思考过程think，一个是检索执行动作 KG Query或者最终答案Answer。</p>
+<p>执行阶段：</p>
+<p>使用一个精确匹配解析器，解析生成阶段的响应并映射到知识图谱检索服务的操作集上（也可能是响应错误或者预测结果答案），如果解析是答案交互终止，如果是在操作集中，则会生成一个观察结果用于下一轮交互。</p>
+<p>提示词如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">You are a helpful assistant. Answer the given question. You can query from knowledge base provided to you to answer the question. You can query knowledge up to [H] <span class="built_in">times</span>. You must first conduct reasoning inside &lt;think&gt;...&lt;/think&gt;. If you need to query knowledge, you can <span class="built_in">set</span> a query statement between &lt;kg-query&gt;...&lt;/kg-query&gt; to query from knowledge base after &lt;think&gt;...&lt;/think&gt;. When you have the final answer, you can output the answer inside &lt;answer&gt;...&lt;/answer&gt;. </span><br><span class="line">KG Query Server Instruction : [KG query server instruction] </span><br><span class="line">Question: [question]. </span><br><span class="line">Assistant:</span><br></pre></td></tr></table></figure>
+
+
+
+<p>两个可验证的命题：</p>
+<p>检索操作集的完整性：对任意推理路径，通过该操作集的检索动作，都可以得到完整的推理路径。</p>
+<p>检索操作无约束可迁移性：对于任何其他的后端知识图谱检索任务，该操作集都可以无缝适用。</p>
+<h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
+<p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
+<p>回合奖励：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
+<p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
+<p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
+<p>把优势分到每一个token：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
+<p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
+<p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
+<p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
+<p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
+<p><img src="/2025/12/09/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
+<p>重要性采样比率：</p>
+<p><img src="/2025/12/09/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
+<p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
+<p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
+<p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
+<ul>
+<li>用 <strong>group-relative turn-level advantage</strong> 说“这一整轮行为好不好”；</li>
+<li>用 ρ​ 和 clip 控制单步更新强度；</li>
+<li>用 KL 把策略拉回到原始 SFT 模型附近，保证稳定；最后对所有 rollout  回合 token 求和，得到整体的 RL 目标 J(θ)​。</li>
+</ul>
+<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>1、测试KG-R1在KG训练集上训练后的性能和效率</p>
+<p>2、测试KG-R1迁移到不同KG到效果</p>
+<p>对比基线:</p>
+<p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
+<p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
+<p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
+<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/2025/12/09/KG-R1/result_comparison.png" alt="result_comparison"></p>
+<h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
+<ol>
+<li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
+<li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
+<li>在全新的数据集上进行测试。</li>
+</ol>
+<p><img src="/2025/12/09/KG-R1/cross_result.png" alt="cross_result"></p>
+<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/2025/12/09/KG-R1/ablation_result.png" alt="ablation_result"></p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>KG-R1</tag>
+        <tag>RL</tag>
+        <tag>KG-RAG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十大经典排序算法</title>
+    <url>/2025/11/22/sort-algorithm/</url>
+    <content><![CDATA[<p><img src="/2025/11/22/sort-algorithm/sort.png" alt="sort_algorithm"></p>
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>比较相邻元素，如果顺序不对就交换，每一轮都找到一个最大&#x2F;最小的数移动到末尾或开头</p>
+<p>重复完成剩余的待排序元素</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 冒泡排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BubbleSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        <span class="comment">//拷贝原数组</span></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 提前结束标志位</span></span><br><span class="line">            <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                    swap(arr, j, j + <span class="number">1</span>);</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 提前结束</span></span><br><span class="line">            <span class="keyword">if</span> (!flag) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *交换数组中的两个元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>遍历数组，从数组找到一个最小&#x2F;最大的数，放在开头或末尾</p>
+<p>对剩余待排序数组重复以上操作直至数组有序</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 选择排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SelectionSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 寻找当前索引之后的最小值</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">minIndex</span> <span class="operator">=</span> i;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">                    minIndex = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果最小值不是当前值，则交换</span></span><br><span class="line">            <span class="keyword">if</span> (minIndex != i) &#123;</span><br><span class="line">                swap(arr, i, minIndex);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *交换数组中的两个元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>将待排序的元素逐个插入到已经排序的序列中的合适位置，直到整个序列都排好序为止。</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 插入排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InsertSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">        <span class="comment">// 插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; arr[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">                arr[j] = arr[j - <span class="number">1</span>];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j != i)&#123;</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行依次直接插入排序。</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 希尔排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ShellSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        shellSort(sourceArray);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">shellSort</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sourceArray.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">gap</span> <span class="operator">=</span> n / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (gap &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> gap; i &lt; n; i++) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> sourceArray[i];</span><br><span class="line">                <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i - gap;</span><br><span class="line">                <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; sourceArray[j] &gt; temp) &#123;</span><br><span class="line">                    sourceArray[j + gap] = sourceArray[j];</span><br><span class="line">                    j -= gap;</span><br><span class="line">                &#125;</span><br><span class="line">                sourceArray[j + gap] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">            gap /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>将一个待排序的序列分成两个子序列，分别对两个子序列进行排序，然后将两个已排序的子序列合并成一个有序序列。</p>
+<h3 id="递归版本"><a href="#递归版本" class="headerlink" title="递归版本"></a>递归版本</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 归并排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MergeSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">MAXN</span> <span class="operator">=</span> <span class="number">100001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 辅助数组</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] help = <span class="keyword">new</span> <span class="title class_">int</span>[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">        mergeSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 递归归并排序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left &gt;= right) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        mergeSort(sourceArray, left, mid);</span><br><span class="line">        mergeSort(sourceArray, mid + <span class="number">1</span>, right);</span><br><span class="line">        merge(sourceArray, left, mid, right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 合并两个有序数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> mid, <span class="type">int</span> right)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (a &lt;= mid &amp;&amp; b &lt;= right) &#123;</span><br><span class="line">            help[i++] = sourceArray[a] &lt;= sourceArray[b] ? sourceArray[a++] : sourceArray[b++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左侧指针、右侧指针，必有一个越界、另一个不越界</span></span><br><span class="line">        <span class="keyword">while</span> (a &lt;= mid) &#123;</span><br><span class="line">            help[i++] = sourceArray[a++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (b &lt;= right) &#123;</span><br><span class="line">            help[i++] = sourceArray[b++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = left; i &lt;= right; i++) &#123;</span><br><span class="line">            sourceArray[i] = help[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="非递归版本"><a href="#非递归版本" class="headerlink" title="非递归版本"></a>非递归版本</h3><p>待续……</p>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>选择一个基准元素，将数组分成两个子数组</p>
+<p>使得左边元素都小于基准，右边元素都大于基准</p>
+<p>对左右子数组递归地进行快速排序</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 快速排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QuickSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        quickSort(sourceArray, <span class="number">0</span>, sourceArray.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 快速排序（递归）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left &lt; right)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> partition(sourceArray, left, right);</span><br><span class="line">            quickSort(sourceArray, left, pivot - <span class="number">1</span>);</span><br><span class="line">            quickSort(sourceArray, pivot + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分区（排序）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">partition</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> sourceArray[left];</span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> left + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> index; i &lt;= right; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sourceArray[i] &lt; pivot) &#123;</span><br><span class="line">                swap(sourceArray, i, index);</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(sourceArray, left, index - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> index - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> sourceArray[a];</span><br><span class="line">        sourceArray[a] = sourceArray[b];</span><br><span class="line">        sourceArray[b] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h2><p>建立一个计数器辅助数组，大小为待排序数组中的最大值+1，统计原数组中每个元素 i 出现的次数，存入计数器数组中的第 i 项。</p>
+<p>将计数器数组中大于0的元素反向填充到原数组中。</p>
+<p>代码详解：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 计数排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CountingSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        countingSort(sourceArray);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">countingSort</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxValue</span> <span class="operator">=</span> getMaxValue(sourceArray);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建计数数组</span></span><br><span class="line">        <span class="type">int</span>[] countArray = <span class="keyword">new</span> <span class="title class_">int</span>[maxValue + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 填充计数数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : sourceArray) &#123;</span><br><span class="line">            countArray[value]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 填充原数组</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; countArray.length; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (countArray[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                sourceArray[index++] = i;</span><br><span class="line">                countArray[i]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取数组中的最大值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">getMaxValue</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxValue</span> <span class="operator">=</span> sourceArray[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : sourceArray) &#123;</span><br><span class="line">            <span class="keyword">if</span> (maxValue &lt; value) &#123;</span><br><span class="line">                maxValue = value;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>待续……</p>
+<h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>待续……</p>
+<h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><p>待续……</p>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+      <tags>
+        <tag>algorithm</tag>
+        <tag>sort</tag>
       </tags>
   </entry>
   <entry>
@@ -526,188 +708,6 @@
       <tags>
         <tag>JUC</tag>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十大经典排序算法</title>
-    <url>/2025/11/22/sort-algorithm/</url>
-    <content><![CDATA[<p><img src="/2025/11/22/sort-algorithm/sort.png" alt="sort_algorithm"></p>
-<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>比较相邻元素，如果顺序不对就交换，每一轮都找到一个最大&#x2F;最小的数移动到末尾或开头</p>
-<p>重复完成剩余的待排序元素</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 冒泡排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BubbleSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        <span class="comment">//拷贝原数组</span></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 提前结束标志位</span></span><br><span class="line">            <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; arr.length - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                    swap(arr, j, j + <span class="number">1</span>);</span><br><span class="line">                    flag = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 提前结束</span></span><br><span class="line">            <span class="keyword">if</span> (!flag) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *交换数组中的两个元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>遍历数组，从数组找到一个最小&#x2F;最大的数，放在开头或末尾</p>
-<p>对剩余待排序数组重复以上操作直至数组有序</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 选择排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SelectionSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 寻找当前索引之后的最小值</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">minIndex</span> <span class="operator">=</span> i;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">                    minIndex = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果最小值不是当前值，则交换</span></span><br><span class="line">            <span class="keyword">if</span> (minIndex != i) &#123;</span><br><span class="line">                swap(arr, i, minIndex);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *交换数组中的两个元素</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> i, <span class="type">int</span> j)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        arr[i] = arr[j];</span><br><span class="line">        arr[j] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>将待排序的元素逐个插入到已经排序的序列中的合适位置，直到整个序列都排好序为止。</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 插入排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InsertSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">        <span class="comment">// 插入排序</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> arr[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; arr[j - <span class="number">1</span>] &gt; temp) &#123;</span><br><span class="line">                arr[j] = arr[j - <span class="number">1</span>];</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (j != i)&#123;</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录”基本有序”时，再对全体记录进行依次直接插入排序。</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 希尔排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ShellSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        shellSort(sourceArray);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">shellSort</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> sourceArray.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">gap</span> <span class="operator">=</span> n / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (gap &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> gap; i &lt; n; i++) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> sourceArray[i];</span><br><span class="line">                <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i - gap;</span><br><span class="line">                <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; sourceArray[j] &gt; temp) &#123;</span><br><span class="line">                    sourceArray[j + gap] = sourceArray[j];</span><br><span class="line">                    j -= gap;</span><br><span class="line">                &#125;</span><br><span class="line">                sourceArray[j + gap] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">            gap /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>将一个待排序的序列分成两个子序列，分别对两个子序列进行排序，然后将两个已排序的子序列合并成一个有序序列。</p>
-<h3 id="递归版本"><a href="#递归版本" class="headerlink" title="递归版本"></a>递归版本</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 归并排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MergeSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">MAXN</span> <span class="operator">=</span> <span class="number">100001</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 辅助数组</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] help = <span class="keyword">new</span> <span class="title class_">int</span>[MAXN];</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        <span class="type">int</span>[] arr = Arrays.copyOf(sourceArray, sourceArray.length);</span><br><span class="line">        mergeSort(arr, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 递归归并排序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left &gt;= right) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        mergeSort(sourceArray, left, mid);</span><br><span class="line">        mergeSort(sourceArray, mid + <span class="number">1</span>, right);</span><br><span class="line">        merge(sourceArray, left, mid, right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 合并两个有序数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> mid, <span class="type">int</span> right)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (a &lt;= mid &amp;&amp; b &lt;= right) &#123;</span><br><span class="line">            help[i++] = sourceArray[a] &lt;= sourceArray[b] ? sourceArray[a++] : sourceArray[b++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 左侧指针、右侧指针，必有一个越界、另一个不越界</span></span><br><span class="line">        <span class="keyword">while</span> (a &lt;= mid) &#123;</span><br><span class="line">            help[i++] = sourceArray[a++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (b &lt;= right) &#123;</span><br><span class="line">            help[i++] = sourceArray[b++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = left; i &lt;= right; i++) &#123;</span><br><span class="line">            sourceArray[i] = help[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="非递归版本"><a href="#非递归版本" class="headerlink" title="非递归版本"></a>非递归版本</h3><p>待续……</p>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>选择一个基准元素，将数组分成两个子数组</p>
-<p>使得左边元素都小于基准，右边元素都大于基准</p>
-<p>对左右子数组递归地进行快速排序</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 快速排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">QuickSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        quickSort(sourceArray, <span class="number">0</span>, sourceArray.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 快速排序（递归）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (left &lt; right)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> partition(sourceArray, left, right);</span><br><span class="line">            quickSort(sourceArray, left, pivot - <span class="number">1</span>);</span><br><span class="line">            quickSort(sourceArray, pivot + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分区（排序）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">partition</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> sourceArray[left];</span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> left + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> index; i &lt;= right; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sourceArray[i] &lt; pivot) &#123;</span><br><span class="line">                swap(sourceArray, i, index);</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(sourceArray, left, index - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> index - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swap</span><span class="params">(<span class="type">int</span>[] sourceArray, <span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> sourceArray[a];</span><br><span class="line">        sourceArray[a] = sourceArray[b];</span><br><span class="line">        sourceArray[b] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h2><p>建立一个计数器辅助数组，大小为待排序数组中的最大值+1，统计原数组中每个元素 i 出现的次数，存入计数器数组中的第 i 项。</p>
-<p>将计数器数组中大于0的元素反向填充到原数组中。</p>
-<p>代码详解：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 计数排序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CountingSort</span> <span class="keyword">implements</span> <span class="title class_">IArraySort</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] sort(<span class="type">int</span>[] sourceArray) &#123;</span><br><span class="line">        countingSort(sourceArray);</span><br><span class="line">        <span class="keyword">return</span> sourceArray;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">countingSort</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxValue</span> <span class="operator">=</span> getMaxValue(sourceArray);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 创建计数数组</span></span><br><span class="line">        <span class="type">int</span>[] countArray = <span class="keyword">new</span> <span class="title class_">int</span>[maxValue + <span class="number">1</span>];</span><br><span class="line">        <span class="comment">// 填充计数数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : sourceArray) &#123;</span><br><span class="line">            countArray[value]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 填充原数组</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; countArray.length; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (countArray[i] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                sourceArray[index++] = i;</span><br><span class="line">                countArray[i]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取数组中的最大值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">getMaxValue</span><span class="params">(<span class="type">int</span>[] sourceArray)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">maxValue</span> <span class="operator">=</span> sourceArray[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : sourceArray) &#123;</span><br><span class="line">            <span class="keyword">if</span> (maxValue &lt; value) &#123;</span><br><span class="line">                maxValue = value;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>待续……</p>
-<h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>待续……</p>
-<h2 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h2><p>待续……</p>
-]]></content>
-      <categories>
-        <category>algorithm</category>
-      </categories>
-      <tags>
-        <tag>algorithm</tag>
-        <tag>sort</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</title>
-    <url>/2025/12/09/KG-R1/</url>
-    <content><![CDATA[<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
-<p>paper source ：<a href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>典型的KG-RAG采用由四个主要子任务组成的模块化工作流：检索、推理、审查、响应</p>
-<p>1、检索以查询KG中的事实</p>
-<p>2、推理以处理检索到的信息</p>
-<p>3、审查以验证逻辑一致性</p>
-<p>4、响应以综合最终答案</p>
-<p>存在问题：</p>
-<p>1、现有的检索增强生成方法计算成本高：</p>
-<p>基于提示的方法通过多次和LLM进行交互，不可避免的导致LLM call、时延和使用token不断累积</p>
-<p>2、对其他知识图谱或更新后的知识图谱的可迁移性和可泛化性差：</p>
-<p>还有一些基于提示和微调的方法在当前知识图谱中得到了较好的调优结果，当迁移到新的知识图谱时，不能保证性能会完整保留。</p>
-<p>KG-R1，一种采用端到端多轮强化学习的智能体KG-RAG系统。</p>
-<p>KG-R1的体系结构有两个组件：单个轻量模型作为智能体和知识图谱检索服务器（作为环境）。知识图谱检索服务器托管知识图以及一组检索操作。轻量模型智能体迭代地执行推理和生成步骤，然后执行多轮检索操作，每个决策都基于知识图谱检索服务器获取的知识生成，并获取最终答案。</p>
-<h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><p>1、KG-R1框架：引入强化学习使得轻量模型学习到最优的推理策略，使智能体在知识图谱环境中交替进行推理和检索操作得到最终答案。</p>
-<p>2、有效的推理过程：KG-R1在使用轻量开源模型和较低的计算成本之下取得了和比较通用模型（如GPT4等）相同甚至更好的效果。</p>
-<p>3、即插即用，跨知识图谱可迁移性：经过训练的KG-R 可轻松迁移至各种知识图谱，并保持KG-RAG的良好性能。</p>
-<h2 id="KG-R1框架总体概述"><a href="#KG-R1框架总体概述" class="headerlink" title="KG-R1框架总体概述"></a>KG-R1框架总体概述</h2><p>KG-R1将KG-RAG转换为与KG接口（KG检索服务器）的多轮交互。</p>
-<p>作者优先考虑两个设计原则。</p>
-<p>1、设计了一个单代理体系结构，它可以简化部署并实现高效、低成本的推理。</p>
-<p>2、构建了一个与模式无关（schema-agnostic）的知识图谱检索服务器，避免引入针对特定知识图谱的假设，从而在不同的知识图谱之间保持良好的可移植性。 </p>
-<p>问题</p>
-<p>什么是KG-RAG？</p>
-<p>什么叫与模式无关？</p>
-<p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
-<p>KG-R1 Framework</p>
-<p><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
-<p>1、知识图谱检索服务</p>
-<p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
-<p>2、KG-R1智能体</p>
-<p>智能体运行包含两个过程，1、生成过程，2、执行过程</p>
-<p>生成阶段</p>
-<p>包含两个部分响应，一个是思考过程think，一个是检索执行动作 KG Query或者最终答案Answer。</p>
-<p>执行阶段：</p>
-<p>使用一个精确匹配解析器，解析生成阶段的响应并映射到知识图谱检索服务的操作集上（也可能是响应错误或者预测结果答案），如果解析是答案交互终止，如果是在操作集中，则会生成一个观察结果用于下一轮交互。</p>
-<p>提示词如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">You are a helpful assistant. Answer the given question. You can query from knowledge base provided to you to answer the question. You can query knowledge up to [H] <span class="built_in">times</span>. You must first conduct reasoning inside &lt;think&gt;...&lt;/think&gt;. If you need to query knowledge, you can <span class="built_in">set</span> a query statement between &lt;kg-query&gt;...&lt;/kg-query&gt; to query from knowledge base after &lt;think&gt;...&lt;/think&gt;. When you have the final answer, you can output the answer inside &lt;answer&gt;...&lt;/answer&gt;. </span><br><span class="line">KG Query Server Instruction : [KG query server instruction] </span><br><span class="line">Question: [question]. </span><br><span class="line">Assistant:</span><br></pre></td></tr></table></figure>
-
-
-
-<p>两个可验证的命题：</p>
-<p>检索操作集的完整性：对任意推理路径，通过该操作集的检索动作，都可以得到完整的推理路径。</p>
-<p>检索操作无约束可迁移性：对于任何其他的后端知识图谱检索任务，该操作集都可以无缝适用。</p>
-<h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
-<p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
-<p>回合奖励：</p>
-<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
-<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
-<p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
-<p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
-<p>把优势分到每一个token：</p>
-<p><img src="/2025/12/09/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
-<p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
-<p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
-<p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
-<p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
-<p><img src="/2025/12/09/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
-<p>重要性采样比率：</p>
-<p><img src="/2025/12/09/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
-<p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
-<p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
-<p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
-<ul>
-<li>用 <strong>group-relative turn-level advantage</strong> 说“这一整轮行为好不好”；</li>
-<li>用 ρ​ 和 clip 控制单步更新强度；</li>
-<li>用 KL 把策略拉回到原始 SFT 模型附近，保证稳定；最后对所有 rollout  回合 token 求和，得到整体的 RL 目标 J(θ)​。</li>
-</ul>
-<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>1、测试KG-R1在KG训练集上训练后的性能和效率</p>
-<p>2、测试KG-R1迁移到不同KG到效果</p>
-<p>对比基线:</p>
-<p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
-<p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
-<p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
-<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/2025/12/09/KG-R1/result_comparison.png" alt="result_comparison"></p>
-<h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
-<ol>
-<li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
-<li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
-<li>在全新的数据集上进行测试。</li>
-</ol>
-<p><img src="/2025/12/09/KG-R1/cross_result.png" alt="cross_result"></p>
-<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/2025/12/09/KG-R1/ablation_result.png" alt="ablation_result"></p>
-]]></content>
-      <categories>
-        <category>论文笔记</category>
-      </categories>
-      <tags>
-        <tag>KG-R1</tag>
-        <tag>RL</tag>
-        <tag>KG-RAG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How to write related work</title>
-    <url>/2025/11/28/How-to-write-related-work/</url>
-    <content><![CDATA[<p>参考链接：<a href="https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/">https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/</a></p>
-<p>相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。</p>
-<h2 id="关于如何撰写相关工作部分"><a href="#关于如何撰写相关工作部分" class="headerlink" title="关于如何撰写相关工作部分"></a>关于如何撰写相关工作部分</h2><ol>
-<li>将和你的研究相关联的文献按照渐进式叙述或对比总结式表述，每个文献使用两三句话总结关键点进行介绍；</li>
-<li>将你要提及的多个文献整理归类为一个类别进行整体介绍，再在介绍的段落之中插入引用；</li>
-<li>精选最重要的文献，并只讨论这些核心文献。使用一个段落详细介绍该文献的内容，表述和你的研究的关联性；</li>
-</ol>
-<p>就目前为止，我看的大多数论文还是采用第一种和第二种方法撰写相关工作内容。</p>
-<h2 id="表述方式"><a href="#表述方式" class="headerlink" title="表述方式"></a>表述方式</h2><p>渐进式叙述</p>
-<p>按时间演进进行叙述：例如：在这一领域，早期主要研究什么方法，但是有什么问题；现有的方法集中于什么什么，取得了什么效果，然而……</p>
-<p>按方法论分别叙述：根据你的研究内容将相关联的研究方法分为几类，逐个叙述；</p>
-<p>对比总结，例如：现有方法A是什么思路，用于什么场景，现有方法B采用了另一种思路，取得了什么效果……</p>
-<h2 id="相关工作部分的另一个关键点"><a href="#相关工作部分的另一个关键点" class="headerlink" title="相关工作部分的另一个关键点"></a>相关工作部分的另一个关键点</h2><p>如果你决定提及某篇文献，它必须与你的研究有具体、明确的关联。你应该能够（轻松地）为选择的每一篇文献进行辩护，说明选择它的理由及其重要性。有些文献很容易解释——它们是你研究的基础，或者提供了解决同一问题的其他方案。但有些文献则较难论证。如果发现难以解释其关联性，那么你就需要自问：为什么要纳入这篇文献？它是否真的必要？</p>
-<h2 id="读论文的建议"><a href="#读论文的建议" class="headerlink" title="读论文的建议"></a>读论文的建议</h2><p>建立文献笔记：每阅读一篇论文，就写下简短总结并标注其核心部分。这样，在需要判断相关性时，你可以参考自己的笔记摘要，而无需依赖论文原文的摘要。</p>
-<p>顺藤摸瓜：利用所读论文的参考文献列表来寻找其他相关文献。如果某篇论文与你的课题紧密相关，那么它引用的文献很可能也高度相关，值得一读。</p>
-<p>追踪目标期刊&#x2F;会议：浏览你计划投稿的期刊或会议的过往发表记录，很可能在其中找到与你主题相关的论文。</p>
-<p>明确关联性：在撰写关于某篇文献的段落时，确保你能回答”这项研究如何与我的工作相关联？”这个问题。如果你回答不了，那就需要考虑是否真的有必要将其纳入。</p>
-<p>最后记录一下今天看见的名言：见人皆所见，思人所未思。</p>
-]]></content>
-      <categories>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>thought</tag>
-        <tag>related work</tag>
       </tags>
   </entry>
 </search>
