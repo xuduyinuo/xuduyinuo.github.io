@@ -4002,6 +4002,14 @@ figure.highlight pre .javascript .function {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.page .card-webinfo {
+  -webkit-box-ordinal-group: true;
+  -moz-box-ordinal-group: true;
+  -o-box-ordinal-group: true;
+  -ms-flex-order: true;
+  -webkit-order: true;
+  order: true;
+}
 @-moz-keyframes more-btn-move {
   0%, 100% {
     -webkit-transform: translateX(0);
