@@ -712,7 +712,7 @@
   </entry>
   <entry>
     <title>MySQL中如何执行一条select语句？</title>
-    <url>/2026/01/04/How_to_execute_a_select_statement_in_MySQL?/</url>
+    <url>/2026/01/04/How_to_execute_a_select_statement_in_MySQL/</url>
     <content><![CDATA[<p>由一条select语句的执行流程，了解MySQL的内部结构！</p>
 <h2 id="MySQL架构"><a href="#MySQL架构" class="headerlink" title="MySQL架构"></a>MySQL架构</h2><p>下图是MySQL的整体架构，主要分为两层，Server层和存储引擎。</p>
 <img src="http://picgo.xuduyinuo.cn/imgs/20260104095558721.webp" alt="MySQL架构图" style="zoom: 25%;" />
