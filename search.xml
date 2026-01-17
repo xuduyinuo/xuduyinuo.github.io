@@ -1,72 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models</title>
-    <url>/2025/11/14/GCR/</url>
-    <content><![CDATA[<h1 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h1><p>paper link: <a href="https://icml.cc/virtual/2025/poster/45868">https://icml.cc/virtual/2025/poster/45868</a></p>
-<p>Code and data are available at: <a href="https://github.com/RManLuo/graph-constrained-reasoning">https://github.com/RManLuo/graph-constrained-reasoning</a></p>
-<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol>
-<li>LLM由于幻觉问题和缺乏特定领域的知识，推理的可靠性不足。</li>
-<li>现有的KG增强LLM的方法（基于检索和基于代理的方法），难以准确的从KG中检索知识。</li>
-</ol>
-<h1 id="Contribution"><a href="#Contribution" class="headerlink" title="Contribution"></a>Contribution</h1><ol>
-<li>提出GCR框架</li>
-<li>结合微调的”小“模型的图推理能力和通用大模型的归纳推理能力增强框架的推理性能</li>
-<li>在RoG-webqsp和RoG-cwq等五个数据集上进行实验，证明了GCR实现了零幻觉且在当时达到了SOTA。（在无需训练的情况下，在零样本提示中具有广泛的通用性）</li>
-</ol>
-<h1 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h1><h2 id="Graph-constrained-Reasoning-GCR"><a href="#Graph-constrained-Reasoning-GCR" class="headerlink" title="Graph-constrained Reasoning (GCR)"></a>Graph-constrained Reasoning (GCR)</h2><p>将KGs直接引入LLMs的解码过程，实现可靠推理。</p>
-<p>由三个主要部分组成：1）知识图Trie构造 2）图约束解码 3）图归纳推理</p>
-<p>GCR的总体框架如下图（c）所示：</p>
-<p><img src="/2025/11/14/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="GCR框架图"></p>
-<h2 id="Knowledge-Graph-Trie-Construction"><a href="#Knowledge-Graph-Trie-Construction" class="headerlink" title="Knowledge Graph Trie Construction"></a>Knowledge Graph Trie Construction</h2><p>因为知识图谱结构化的特性，LLM难以有效进行推理。</p>
-<p>作者提出将KG的结构化知识转化为KG-Trie（知识图谱前缀树）索引，来应用于LLM的解码过程，促进LLM的推理能力。</p>
-<p>方法：给定一个KG和问题及主题实体。</p>
-<ol>
-<li>从主题实体开始，使用图遍历算法在KG中遍历固定跳数的推理路径</li>
-<li>将搜索到的推理路径转化为自然语言句子</li>
-<li>使用LLM的分词器工具将自然语言句子转换为token并存储在KG-Trie中</li>
-</ol>
-<p>形式化为如下公式：</p>
-<p><img src="/2025/11/14/GCR/build_KG_trie.png" alt="build_KG_trie"></p>
-<h2 id="Graph-constrained-Decoding"><a href="#Graph-constrained-Decoding" class="headerlink" title="Graph-constrained Decoding"></a>Graph-constrained Decoding</h2><p>给定一个问题Q，通过提示一个经过微调之后的轻量化的小模型，在LLM解码时使用上一步骤中得到的KG-Trie作约束，保证LLM生成的推理路径都是KG中存在的有效的真实的路径。</p>
-<p>LLM每次通过图约束解码得到有效的推理路径之后再切换回常规解码，生成以路径为条件的假设答案。</p>
-<p><img src="/2025/11/14/GCR/Graph-constrained-Decoding.png"></p>
-<p>微调轻量化小模型方法：</p>
-<p>训练数据中包含问题、问题实体、答案实体和问题相关知识图谱三元组</p>
-<p>先将知识图谱三元组转化为图结构，再使用最短路径算法连接问题实体和答案实体，使其连接的路径作为该问题的推理路径。</p>
-<p>作者实验标明，使用微调的轻量化小模型也能得到良好的推理性能。</p>
-<blockquote>
-<p>图约束解码方法不同于基于检索的解码方法，它将预先构造的KG-Trie集成到LLMs的解码过程中。这不仅减少了输入token，而且弥补了LLMs中的非结构化推理和KGs中的结构化知识之间的差距，允许在KGs上进行有效的推理，而不管其规模大小，这将导致可靠的推理，从而得到答案。</p>
-</blockquote>
-<h2 id="Graph-Inductive-Reasoning"><a href="#Graph-Inductive-Reasoning" class="headerlink" title="Graph Inductive Reasoning"></a>Graph Inductive Reasoning</h2><p>通过提示小模型得到该问题的多条推理路径和假设答案，再将这些推理路径和假设答案输入给一个强大的通用大模型，通过大模型及其内部知识进行归纳整理得到最终的答案。</p>
-<p><img src="/2025/11/14/GCR/Graph-Inductive-Reasoning.png" alt="Graph-Inductive-Reasoning"></p>
-<h1 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h1><h2 id="思路学习"><a href="#思路学习" class="headerlink" title="思路学习"></a>思路学习</h2><p>对实验步骤进行客观陈述，数据集、baseline、评估指标、实现过程等</p>
-<p>说明你的实验具有什么效果，和基线相比有什么突出点</p>
-<p>你的实验结果怎么和你的创新点相关联</p>
-<p>基本：</p>
-<p>可以在实验之前通过问题的方式告诉自己都需要做什么实验</p>
-<p>通过实验告诉读者，你提出的框架或模型和基线相比有什么不同、提升……</p>
-<p>通过实验告诉读者，你提出的框架或模型解决了什么问题</p>
-<p>通过实验告诉读者，你提出的框架或模型可以怎么扩展，或应用在哪些下游任务……</p>
-<h2 id="Implementations"><a href="#Implementations" class="headerlink" title="Implementations"></a>Implementations</h2><p>我们使用KG-Trie索引从问题实体开始的2个跳内的所有推理路径。对于LLM，我们使用微调Llama3-8B 作为KG专用LLM。我们通过图约束解码生成前10条推理路径和假设答案。我们采用ChatGPT和GPT-4o-mini作为归纳推理的通用LLMs。</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="/2025/11/14/GCR/result.png" alt="result"></p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>提出了一种新的LLM推理范式，称为图约束推理（GCR），通过引入结构化KG来消除幻觉，保证推理的可靠性。</p>
-<p>为了将LLMs中的非结构化推理与KGs中的结构化知识联系起来，我们提出了一种KG-Trie，利用基于Trie的索引对KGs中的路径进行编码。</p>
-<p>使用大小模型协同作用，结合图推理和归纳推理生成最终答案。</p>
-]]></content>
-      <categories>
-        <category>论文笔记</category>
-      </categories>
-      <tags>
-        <tag>LLM</tag>
-        <tag>Knowledge Graph</tag>
-        <tag>KG-Trie</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从零开始，使用Hexo搭建个人博客~</title>
     <url>/2025/11/07/Build_hexo_blog_tutorial/</url>
-    <content><![CDATA[<h1 id="从零开始，使用Hexo搭建个人博客"><a href="#从零开始，使用Hexo搭建个人博客" class="headerlink" title="从零开始，使用Hexo搭建个人博客~"></a>从零开始，使用Hexo搭建个人博客~</h1><blockquote>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="从零开始，使用Hexo搭建个人博客"><a href="#从零开始，使用Hexo搭建个人博客" class="headerlink" title="从零开始，使用Hexo搭建个人博客~"></a>从零开始，使用Hexo搭建个人博客~</h1><blockquote>
 <p>参考文章：<a href="https://blog.fiveth.cc/p/bb32/">https://blog.fiveth.cc/p/bb32/</a></p>
 </blockquote>
 <h2 id="准备环境及工具"><a href="#准备环境及工具" class="headerlink" title="准备环境及工具"></a>准备环境及工具</h2><p>1、node.js 环境</p>
@@ -327,9 +264,72 @@
       </tags>
   </entry>
   <entry>
+    <title>Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models</title>
+    <url>/2025/11/14/GCR/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h1><p>paper link: <a href="https://icml.cc/virtual/2025/poster/45868">https://icml.cc/virtual/2025/poster/45868</a></p>
+<p>Code and data are available at: <a href="https://github.com/RManLuo/graph-constrained-reasoning">https://github.com/RManLuo/graph-constrained-reasoning</a></p>
+<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol>
+<li>LLM由于幻觉问题和缺乏特定领域的知识，推理的可靠性不足。</li>
+<li>现有的KG增强LLM的方法（基于检索和基于代理的方法），难以准确的从KG中检索知识。</li>
+</ol>
+<h1 id="Contribution"><a href="#Contribution" class="headerlink" title="Contribution"></a>Contribution</h1><ol>
+<li>提出GCR框架</li>
+<li>结合微调的”小“模型的图推理能力和通用大模型的归纳推理能力增强框架的推理性能</li>
+<li>在RoG-webqsp和RoG-cwq等五个数据集上进行实验，证明了GCR实现了零幻觉且在当时达到了SOTA。（在无需训练的情况下，在零样本提示中具有广泛的通用性）</li>
+</ol>
+<h1 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h1><h2 id="Graph-constrained-Reasoning-GCR"><a href="#Graph-constrained-Reasoning-GCR" class="headerlink" title="Graph-constrained Reasoning (GCR)"></a>Graph-constrained Reasoning (GCR)</h2><p>将KGs直接引入LLMs的解码过程，实现可靠推理。</p>
+<p>由三个主要部分组成：1）知识图Trie构造 2）图约束解码 3）图归纳推理</p>
+<p>GCR的总体框架如下图（c）所示：</p>
+<p><img src="/2025/11/14/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="GCR框架图"></p>
+<h2 id="Knowledge-Graph-Trie-Construction"><a href="#Knowledge-Graph-Trie-Construction" class="headerlink" title="Knowledge Graph Trie Construction"></a>Knowledge Graph Trie Construction</h2><p>因为知识图谱结构化的特性，LLM难以有效进行推理。</p>
+<p>作者提出将KG的结构化知识转化为KG-Trie（知识图谱前缀树）索引，来应用于LLM的解码过程，促进LLM的推理能力。</p>
+<p>方法：给定一个KG和问题及主题实体。</p>
+<ol>
+<li>从主题实体开始，使用图遍历算法在KG中遍历固定跳数的推理路径</li>
+<li>将搜索到的推理路径转化为自然语言句子</li>
+<li>使用LLM的分词器工具将自然语言句子转换为token并存储在KG-Trie中</li>
+</ol>
+<p>形式化为如下公式：</p>
+<p><img src="/2025/11/14/GCR/build_KG_trie.png" alt="build_KG_trie"></p>
+<h2 id="Graph-constrained-Decoding"><a href="#Graph-constrained-Decoding" class="headerlink" title="Graph-constrained Decoding"></a>Graph-constrained Decoding</h2><p>给定一个问题Q，通过提示一个经过微调之后的轻量化的小模型，在LLM解码时使用上一步骤中得到的KG-Trie作约束，保证LLM生成的推理路径都是KG中存在的有效的真实的路径。</p>
+<p>LLM每次通过图约束解码得到有效的推理路径之后再切换回常规解码，生成以路径为条件的假设答案。</p>
+<p><img src="/2025/11/14/GCR/Graph-constrained-Decoding.png"></p>
+<p>微调轻量化小模型方法：</p>
+<p>训练数据中包含问题、问题实体、答案实体和问题相关知识图谱三元组</p>
+<p>先将知识图谱三元组转化为图结构，再使用最短路径算法连接问题实体和答案实体，使其连接的路径作为该问题的推理路径。</p>
+<p>作者实验标明，使用微调的轻量化小模型也能得到良好的推理性能。</p>
+<blockquote>
+<p>图约束解码方法不同于基于检索的解码方法，它将预先构造的KG-Trie集成到LLMs的解码过程中。这不仅减少了输入token，而且弥补了LLMs中的非结构化推理和KGs中的结构化知识之间的差距，允许在KGs上进行有效的推理，而不管其规模大小，这将导致可靠的推理，从而得到答案。</p>
+</blockquote>
+<h2 id="Graph-Inductive-Reasoning"><a href="#Graph-Inductive-Reasoning" class="headerlink" title="Graph Inductive Reasoning"></a>Graph Inductive Reasoning</h2><p>通过提示小模型得到该问题的多条推理路径和假设答案，再将这些推理路径和假设答案输入给一个强大的通用大模型，通过大模型及其内部知识进行归纳整理得到最终的答案。</p>
+<p><img src="/2025/11/14/GCR/Graph-Inductive-Reasoning.png" alt="Graph-Inductive-Reasoning"></p>
+<h1 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h1><h2 id="思路学习"><a href="#思路学习" class="headerlink" title="思路学习"></a>思路学习</h2><p>对实验步骤进行客观陈述，数据集、baseline、评估指标、实现过程等</p>
+<p>说明你的实验具有什么效果，和基线相比有什么突出点</p>
+<p>你的实验结果怎么和你的创新点相关联</p>
+<p>基本：</p>
+<p>可以在实验之前通过问题的方式告诉自己都需要做什么实验</p>
+<p>通过实验告诉读者，你提出的框架或模型和基线相比有什么不同、提升……</p>
+<p>通过实验告诉读者，你提出的框架或模型解决了什么问题</p>
+<p>通过实验告诉读者，你提出的框架或模型可以怎么扩展，或应用在哪些下游任务……</p>
+<h2 id="Implementations"><a href="#Implementations" class="headerlink" title="Implementations"></a>Implementations</h2><p>我们使用KG-Trie索引从问题实体开始的2个跳内的所有推理路径。对于LLM，我们使用微调Llama3-8B 作为KG专用LLM。我们通过图约束解码生成前10条推理路径和假设答案。我们采用ChatGPT和GPT-4o-mini作为归纳推理的通用LLMs。</p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="/2025/11/14/GCR/result.png" alt="result"></p>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>提出了一种新的LLM推理范式，称为图约束推理（GCR），通过引入结构化KG来消除幻觉，保证推理的可靠性。</p>
+<p>为了将LLMs中的非结构化推理与KGs中的结构化知识联系起来，我们提出了一种KG-Trie，利用基于Trie的索引对KGs中的路径进行编码。</p>
+<p>使用大小模型协同作用，结合图推理和归纳推理生成最终答案。</p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>LLM</tag>
+        <tag>Knowledge Graph</tag>
+        <tag>KG-Trie</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How to write related work</title>
     <url>/2025/11/28/How-to-write-related-work/</url>
-    <content><![CDATA[<p>参考链接：<a href="https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/">https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>参考链接：<a href="https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/">https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/</a></p>
 <p>相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。</p>
 <h2 id="关于如何撰写相关工作部分"><a href="#关于如何撰写相关工作部分" class="headerlink" title="关于如何撰写相关工作部分"></a>关于如何撰写相关工作部分</h2><ol>
 <li>将和你的研究相关联的文献按照渐进式叙述或对比总结式表述，每个文献使用两三句话总结关键点进行介绍；</li>
@@ -358,105 +358,9 @@
       </tags>
   </entry>
   <entry>
-    <title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</title>
-    <url>/2025/12/09/KG-R1/</url>
-    <content><![CDATA[<h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
-<p>paper source ：<a href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
-<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>典型的KG-RAG采用由四个主要子任务组成的模块化工作流：检索、推理、审查、响应</p>
-<p>1、检索以查询KG中的事实</p>
-<p>2、推理以处理检索到的信息</p>
-<p>3、审查以验证逻辑一致性</p>
-<p>4、响应以综合最终答案</p>
-<p>存在问题：</p>
-<p>1、现有的检索增强生成方法计算成本高：</p>
-<p>基于提示的方法通过多次和LLM进行交互，不可避免的导致LLM call、时延和使用token不断累积</p>
-<p>2、对其他知识图谱或更新后的知识图谱的可迁移性和可泛化性差：</p>
-<p>还有一些基于提示和微调的方法在当前知识图谱中得到了较好的调优结果，当迁移到新的知识图谱时，不能保证性能会完整保留。</p>
-<p>KG-R1，一种采用端到端多轮强化学习的智能体KG-RAG系统。</p>
-<p>KG-R1的体系结构有两个组件：单个轻量模型作为智能体和知识图谱检索服务器（作为环境）。知识图谱检索服务器托管知识图以及一组检索操作。轻量模型智能体迭代地执行推理和生成步骤，然后执行多轮检索操作，每个决策都基于知识图谱检索服务器获取的知识生成，并获取最终答案。</p>
-<h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><p>1、KG-R1框架：引入强化学习使得轻量模型学习到最优的推理策略，使智能体在知识图谱环境中交替进行推理和检索操作得到最终答案。</p>
-<p>2、有效的推理过程：KG-R1在使用轻量开源模型和较低的计算成本之下取得了和比较通用模型（如GPT4等）相同甚至更好的效果。</p>
-<p>3、即插即用，跨知识图谱可迁移性：经过训练的KG-R 可轻松迁移至各种知识图谱，并保持KG-RAG的良好性能。</p>
-<h2 id="KG-R1框架总体概述"><a href="#KG-R1框架总体概述" class="headerlink" title="KG-R1框架总体概述"></a>KG-R1框架总体概述</h2><p>KG-R1将KG-RAG转换为与KG接口（KG检索服务器）的多轮交互。</p>
-<p>作者优先考虑两个设计原则。</p>
-<p>1、设计了一个单代理体系结构，它可以简化部署并实现高效、低成本的推理。</p>
-<p>2、构建了一个与模式无关（schema-agnostic）的知识图谱检索服务器，避免引入针对特定知识图谱的假设，从而在不同的知识图谱之间保持良好的可移植性。 </p>
-<p>问题</p>
-<p>什么是KG-RAG？</p>
-<p>什么叫与模式无关？</p>
-<p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
-<p>KG-R1 Framework</p>
-<p><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
-<p>1、知识图谱检索服务</p>
-<p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
-<p>2、KG-R1智能体</p>
-<p>智能体运行包含两个过程，1、生成过程，2、执行过程</p>
-<p>生成阶段</p>
-<p>包含两个部分响应，一个是思考过程think，一个是检索执行动作 KG Query或者最终答案Answer。</p>
-<p>执行阶段：</p>
-<p>使用一个精确匹配解析器，解析生成阶段的响应并映射到知识图谱检索服务的操作集上（也可能是响应错误或者预测结果答案），如果解析是答案交互终止，如果是在操作集中，则会生成一个观察结果用于下一轮交互。</p>
-<p>提示词如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">You are a helpful assistant. Answer the given question. You can query from knowledge base provided to you to answer the question. You can query knowledge up to [H] <span class="built_in">times</span>. You must first conduct reasoning inside &lt;think&gt;...&lt;/think&gt;. If you need to query knowledge, you can <span class="built_in">set</span> a query statement between &lt;kg-query&gt;...&lt;/kg-query&gt; to query from knowledge base after &lt;think&gt;...&lt;/think&gt;. When you have the final answer, you can output the answer inside &lt;answer&gt;...&lt;/answer&gt;. </span><br><span class="line">KG Query Server Instruction : [KG query server instruction] </span><br><span class="line">Question: [question]. </span><br><span class="line">Assistant:</span><br></pre></td></tr></table></figure>
-
-
-
-<p>两个可验证的命题：</p>
-<p>检索操作集的完整性：对任意推理路径，通过该操作集的检索动作，都可以得到完整的推理路径。</p>
-<p>检索操作无约束可迁移性：对于任何其他的后端知识图谱检索任务，该操作集都可以无缝适用。</p>
-<h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
-<p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
-<p>回合奖励：</p>
-<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
-<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
-<p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
-<p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
-<p>把优势分到每一个token：</p>
-<p><img src="/2025/12/09/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
-<p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
-<p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
-<p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
-<p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
-<p><img src="/2025/12/09/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
-<p>重要性采样比率：</p>
-<p><img src="/2025/12/09/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
-<p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
-<p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
-<p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
-<ul>
-<li>用 <strong>group-relative turn-level advantage</strong> 说“这一整轮行为好不好”；</li>
-<li>用 ρ​ 和 clip 控制单步更新强度；</li>
-<li>用 KL 把策略拉回到原始 SFT 模型附近，保证稳定；最后对所有 rollout  回合 token 求和，得到整体的 RL 目标 J(θ)​。</li>
-</ul>
-<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>1、测试KG-R1在KG训练集上训练后的性能和效率</p>
-<p>2、测试KG-R1迁移到不同KG到效果</p>
-<p>对比基线:</p>
-<p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
-<p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
-<p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
-<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/2025/12/09/KG-R1/result_comparison.png" alt="result_comparison"></p>
-<h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
-<ol>
-<li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
-<li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
-<li>在全新的数据集上进行测试。</li>
-</ol>
-<p><img src="/2025/12/09/KG-R1/cross_result.png" alt="cross_result"></p>
-<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/2025/12/09/KG-R1/ablation_result.png" alt="ablation_result"></p>
-]]></content>
-      <categories>
-        <category>论文笔记</category>
-      </categories>
-      <tags>
-        <tag>KG-R1</tag>
-        <tag>RL</tag>
-        <tag>KG-RAG</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL中如何执行一条select语句？</title>
     <url>/2026/01/04/How_to_execute_a_select_statement_in_MySQL/</url>
-    <content><![CDATA[<p>由一条select语句的执行流程，了解MySQL的内部结构！</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>由一条select语句的执行流程，了解MySQL的内部结构！</p>
 <h2 id="MySQL架构"><a href="#MySQL架构" class="headerlink" title="MySQL架构"></a>MySQL架构</h2><p>下图是MySQL的整体架构，主要分为两层，Server层和存储引擎。</p>
 <img src="http://picgo.xuduyinuo.cn/imgs/20260104095558721.webp" alt="MySQL架构图" style="zoom: 25%;" />
 
@@ -575,9 +479,105 @@
       </tags>
   </entry>
   <entry>
+    <title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</title>
+    <url>/2025/12/09/KG-R1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
+<p>paper source ：<a href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>典型的KG-RAG采用由四个主要子任务组成的模块化工作流：检索、推理、审查、响应</p>
+<p>1、检索以查询KG中的事实</p>
+<p>2、推理以处理检索到的信息</p>
+<p>3、审查以验证逻辑一致性</p>
+<p>4、响应以综合最终答案</p>
+<p>存在问题：</p>
+<p>1、现有的检索增强生成方法计算成本高：</p>
+<p>基于提示的方法通过多次和LLM进行交互，不可避免的导致LLM call、时延和使用token不断累积</p>
+<p>2、对其他知识图谱或更新后的知识图谱的可迁移性和可泛化性差：</p>
+<p>还有一些基于提示和微调的方法在当前知识图谱中得到了较好的调优结果，当迁移到新的知识图谱时，不能保证性能会完整保留。</p>
+<p>KG-R1，一种采用端到端多轮强化学习的智能体KG-RAG系统。</p>
+<p>KG-R1的体系结构有两个组件：单个轻量模型作为智能体和知识图谱检索服务器（作为环境）。知识图谱检索服务器托管知识图以及一组检索操作。轻量模型智能体迭代地执行推理和生成步骤，然后执行多轮检索操作，每个决策都基于知识图谱检索服务器获取的知识生成，并获取最终答案。</p>
+<h2 id="创新点"><a href="#创新点" class="headerlink" title="创新点"></a>创新点</h2><p>1、KG-R1框架：引入强化学习使得轻量模型学习到最优的推理策略，使智能体在知识图谱环境中交替进行推理和检索操作得到最终答案。</p>
+<p>2、有效的推理过程：KG-R1在使用轻量开源模型和较低的计算成本之下取得了和比较通用模型（如GPT4等）相同甚至更好的效果。</p>
+<p>3、即插即用，跨知识图谱可迁移性：经过训练的KG-R 可轻松迁移至各种知识图谱，并保持KG-RAG的良好性能。</p>
+<h2 id="KG-R1框架总体概述"><a href="#KG-R1框架总体概述" class="headerlink" title="KG-R1框架总体概述"></a>KG-R1框架总体概述</h2><p>KG-R1将KG-RAG转换为与KG接口（KG检索服务器）的多轮交互。</p>
+<p>作者优先考虑两个设计原则。</p>
+<p>1、设计了一个单代理体系结构，它可以简化部署并实现高效、低成本的推理。</p>
+<p>2、构建了一个与模式无关（schema-agnostic）的知识图谱检索服务器，避免引入针对特定知识图谱的假设，从而在不同的知识图谱之间保持良好的可移植性。 </p>
+<p>问题</p>
+<p>什么是KG-RAG？</p>
+<p>什么叫与模式无关？</p>
+<p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
+<p>KG-R1 Framework</p>
+<p><img src="/2025/12/09/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
+<p>1、知识图谱检索服务</p>
+<p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
+<p>2、KG-R1智能体</p>
+<p>智能体运行包含两个过程，1、生成过程，2、执行过程</p>
+<p>生成阶段</p>
+<p>包含两个部分响应，一个是思考过程think，一个是检索执行动作 KG Query或者最终答案Answer。</p>
+<p>执行阶段：</p>
+<p>使用一个精确匹配解析器，解析生成阶段的响应并映射到知识图谱检索服务的操作集上（也可能是响应错误或者预测结果答案），如果解析是答案交互终止，如果是在操作集中，则会生成一个观察结果用于下一轮交互。</p>
+<p>提示词如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">You are a helpful assistant. Answer the given question. You can query from knowledge base provided to you to answer the question. You can query knowledge up to [H] <span class="built_in">times</span>. You must first conduct reasoning inside &lt;think&gt;...&lt;/think&gt;. If you need to query knowledge, you can <span class="built_in">set</span> a query statement between &lt;kg-query&gt;...&lt;/kg-query&gt; to query from knowledge base after &lt;think&gt;...&lt;/think&gt;. When you have the final answer, you can output the answer inside &lt;answer&gt;...&lt;/answer&gt;. </span><br><span class="line">KG Query Server Instruction : [KG query server instruction] </span><br><span class="line">Question: [question]. </span><br><span class="line">Assistant:</span><br></pre></td></tr></table></figure>
+
+
+
+<p>两个可验证的命题：</p>
+<p>检索操作集的完整性：对任意推理路径，通过该操作集的检索动作，都可以得到完整的推理路径。</p>
+<p>检索操作无约束可迁移性：对于任何其他的后端知识图谱检索任务，该操作集都可以无缝适用。</p>
+<h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
+<p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
+<p>回合奖励：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
+<p><img src="/2025/12/09/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
+<p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
+<p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
+<p>把优势分到每一个token：</p>
+<p><img src="/2025/12/09/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
+<p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
+<p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
+<p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
+<p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
+<p><img src="/2025/12/09/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
+<p>重要性采样比率：</p>
+<p><img src="/2025/12/09/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
+<p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
+<p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
+<p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
+<ul>
+<li>用 <strong>group-relative turn-level advantage</strong> 说“这一整轮行为好不好”；</li>
+<li>用 ρ​ 和 clip 控制单步更新强度；</li>
+<li>用 KL 把策略拉回到原始 SFT 模型附近，保证稳定；最后对所有 rollout  回合 token 求和，得到整体的 RL 目标 J(θ)​。</li>
+</ul>
+<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>1、测试KG-R1在KG训练集上训练后的性能和效率</p>
+<p>2、测试KG-R1迁移到不同KG到效果</p>
+<p>对比基线:</p>
+<p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
+<p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
+<p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
+<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/2025/12/09/KG-R1/result_comparison.png" alt="result_comparison"></p>
+<h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
+<ol>
+<li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
+<li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
+<li>在全新的数据集上进行测试。</li>
+</ol>
+<p><img src="/2025/12/09/KG-R1/cross_result.png" alt="cross_result"></p>
+<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/2025/12/09/KG-R1/ablation_result.png" alt="ablation_result"></p>
+]]></content>
+      <categories>
+        <category>论文笔记</category>
+      </categories>
+      <tags>
+        <tag>KG-R1</tag>
+        <tag>RL</tag>
+        <tag>KG-RAG</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十大经典排序算法</title>
     <url>/2025/11/22/sort-algorithm/</url>
-    <content><![CDATA[<p><img src="/2025/11/22/sort-algorithm/sort.png" alt="sort_algorithm"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><img src="/2025/11/22/sort-algorithm/sort.png" alt="sort_algorithm"></p>
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>比较相邻元素，如果顺序不对就交换，每一轮都找到一个最大&#x2F;最小的数移动到末尾或开头</p>
 <p>重复完成剩余的待排序元素</p>
 <p>代码详解：</p>
@@ -638,7 +638,7 @@
   <entry>
     <title>Java并发编程</title>
     <url>/2025/12/18/Multithreading/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>多线程是指在一个程序中同时执行多个线程，每个线程都有自己独立的执行路径。在多线程中，程序的执行可以同时进行多个任务，从而提高系统的资源利用率和响应性能。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>多线程是指在一个程序中同时执行多个线程，每个线程都有自己独立的执行路径。在多线程中，程序的执行可以同时进行多个任务，从而提高系统的资源利用率和响应性能。</p>
 <p>在传统的单线程编程模型中，程序按照顺序执行，一次只处理一个任务。这种方式在某些情况下可能会导致效率低下或者无法满足需求。而多线程通过将任务拆分为多个子任务，并且在不同的线程上同时执行，从而实现并发处理。</p>
 <h2 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h2><p>操作系统层面划分线程状态</p>
 <p><img src="/2025/12/18/Multithreading/thread-status.png" alt="操作系统层面划分线程状态"></p>
@@ -840,7 +840,7 @@
   <entry>
     <title>开始是结束的开始？愿我们都能成为生活的高手！</title>
     <url>/2026/01/15/We-Made-a-Beautiful-Bouquet/</url>
-    <content><![CDATA[<p>有着诸多相同的兴趣爱好的恋人</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>有着诸多相同的兴趣爱好的恋人</p>
 <p>最后却以遗憾结束……</p>
 <p><img src="/2026/01/15/We-Made-a-Beautiful-Bouquet/00.webp" alt="00"></p>
 <h2 id="邂逅、同频"><a href="#邂逅、同频" class="headerlink" title="邂逅、同频"></a>邂逅、同频</h2><p>山音麦、八谷绢</p>
