@@ -211,7 +211,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/hexo/</loc>
+    <loc>https://blog.xuduyinuo.cn/tags/thought/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -225,35 +225,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/tutorial/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/tags/thought/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuduyinuo.cn/tags/related-work/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/tags/algorithm/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/tags/sort/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -268,6 +240,20 @@
   
   <url>
     <loc>https://blog.xuduyinuo.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/tags/hexo/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/tags/tutorial/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -294,6 +280,20 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.xuduyinuo.cn/tags/algorithm/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/tags/sort/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -311,21 +311,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/categories/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xuduyinuo.cn/categories/Notes/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/categories/algorithm/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -339,7 +325,21 @@
   </url>
   
   <url>
+    <loc>https://blog.xuduyinuo.cn/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuduyinuo.cn/categories/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/categories/algorithm/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
