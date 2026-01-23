@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>从零开始，使用Hexo搭建个人博客~</title>
-    <url>/Build_hexo_blog_tutorial.html</url>
+    <url>/undefined/Build_hexo_blog_tutorial/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="从零开始，使用Hexo搭建个人博客"><a href="#从零开始，使用Hexo搭建个人博客" class="headerlink" title="从零开始，使用Hexo搭建个人博客~"></a>从零开始，使用Hexo搭建个人博客~</h1><blockquote>
 <p>参考文章：<a href="https://blog.fiveth.cc/p/bb32/">https://blog.fiveth.cc/p/bb32/</a></p>
 </blockquote>
@@ -57,7 +57,7 @@
 
 <p>浏览器输入localhost:4000 进入生成的hexo本地服务器（在命令行使用ctrl + c 关闭）</p>
 <h2 id="将本地博客内容部署到Github"><a href="#将本地博客内容部署到Github" class="headerlink" title="将本地博客内容部署到Github"></a>将本地博客内容部署到Github</h2><p>在本地下载并安装hexo之后会生成的目录结构如下图</p>
-<p><img src="/Build_hexo_blog_tutorial/01.png" alt="hexo文件夹内容"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/01.png" alt="hexo文件夹内容"></p>
 <p>编辑博客配置文件_config.yml，将博客内容链接到Github中</p>
 <p>使用文本编辑器打开_config.yml，拉到最下面将deploy后面的全删掉，复制粘贴以下内容</p>
 <p>repository后面为你的Github仓库链接，ssh或者https都行</p>
@@ -119,7 +119,7 @@
 
 
 <p>修改完成后，在终端新建文章时，会自动生成一个和文章同名的资源文件夹，如下图所示</p>
-<p><img src="/Build_hexo_blog_tutorial/02.png" alt="文章及其资源文件夹"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/02.png" alt="文章及其资源文件夹"></p>
 <blockquote>
 <p>注意：如果文章名称有空格，需要使用双引号引起来</p>
 </blockquote>
@@ -159,7 +159,7 @@
 
 <p>建议：</p>
 <p>在 hexo 的根目录创建一个文件 _config.butterfly.yml，并把主题目录的 _config.yml 內容复制到 _config.butterfly.yml 去。</p>
-<p><img src="/Build_hexo_blog_tutorial/03.png"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/03.png"></p>
 <blockquote>
 <p>使用git命令安装的主题保存在themes文件夹中，使用npm命令安装的主题保存在node_modules文件夹中</p>
 </blockquote>
@@ -219,11 +219,11 @@
 <p>1、Page Front-matter</p>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">type:</span><br><span class="line">comments:</span><br><span class="line">description:</span><br><span class="line">keywords:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">mathjax:</span></span><br><span class="line"><span class="emphasis">katex:</span></span><br><span class="line"><span class="emphasis">aside:</span></span><br><span class="line"><span class="emphasis">aplayer:</span></span><br><span class="line"><span class="emphasis">highlight_</span>shrink:</span><br><span class="line">random:</span><br><span class="line">limit:</span><br><span class="line">  type:</span><br><span class="line"><span class="section">  value:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/Build_hexo_blog_tutorial/04.png" alt="Page Front-matter参数详解"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/04.png" alt="Page Front-matter参数详解"></p>
 <p>2、Post Front-matter</p>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title:</span><br><span class="line">date:</span><br><span class="line">updated:</span><br><span class="line">tags:</span><br><span class="line">categories:</span><br><span class="line">keywords:</span><br><span class="line">description:</span><br><span class="line">top<span class="emphasis">_img:</span></span><br><span class="line"><span class="emphasis">comments:</span></span><br><span class="line"><span class="emphasis">cover:</span></span><br><span class="line"><span class="emphasis">toc:</span></span><br><span class="line"><span class="emphasis">toc_</span>number:</span><br><span class="line">toc<span class="emphasis">_style_</span>simple:</span><br><span class="line">copyright:</span><br><span class="line">copyright<span class="emphasis">_author:</span></span><br><span class="line"><span class="emphasis">copyright_</span>author<span class="emphasis">_href:</span></span><br><span class="line"><span class="emphasis">copyright_</span>url:</span><br><span class="line">copyright<span class="emphasis">_info:</span></span><br><span class="line"><span class="emphasis">mathjax:</span></span><br><span class="line"><span class="emphasis">katex:</span></span><br><span class="line"><span class="emphasis">aplayer:</span></span><br><span class="line"><span class="emphasis">highlight_</span>shrink:</span><br><span class="line">aside:</span><br><span class="line">abcjs:</span><br><span class="line"><span class="section">noticeOutdate:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/Build_hexo_blog_tutorial/05.png" alt="Post Front-matter参数详解"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/05.png" alt="Post Front-matter参数详解"></p>
 <h2 id="配置自定义域名访问"><a href="#配置自定义域名访问" class="headerlink" title="配置自定义域名访问"></a>配置自定义域名访问</h2><p>首先需要有一个自定义域名，在阿里云或者腾讯云使用CNAME方式进行域名解析</p>
 <p>登录Github，进入连接hexo博客内容的仓库（用户名.github.io）</p>
 <p>Settings——&gt;Pages——&gt;Custom domain</p>
@@ -245,10 +245,10 @@
 
 
 <h2 id="文章结尾的中文标题乱码问题"><a href="#文章结尾的中文标题乱码问题" class="headerlink" title="文章结尾的中文标题乱码问题"></a>文章结尾的中文标题乱码问题</h2><p>当使用 hexo n title 命令新建文章时，如果title是中文标题，则在文章结尾的文章链接中会出现中文乱码问题，如下</p>
-<p><img src="/Build_hexo_blog_tutorial/07.png" alt="中文标题文章连接乱码"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/07.png" alt="中文标题文章连接乱码"></p>
 <p>解决方案：</p>
 <p>在使用hexo n title 命令新建文章时，title使用英文</p>
-<p><img src="/Build_hexo_blog_tutorial/06.png" alt="测试英文标题文章链接不乱码"></p>
+<p><img src="/undefined/Build_hexo_blog_tutorial/06.png" alt="测试英文标题文章链接不乱码"></p>
 <p>然后进入生成的文章的md页面，修改post front-matter部分中title为中文标题</p>
 <figure class="highlight md"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 测试文章标题</span><br><span class="line">date: 2025-01-01</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">  -</span> Hexo</span><br><span class="line"><span class="section">  - 博客</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
@@ -265,7 +265,7 @@
   </entry>
   <entry>
     <title>Graph-constrained Reasoning:Faithful Reasoning on Knowledge Graphs with  Large Language Models</title>
-    <url>/GCR.html</url>
+    <url>/undefined/GCR/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h1><p>paper link: <a href="https://icml.cc/virtual/2025/poster/45868">https://icml.cc/virtual/2025/poster/45868</a></p>
 <p>Code and data are available at: <a href="https://github.com/RManLuo/graph-constrained-reasoning">https://github.com/RManLuo/graph-constrained-reasoning</a></p>
 <h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ol>
@@ -280,7 +280,7 @@
 <h1 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h1><h2 id="Graph-constrained-Reasoning-GCR"><a href="#Graph-constrained-Reasoning-GCR" class="headerlink" title="Graph-constrained Reasoning (GCR)"></a>Graph-constrained Reasoning (GCR)</h2><p>将KGs直接引入LLMs的解码过程，实现可靠推理。</p>
 <p>由三个主要部分组成：1）知识图Trie构造 2）图约束解码 3）图归纳推理</p>
 <p>GCR的总体框架如下图（c）所示：</p>
-<p><img src="/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="GCR框架图"></p>
+<p><img src="/undefined/GCR/GCR%E6%A1%86%E6%9E%B6%E5%9B%BE.png" alt="GCR框架图"></p>
 <h2 id="Knowledge-Graph-Trie-Construction"><a href="#Knowledge-Graph-Trie-Construction" class="headerlink" title="Knowledge Graph Trie Construction"></a>Knowledge Graph Trie Construction</h2><p>因为知识图谱结构化的特性，LLM难以有效进行推理。</p>
 <p>作者提出将KG的结构化知识转化为KG-Trie（知识图谱前缀树）索引，来应用于LLM的解码过程，促进LLM的推理能力。</p>
 <p>方法：给定一个KG和问题及主题实体。</p>
@@ -290,10 +290,10 @@
 <li>使用LLM的分词器工具将自然语言句子转换为token并存储在KG-Trie中</li>
 </ol>
 <p>形式化为如下公式：</p>
-<p><img src="/GCR/build_KG_trie.png" alt="build_KG_trie"></p>
+<p><img src="/undefined/GCR/build_KG_trie.png" alt="build_KG_trie"></p>
 <h2 id="Graph-constrained-Decoding"><a href="#Graph-constrained-Decoding" class="headerlink" title="Graph-constrained Decoding"></a>Graph-constrained Decoding</h2><p>给定一个问题Q，通过提示一个经过微调之后的轻量化的小模型，在LLM解码时使用上一步骤中得到的KG-Trie作约束，保证LLM生成的推理路径都是KG中存在的有效的真实的路径。</p>
 <p>LLM每次通过图约束解码得到有效的推理路径之后再切换回常规解码，生成以路径为条件的假设答案。</p>
-<p><img src="/GCR/Graph-constrained-Decoding.png"></p>
+<p><img src="/undefined/GCR/Graph-constrained-Decoding.png"></p>
 <p>微调轻量化小模型方法：</p>
 <p>训练数据中包含问题、问题实体、答案实体和问题相关知识图谱三元组</p>
 <p>先将知识图谱三元组转化为图结构，再使用最短路径算法连接问题实体和答案实体，使其连接的路径作为该问题的推理路径。</p>
@@ -302,7 +302,7 @@
 <p>图约束解码方法不同于基于检索的解码方法，它将预先构造的KG-Trie集成到LLMs的解码过程中。这不仅减少了输入token，而且弥补了LLMs中的非结构化推理和KGs中的结构化知识之间的差距，允许在KGs上进行有效的推理，而不管其规模大小，这将导致可靠的推理，从而得到答案。</p>
 </blockquote>
 <h2 id="Graph-Inductive-Reasoning"><a href="#Graph-Inductive-Reasoning" class="headerlink" title="Graph Inductive Reasoning"></a>Graph Inductive Reasoning</h2><p>通过提示小模型得到该问题的多条推理路径和假设答案，再将这些推理路径和假设答案输入给一个强大的通用大模型，通过大模型及其内部知识进行归纳整理得到最终的答案。</p>
-<p><img src="/GCR/Graph-Inductive-Reasoning.png" alt="Graph-Inductive-Reasoning"></p>
+<p><img src="/undefined/GCR/Graph-Inductive-Reasoning.png" alt="Graph-Inductive-Reasoning"></p>
 <h1 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h1><h2 id="思路学习"><a href="#思路学习" class="headerlink" title="思路学习"></a>思路学习</h2><p>对实验步骤进行客观陈述，数据集、baseline、评估指标、实现过程等</p>
 <p>说明你的实验具有什么效果，和基线相比有什么突出点</p>
 <p>你的实验结果怎么和你的创新点相关联</p>
@@ -312,7 +312,7 @@
 <p>通过实验告诉读者，你提出的框架或模型解决了什么问题</p>
 <p>通过实验告诉读者，你提出的框架或模型可以怎么扩展，或应用在哪些下游任务……</p>
 <h2 id="Implementations"><a href="#Implementations" class="headerlink" title="Implementations"></a>Implementations</h2><p>我们使用KG-Trie索引从问题实体开始的2个跳内的所有推理路径。对于LLM，我们使用微调Llama3-8B 作为KG专用LLM。我们通过图约束解码生成前10条推理路径和假设答案。我们采用ChatGPT和GPT-4o-mini作为归纳推理的通用LLMs。</p>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="/GCR/result.png" alt="result"></p>
+<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><p><img src="/undefined/GCR/result.png" alt="result"></p>
 <h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>提出了一种新的LLM推理范式，称为图约束推理（GCR），通过引入结构化KG来消除幻觉，保证推理的可靠性。</p>
 <p>为了将LLMs中的非结构化推理与KGs中的结构化知识联系起来，我们提出了一种KG-Trie，利用基于Trie的索引对KGs中的路径进行编码。</p>
 <p>使用大小模型协同作用，结合图推理和归纳推理生成最终答案。</p>
@@ -328,7 +328,7 @@
   </entry>
   <entry>
     <title>How to write related work</title>
-    <url>/How-to-write-related-work.html</url>
+    <url>/undefined/How-to-write-related-work/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>参考链接：<a href="https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/">https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/</a></p>
 <p>相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。</p>
 <h2 id="关于如何撰写相关工作部分"><a href="#关于如何撰写相关工作部分" class="headerlink" title="关于如何撰写相关工作部分"></a>关于如何撰写相关工作部分</h2><ol>
@@ -358,8 +358,129 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL中如何执行一条select语句？</title>
+    <url>/undefined/How_to_execute_a_select_statement_in_MySQL/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>由一条select语句的执行流程，了解MySQL的内部结构！</p>
+<h2 id="MySQL架构"><a href="#MySQL架构" class="headerlink" title="MySQL架构"></a>MySQL架构</h2><p>下图是MySQL的整体架构，主要分为两层，Server层和存储引擎。</p>
+<img src="http://picgo.xuduyinuo.cn/imgs/20260104095558721.webp" alt="MySQL架构图" style="zoom: 25%;" />
+
+
+
+<p>Server层：负责建立连接、分析和执行 SQL</p>
+<p>包含核心功能模块：连接器、查询缓存（8.0版本移除）、解析器、预处理器、优化器、执行器、内置函数（如日期、时间、数学和加密函数等）和所有跨存储引擎的功能（存储过程、触发器、视图）。</p>
+<p>存储引擎：负责数据的存储和提取</p>
+<p>支持多种存储引擎，不同存储引擎共用同一个Server层，默认存储引擎为InnoDB。</p>
+<h2 id="连接器"><a href="#连接器" class="headerlink" title="连接器"></a>连接器</h2><p>使用MySQL之前需要先进行连接（登录）MySQL服务，然后才能执行SQL语句，连接语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="operator">-</span>h 指定 MySQL 服务得 IP 地址，如果是连接本地的 MySQL服务，可以不用这个参数；</span><br><span class="line"># <span class="operator">-</span>u 指定用户名，管理员角色名为 root；</span><br><span class="line"># <span class="operator">-</span>p 指定密码，如果命令行中不填写密码（为了密码安全，建议不要在命令行写密码），就需要在交互对话里面输入密码</span><br><span class="line">mysql <span class="operator">-</span>h$ip <span class="operator">-</span>u$<span class="keyword">user</span> <span class="operator">-</span>p</span><br></pre></td></tr></table></figure>
+
+<p>连接过程需要经过TCP三次握手，连接之前确保启动MySQL服务，使用正确的用户名和密码，连接成功如下</p>
+<img src="http://picgo.xuduyinuo.cn/imgs/20260104102100681.webp" alt="image-20260104102048666" style="zoom:50%;" />
+
+<p>连接成功后连接器就会获取该用户的权限，然后保存起来，后续该用户在此连接里的任何操作，都会基于连接开始时读到的权限进行权限逻辑的判断。所以，如果一个用户已经建立了连接，即使管理员中途修改了该用户的权限，也不会影响已经存在连接的权限。修改完成后，只有再新建的连接才会使用新的权限设置。</p>
+<p>查看当前MySQL服务被多少个客户端连接：show processlist</p>
+<p><img src="http://picgo.xuduyinuo.cn/imgs/20260104103235296.webp" alt="image-20260104103233284"></p>
+<p>空闲连接</p>
+<p>MySQL 定义了空闲连接的最大空闲时长，由 wait_timeout 参数控制的，默认值是 8 小时（28880秒），如果空闲连接超过了这个时间，连接器就会自动将它断开。</p>
+<p>使用的是 kill connection + id 命令手动断开空闲连接。</p>
+<p>MySQL 的连接数限制</p>
+<p>MySQL 服务支持的最大连接数由 max_connections 参数控制，默认是 151 。</p>
+<p>短连接和长连接</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span> 短连接</span><br><span class="line">连接 mysql 服务（TCP 三次握手）</span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">断开 mysql 服务（TCP 四次挥手）</span><br><span class="line"></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 长连接</span><br><span class="line">连接 mysql 服务（TCP 三次握手）</span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">....</span><br><span class="line">断开 mysql 服务（TCP 四次挥手）</span><br></pre></td></tr></table></figure>
+
+<p>长连接可以减少建立连接和断开连接的过程，所以一般是推荐使用长连接</p>
+<p>长连接后可能会占用内存增多，因为 MySQL 在执行查询过程中临时使用内存管理连接对象，这些连接对象资源只有在连接断开时才会释放。如果长连接累计很多，将导致 MySQL 服务占用内存太大，有可能会被系统强制杀掉，这样会发生 MySQL 服务异常重启的现象。</p>
+<p>总结连接器流程：</p>
+<p>1、与客户端进行 TCP 三次握手建立连接；</p>
+<p>2、校验客户端的用户名和密码，如果用户名或密码不对，则会报错；</p>
+<p>3、如果用户名和密码都对了，会读取该用户的权限，然后后面的权限逻辑判断都基于此时读取到的权限；</p>
+<h2 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h2><p>连接器得工作完成后，客户端就可以向 MySQL 服务发送 SQL 语句了，MySQL 服务收到 SQL 语句后，就会解析出 SQL 语句的第一个字段，看看是什么类型的语句。</p>
+<p>在8.0之前的版本中，如果SQL是select语句，MySQL会先进行查询缓存，如果命中则直接返回，未命中则继续执行。</p>
+<p>对于更新比较频繁的表，查询缓存的命中率很低的，因为只要一个表有更新操作，那么这个表的查询缓存就会被清空。</p>
+<h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>在正式执行 SQL 查询语句之前， MySQL 会先对 SQL 语句做解析。</p>
+<p>词法分析：</p>
+<p>把字符串切成 token，MySQL 会根据你输入的字符串识别出关键字</p>
+<p>语法分析：</p>
+<p>根据词法分析的结果，语法解析器会根据语法规则，判断你输入的这个 SQL 语句是否满足 MySQL 语法，如果没问题就会构建出 SQL 语法树，这样方便后面模块获取 SQL 类型、表名、字段名、 where 条件等等。</p>
+<img src="http://picgo.xuduyinuo.cn/imgs/20260104155413190.webp" alt="image-20260104155407094" style="zoom:50%;" />
+
+<h2 id="执行SQL流程"><a href="#执行SQL流程" class="headerlink" title="执行SQL流程"></a>执行SQL流程</h2><h3 id="预处理器"><a href="#预处理器" class="headerlink" title="预处理器"></a>预处理器</h3><p>检查 SQL 查询语句中的表或者字段是否存在；</p>
+<p>将 <code>select *</code> 中的 <code>*</code> 符号，扩展为表上的所有列；</p>
+<p>预处理器负责把解析器产出的语法结构“落到真实的库表对象上”，让一条语句从“语法正确”变成“语义可执行”。它会解析并确认语句里引用的库、表、列等对象是否存在且可访问（比如表不存在会在这一阶段直接报错），同时会把 <code>select *</code> 这类模糊表达展开成明确的列清单，必要时也会完成与权限、类型相关的基础校验。</p>
+<p>它的作用是尽早发现“对象&#x2F;语义层面”的问题并把查询规格化，为后续生成执行计划提供准确输入。</p>
+<h3 id="优化器"><a href="#优化器" class="headerlink" title="优化器"></a>优化器</h3><p>经过预处理阶段后，还需要为 SQL 查询语句先制定一个执行计划。</p>
+<p>优化器负责为这条 SQL 选择一条成本更低的执行计划，核心就是在多种可行访问路径之间做取舍，例如决定走主键索引、二级索引还是全表扫描，以及能否利用覆盖索引来避免回表、能否使用索引下推来减少不必要的回表与记录传递等。它会基于统计信息与代价模型评估不同方案的开销，最终确定执行过程中“怎么访问数据、以什么顺序和方式取数”的策略；</p>
+<p>它的作用是把同一个逻辑查询变成尽可能高效的物理执行方案，<code>EXPLAIN</code> 里看到的 key&#x2F;type&#x2F;Extra 等信息本质上就是优化器决策的外化结果。</p>
+<h3 id="执行器"><a href="#执行器" class="headerlink" title="执行器"></a>执行器</h3><p>经历完优化器后，就确定了执行方案，接下来 MySQL 就真正开始执行语句了，这个工作是由「执行器」完成的。在执行的过程中，执行器就会和存储引擎交互了，交互是以记录为单位的。根据执行计划执行 SQL 查询语句，从存储引擎读取记录，返回给客户端。</p>
+<p>负责按优化器给定的执行计划真正把查询跑起来，并在执行过程中以记录为单位与存储引擎交互：该走索引就调用引擎的索引读取接口定位第一条或下一条记录，该全表扫就让引擎顺序返回记录，然后在 Server 层对返回的记录做条件判断与表达式计算，满足条件的就逐步发送给客户端，直到读完或满足停止条件为止。在索引下推场景下，执行器会把部分原本由 Server 层做的过滤条件交给引擎在索引层先筛掉，从而减少回表次数与数据搬运。它的作用是把“计划”转化为具体的读、判、发动作，协调 Server 层与存储引擎完成整条语句的实际执行。</p>
+<p>三种方式：</p>
+<p>主键索引查询</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> product <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>以上面的SQL语句为例，这条查询语句的查询条件用到了主键索引，而且是等值查询，同时主键 id 是唯一，不会有 id 相同的记录，所以优化器决定选用访问类型为 const 进行查询，也就是使用主键索引查询一条记录，那么执行器与存储引擎的执行流程是这样的：</p>
+<blockquote>
+<p>1、执行器第一次查询，会调用 read_first_record 函数指针指向的函数，因为优化器选择的访问类型为 const，这个函数指针被指向为 InnoDB 引擎索引查询的接口，把条件 id &#x3D; 1 交给存储引擎，让存储引擎定位符合条件的第一条记录。</p>
+<p>2、存储引擎通过主键索引的 B+ 树结构定位到 id &#x3D; 1的第一条记录，如果记录是不存在的，就会向执行器上报记录找不到的错误，然后查询结束。如果记录是存在的，就会将记录返回给执行器；</p>
+<p>3、执行器从存储引擎读到记录后，接着判断记录是否符合查询条件，如果符合则发送给客户端，如果不符合则跳过该记录。</p>
+<p>4、执行器查询的过程是一个 while 循环，所以还会再查一次，但是这次因为不是第一次查询了，所以会调用 read_record 函数指针指向的函数，因为优化器选择的访问类型为 const，这个函数指针被指向为一个永远返回 - 1 的函数，所以当调用该函数的时候，执行器就退出循环，也就是结束查询了。</p>
+</blockquote>
+<p>全表扫描</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> product <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;iphone&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>以上面的SQL语句为例，这条查询语句的查询条件没有用到索引，所以优化器决定选用访问类型为 ALL 进行查询，也就是全表扫描的方式查询，那么这时执行器与存储引擎的执行流程是这样的：</p>
+<blockquote>
+<p>1、执行器第一次查询，会调用 read_first_record 函数指针指向的函数，因为优化器选择的访问类型为 all，这个函数指针被指向为 InnoDB 引擎全扫描的接口，让存储引擎读取表中的第一条记录；</p>
+<p>执行器会判断读到的这条记录的 name 是不是 iphone，如果不是则跳过；如果是则将记录发给客户的（是的没错，Server 层每从存储引擎读到一条记录就会发送给客户端，之所以客户端显示的时候是直接显示所有记录的，是因为客户端是等查询语句查询完成后，才会显示出所有的记录）。</p>
+<p>3、执行器查询的过程是一个 while 循环，所以还会再查一次，会调用 read_record 函数指针指向的函数，因为优化器选择的访问类型为 all，read_record 函数指针指向的还是 InnoDB 引擎全扫描的接口，所以接着向存储引擎层要求继续读刚才那条记录的下一条记录，存储引擎把下一条记录取出后就将其返回给执行器（Server层），执行器继续判断条件，不符合查询条件即跳过该记录，否则发送到客户端；</p>
+<p>4、一直重复上述过程，直到存储引擎把表中的所有记录读完，然后向执行器（Server层） 返回了读取完毕的信息；</p>
+<p>5、执行器收到存储引擎报告的查询完毕的信息，退出循环，停止查询。</p>
+</blockquote>
+<p>索引下推</p>
+<p>mysql 5.6 推出的查询优化策略。</p>
+<p>索引下推能够<strong>减少</strong> <strong>二级索引</strong> 在查询时的<strong>回表操作</strong>，提高查询效率，因为它将 server 层部分负责的事交给了存储引擎层去处理。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">有一个字段如下的表，且对 age 和 reward 字段建立了联合索引。</span><br><span class="line"> id    name     age      reward</span><br><span class="line"> </span><br><span class="line"> 有如下的查询语句</span><br><span class="line"> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_user <span class="keyword">where</span> age <span class="operator">&gt;</span> <span class="number">20</span> <span class="keyword">and</span> reward <span class="operator">=</span> <span class="number">100000</span>;</span><br></pre></td></tr></table></figure>
+
+<p>联合索引当遇到范围查询 (&gt;、&lt;) 就会停止匹配，也就是 <strong>age 字段能用到联合索引，但是 reward 字段则无法利用到索引</strong>。</p>
+<p>不使用索引下推时（mysql 5.6版本之前），执行器与存储引擎的执行流程如下：</p>
+<blockquote>
+<p>1、Server 层首先调用存储引擎的接口定位到满足查询条件的第一条二级索引记录，也就是定位到 age &gt; 20 的第一条记录；</p>
+<p>2、存储引擎根据二级索引的 B+ 树快速定位到这条记录后，获取主键值，然后进行回表操作，将完整的记录返回给 Server 层；</p>
+<p>3、Server 层在判断该记录的 reward 是否等于 100000，如果成立则将其发送给客户端；否则跳过该记录；</p>
+<p>4、接着，继续向存储引擎索要下一条记录，存储引擎在二级索引定位到记录后，获取主键值，然后回表操作，将完整的记录返回给 Server 层；</p>
+<p>5、如此往复，直到存储引擎把表中的所有记录读完。</p>
+<p>可以看到，没有索引下推的时候，每查询到一条二级索引记录，都要进行回表操作，然后将记录返回给 Server，接着 Server 再判断该记录的 reward 是否等于 100000。</p>
+</blockquote>
+<p>而使用索引下推后，判断记录的 reward 是否等于 100000 的工作交给了存储引擎层，过程如下 ：</p>
+<blockquote>
+<p>1、Server 层首先调用存储引擎的接口定位到满足查询条件的第一条二级索引记录，也就是定位到 age &gt; 20 的第一条记录；</p>
+<p>存储引擎定位到二级索引后，先不执行回表操作，而是先判断一下该索引中包含的列（reward列）的条件（reward 是否等于 100000）是否成立。如果条件不成立，则直接跳过该二级索引。如果成立，则执行回表操作，将完成记录返回给 Server 层。</p>
+<p>3、Server 层在判断其他的查询条件（本次查询没有其他条件）是否成立，如果成立则将其发送给客户端；否则跳过该记录，然后向存储引擎索要下一条记录。</p>
+<p>4、如此往复，直到存储引擎把表中的所有记录读完。</p>
+<p>可以看到，使用了索引下推后，虽然 reward 列无法使用到联合索引，但是因为它包含在联合索引（age，reward）里，所以直接在存储引擎过滤出满足 reward &#x3D; 100000 的记录后，才去执行回表操作获取整个记录。相比于没有使用索引下推，节省了很多回表操作。</p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>执行一条 SQL 查询语句，期间发生了什么？</p>
+<ul>
+<li>连接器：建立连接，管理连接、校验用户身份；</li>
+<li>查询缓存：查询语句如果命中查询缓存则直接返回，否则继续往下执行。MySQL 8.0 已删除该模块；</li>
+<li>解析 SQL，通过解析器对 SQL 查询语句进行词法分析、语法分析，然后构建语法树，方便后续模块读取表名、字段、语句类型；</li>
+<li>执行 SQL：执行 SQL 共有三个阶段：<ul>
+<li>预处理阶段：检查表或字段是否存在；将 <code>select *</code> 中的 <code>*</code> 符号扩展为表上的所有列。</li>
+<li>优化阶段：基于查询成本的考虑， 选择查询成本最小的执行计划；</li>
+<li>执行阶段：根据执行计划执行 SQL 查询语句，从存储引擎读取记录，返回给客户端；</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>KG-R1：基于强化学习的高效可转移的智能体知识图谱检索增强生成</title>
-    <url>/KG-R1.html</url>
+    <url>/undefined/KG-R1/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="Source"><a href="#Source" class="headerlink" title="Source"></a>Source</h2><p>code source ：<a href="https://github.com/Jinyeop3110/KG-R1">https://github.com/Jinyeop3110/KG-R1</a>.</p>
 <p>paper source ：<a href="https://arxiv.org/abs/2509.26383">https://arxiv.org/abs/2509.26383</a></p>
 <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>知识图谱检索增强生成（KG-RAG）通过将大型语言模型（LLM）与结构化、可验证的知识图谱（KG）相结合，从而减轻模型幻觉问题，并显式呈现其推理过程。然而，许多KG-RAG系统由多个LLM模块（如规划、推理和响应）组成，增加了推理成本，并将推理行为绑定到特定的目标知识图谱上。为此，我们引入了KG-R1，一种基于强化学习（RL）的智能体知识图谱检索增强生成（KGRAG）框架。KG-R1利用一个单智能体与知识图谱进行交互并将知识图谱作为其环境，在每个步骤学习检索，并将检索到的信息合并到KG-R1的推理和生成中。该过程通过端到端的强化学习进行优化。在跨知识图谱问答（KGQA）基准的实验中，证明了方法的有效性和可迁移性：与先前的使用更大的基础模型或微调的模型的多模块工作流方法相比，KG-R1方法使用Qwen-2.5-3B模型，用更少的token取得了更好的准确性。KG-R1支持即插即用，经过训练后，它在其他知识图谱上也能保持很高的准确性，无需再训练。</p>
@@ -387,7 +508,7 @@
 <p>什么叫与模式无关？</p>
 <p>指系统的设计不依赖某一个特定的 schema 细节，不假设“图里一定有某种具体的实体类型&#x2F;关系名”，因此可以在不同结构的知识图谱之间复用。</p>
 <p>KG-R1 Framework</p>
-<p><img src="/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
+<p><img src="/undefined/KG-R1/KG-R1-freamwork.png" alt="KG-R1-freamwork"></p>
 <p>1、知识图谱检索服务</p>
 <p>为知识图谱搭建一个后端检索服务，并提供一个单跳检索操作集接口$U_{ret}$，</p>
 <p>2、KG-R1智能体</p>
@@ -407,19 +528,19 @@
 <h2 id="KG-R1-Training-With-RL"><a href="#KG-R1-Training-With-RL" class="headerlink" title="KG-R1 Training With RL"></a>KG-R1 Training With RL</h2><p>通过使用GRPO强化学习算法微调轻量化开源模型找到一个策略，使得KG-R1 智能体学会通过多轮交互有效检索知识图谱上的推理路径并生成精确的答案。</p>
 <p>奖励函数：单轮回合奖励 + 全局结果奖励</p>
 <p>回合奖励：</p>
-<p><img src="/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
-<p><img src="/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
+<p><img src="/undefined/KG-R1/%E5%A5%96%E5%8A%B1%E5%87%BD%E6%95%B01.png" alt="奖励函数1"></p>
+<p><img src="/undefined/KG-R1/%E5%A5%96%E5%8A%B1%E5%8F%8A%E4%BC%98%E5%8A%BF%E5%87%BD%E6%95%B0.png" alt="奖励及优势函数"></p>
 <p>同一批 rollouts 里，谁比平均表现好 → 正优势，差 → 负优势</p>
 <p>用 同一个 group 基线，就不需要额外训练一个 value 网络（这就是 GRPO 最大的区别）</p>
 <p>把优势分到每一个token：</p>
-<p><img src="/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
+<p><img src="/undefined/KG-R1/%E5%B9%B3%E5%9D%87%E5%88%86%E9%85%8Dtoken.png" alt="平均分配token"></p>
 <p>在第 nnn 条轨迹第 ttt 轮的输出文本中，有一连串 token </p>
 <p>只对「agent 生成的部分」（不包括系统 prompt、用户 problem）打梯度</p>
 <p>然后把同一个 step 的优势分给该 step 的每个有效 token</p>
 <p>本质目的：无论增大还是减小概率，每次更新都别太猛。</p>
-<p><img src="/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
+<p><img src="/undefined/KG-R1/%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0.png" alt="目标函数"></p>
 <p>重要性采样比率：</p>
-<p><img src="/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
+<p><img src="/undefined/KG-R1/%E9%87%8D%E8%A6%81%E6%80%A7%E9%87%87%E6%A0%B7%E7%AD%96%E7%95%A5.png" alt="重要性采样策略"></p>
 <p>KL散度的作用：限制当前策略要偏离参考策略 （通常是初始模型）太远，防止训练发散。</p>
 <p>当当前策略和初始策略的比例相差太多时，即使前面的PPO-clip将策略提高太多时，后面的KL散度也可以按照一定的比例进行惩罚。</p>
 <p><strong>在每个 token 上做一个 PPO 式的策略梯度更新</strong></p>
@@ -434,15 +555,15 @@
 <p>无 KG 方法: Vanilla LLM, Chain-of-Thought (CoT)。</p>
 <p>KG-RAG 方法: RoG (微调 LLaMA2-7B), ToG (GPT-3.5), ReKnoS (GPT-4o-mini) 。</p>
 <p>训练数据: 在 WebQSP (Freebase子集) 和 CWQ (Complex WebQuestions, 复杂多跳) 上进行训练 。</p>
-<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/KG-R1/result_comparison.png" alt="result_comparison"></p>
+<h3 id="对比实验结果"><a href="#对比实验结果" class="headerlink" title="对比实验结果"></a>对比实验结果</h3><p><img src="/undefined/KG-R1/result_comparison.png" alt="result_comparison"></p>
 <h3 id="跨图谱迁移实验结果"><a href="#跨图谱迁移实验结果" class="headerlink" title="跨图谱迁移实验结果"></a>跨图谱迁移实验结果</h3><p>跨图谱迁移能力</p>
 <ol>
 <li>直接使用在 WebQSP 或 CWQ 上训练好的 Agent 模型。</li>
 <li>不进行任何微调，直接更换后端的 KG Server 数据源。</li>
 <li>在全新的数据集上进行测试。</li>
 </ol>
-<p><img src="/KG-R1/cross_result.png" alt="cross_result"></p>
-<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/KG-R1/ablation_result.png" alt="ablation_result"></p>
+<p><img src="/undefined/KG-R1/cross_result.png" alt="cross_result"></p>
+<h3 id="消融实验结果"><a href="#消融实验结果" class="headerlink" title="消融实验结果"></a>消融实验结果</h3><p><img src="/undefined/KG-R1/ablation_result.png" alt="ablation_result"></p>
 ]]></content>
       <categories>
         <category>论文笔记</category>
@@ -454,14 +575,97 @@
       </tags>
   </entry>
   <entry>
+    <title>开始是结束的开始？愿我们都能成为生活的高手！</title>
+    <url>/undefined/We-Made-a-Beautiful-Bouquet/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>有着诸多相同的兴趣爱好的恋人</p>
+<p>最后却以遗憾结束……</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/00.webp" alt="00"></p>
+<h2 id="邂逅、同频"><a href="#邂逅、同频" class="headerlink" title="邂逅、同频"></a>邂逅、同频</h2><p>山音麦、八谷绢</p>
+<p>两个错过末班地铁的大学生意外发现两人的兴趣爱好出奇的一致</p>
+<p>两人都喜欢相同的电影、音乐和文学作品</p>
+<p>都喜欢用电影票当书签</p>
+<p>都好奇石头剪刀布的规则，为什么布能赢石头？明明石头能将布戳个洞</p>
+<p>还都一起错过了同一个喜剧专场</p>
+<p>在几次交谈中</p>
+<p>两人互生好感</p>
+<p>渐生情愫</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/01.webp" alt="01"></p>
+<h2 id="热恋、纯粹"><a href="#热恋、纯粹" class="headerlink" title="热恋、纯粹"></a>热恋、纯粹</h2><p>毕业，同居</p>
+<p>两人在多摩川河畔的出租屋过着惬意的日子</p>
+<p>麦以兼职插画赚钱</p>
+<p>绢在冰淇淋店兼职</p>
+<p>领养黑猫男爵</p>
+<p>去老夫妇的面包房买喜欢的面包</p>
+<p>下班后回家的三十分钟散步时间</p>
+<p>是两人最温馨的记忆</p>
+<p>阳台上，麦对绢说</p>
+<p>我的人生目标就是，一直跟你过现在这样的生活。</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/02.webp" alt="02"></p>
+<h2 id="现实、错位"><a href="#现实、错位" class="headerlink" title="现实、错位"></a>现实、错位</h2><p>没有坚实的物质基础的保障下</p>
+<p>理想的乌托邦式的恋爱生活不能长久</p>
+<p>一张插画由一千日元降到三张插画一千日元（约44RMB）</p>
+<p>麦不得不开始找工作</p>
+<p>绢考上了会计师证</p>
+<p>先找到了一份朝九晚五的工作</p>
+<p>随后几经面试</p>
+<p>麦也入职一家初创物流公司</p>
+<p>由此开始</p>
+<p>生活、工作、理想不能同时兼顾</p>
+<p>绢在下班后可以看书、打游戏，维持喜好</p>
+<p>麦却不得不频繁加班，作策划</p>
+<p>两人都想照顾对方的感受</p>
+<p>但慢慢出现分歧</p>
+<p>两双不同鞋子的特写</p>
+<p>后备箱中扔掉的书籍</p>
+<p>都表明两人不再同频</p>
+<p>刚开始的两人只是想过好普通生活</p>
+<p>最后发现并不容易</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/03.webp" alt="03"></p>
+<h2 id="终焉、释然"><a href="#终焉、释然" class="headerlink" title="终焉、释然"></a>终焉、释然</h2><p>在朋友的婚礼上</p>
+<p>两人向各自的好友袒露心声</p>
+<p>现在的爱情和完全不同于刚开始的模样</p>
+<p>重回告白的地点</p>
+<p>看见一对情侣</p>
+<p>和当初的自己一样</p>
+<p>热烈、纯真、充满可能</p>
+<p>又想到当初的甜蜜和当下的遗憾</p>
+<p>两人相拥落泪</p>
+<p>决定分手</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/04.webp" alt="04"></p>
+<p>电影好似绝大多数情侣的真实写照</p>
+<p>从百分百合拍到长时间消耗和平分手</p>
+<p>本质还是没有物质保障</p>
+<p>为了更好的生活</p>
+<p>必须要放弃一部分</p>
+<p>麦的理想主义最终被工作的琐碎磨灭</p>
+<p>作为旁观者而言</p>
+<p>多希望他能平衡好工作和生活</p>
+<p>想了想，即使两人衣食无忧</p>
+<p>可能也有其他插曲来干扰正常的生活节奏</p>
+<p><img src="/undefined/We-Made-a-Beautiful-Bouquet/05.webp" alt="05"></p>
+<p>我们普通人所能借鉴的</p>
+<p>只是经营好自己的生活</p>
+<p>借用房客中乐瑶的名言</p>
+<p>希望我们每个人，都能做生活的高手</p>
+]]></content>
+      <categories>
+        <category>电影</category>
+      </categories>
+      <tags>
+        <tag>花束般的恋爱</tag>
+        <tag>有村架纯</tag>
+        <tag>电影</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java并发编程</title>
-    <url>/Multithreading.html</url>
+    <url>/undefined/Multithreading/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>多线程是指在一个程序中同时执行多个线程，每个线程都有自己独立的执行路径。在多线程中，程序的执行可以同时进行多个任务，从而提高系统的资源利用率和响应性能。</p>
 <p>在传统的单线程编程模型中，程序按照顺序执行，一次只处理一个任务。这种方式在某些情况下可能会导致效率低下或者无法满足需求。而多线程通过将任务拆分为多个子任务，并且在不同的线程上同时执行，从而实现并发处理。</p>
 <h2 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h2><p>操作系统层面划分线程状态</p>
-<p><img src="/Multithreading/thread-status.png" alt="操作系统层面划分线程状态"></p>
+<p><img src="/undefined/Multithreading/thread-status.png" alt="操作系统层面划分线程状态"></p>
 <p>java代码层面划分线程状态</p>
-<p><img src="/Multithreading/thread-status-java.png" alt="java代码层面划分线程状态"></p>
+<p><img src="/undefined/Multithreading/thread-status-java.png" alt="java代码层面划分线程状态"></p>
 <h2 id="四种创建线程的方式"><a href="#四种创建线程的方式" class="headerlink" title="四种创建线程的方式"></a>四种创建线程的方式</h2><h3 id="继承-Thread-类"><a href="#继承-Thread-类" class="headerlink" title="继承 Thread 类"></a>继承 Thread 类</h3><p>继承 Thread 类并重写 run() 方法，直接创建 Thread 子类对象并调用 start() 方法启动线程。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyThread</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name);  <span class="comment">// 调用父类 Thread 的构造函数设置名称</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)&#123;</span><br><span class="line">            log.info(<span class="string">&quot;Thread ：&#123;&#125;&quot;</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">MyThread</span>(<span class="string">&quot;haibara&quot;</span>).start();</span><br></pre></td></tr></table></figure>
 
@@ -613,7 +817,7 @@
 
 
 
-<h3 id="线程池工作流"><a href="#线程池工作流" class="headerlink" title="线程池工作流"></a>线程池工作流</h3><p><img src="/Multithreading/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.png" alt="线程池工作流"></p>
+<h3 id="线程池工作流"><a href="#线程池工作流" class="headerlink" title="线程池工作流"></a>线程池工作流</h3><p><img src="/undefined/Multithreading/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.png" alt="线程池工作流"></p>
 <blockquote>
 <p>线程池采用“懒加载”方式创建线程，以降低资源消耗并提高系统稳定性。</p>
 </blockquote>
@@ -656,213 +860,9 @@
       </tags>
   </entry>
   <entry>
-    <title>开始是结束的开始？愿我们都能成为生活的高手！</title>
-    <url>/We-Made-a-Beautiful-Bouquet.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>有着诸多相同的兴趣爱好的恋人</p>
-<p>最后却以遗憾结束……</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/00.webp" alt="00"></p>
-<h2 id="邂逅、同频"><a href="#邂逅、同频" class="headerlink" title="邂逅、同频"></a>邂逅、同频</h2><p>山音麦、八谷绢</p>
-<p>两个错过末班地铁的大学生意外发现两人的兴趣爱好出奇的一致</p>
-<p>两人都喜欢相同的电影、音乐和文学作品</p>
-<p>都喜欢用电影票当书签</p>
-<p>都好奇石头剪刀布的规则，为什么布能赢石头？明明石头能将布戳个洞</p>
-<p>还都一起错过了同一个喜剧专场</p>
-<p>在几次交谈中</p>
-<p>两人互生好感</p>
-<p>渐生情愫</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/01.webp" alt="01"></p>
-<h2 id="热恋、纯粹"><a href="#热恋、纯粹" class="headerlink" title="热恋、纯粹"></a>热恋、纯粹</h2><p>毕业，同居</p>
-<p>两人在多摩川河畔的出租屋过着惬意的日子</p>
-<p>麦以兼职插画赚钱</p>
-<p>绢在冰淇淋店兼职</p>
-<p>领养黑猫男爵</p>
-<p>去老夫妇的面包房买喜欢的面包</p>
-<p>下班后回家的三十分钟散步时间</p>
-<p>是两人最温馨的记忆</p>
-<p>阳台上，麦对绢说</p>
-<p>我的人生目标就是，一直跟你过现在这样的生活。</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/02.webp" alt="02"></p>
-<h2 id="现实、错位"><a href="#现实、错位" class="headerlink" title="现实、错位"></a>现实、错位</h2><p>没有坚实的物质基础的保障下</p>
-<p>理想的乌托邦式的恋爱生活不能长久</p>
-<p>一张插画由一千日元降到三张插画一千日元（约44RMB）</p>
-<p>麦不得不开始找工作</p>
-<p>绢考上了会计师证</p>
-<p>先找到了一份朝九晚五的工作</p>
-<p>随后几经面试</p>
-<p>麦也入职一家初创物流公司</p>
-<p>由此开始</p>
-<p>生活、工作、理想不能同时兼顾</p>
-<p>绢在下班后可以看书、打游戏，维持喜好</p>
-<p>麦却不得不频繁加班，作策划</p>
-<p>两人都想照顾对方的感受</p>
-<p>但慢慢出现分歧</p>
-<p>两双不同鞋子的特写</p>
-<p>后备箱中扔掉的书籍</p>
-<p>都表明两人不再同频</p>
-<p>刚开始的两人只是想过好普通生活</p>
-<p>最后发现并不容易</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/03.webp" alt="03"></p>
-<h2 id="终焉、释然"><a href="#终焉、释然" class="headerlink" title="终焉、释然"></a>终焉、释然</h2><p>在朋友的婚礼上</p>
-<p>两人向各自的好友袒露心声</p>
-<p>现在的爱情和完全不同于刚开始的模样</p>
-<p>重回告白的地点</p>
-<p>看见一对情侣</p>
-<p>和当初的自己一样</p>
-<p>热烈、纯真、充满可能</p>
-<p>又想到当初的甜蜜和当下的遗憾</p>
-<p>两人相拥落泪</p>
-<p>决定分手</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/04.webp" alt="04"></p>
-<p>电影好似绝大多数情侣的真实写照</p>
-<p>从百分百合拍到长时间消耗和平分手</p>
-<p>本质还是没有物质保障</p>
-<p>为了更好的生活</p>
-<p>必须要放弃一部分</p>
-<p>麦的理想主义最终被工作的琐碎磨灭</p>
-<p>作为旁观者而言</p>
-<p>多希望他能平衡好工作和生活</p>
-<p>想了想，即使两人衣食无忧</p>
-<p>可能也有其他插曲来干扰正常的生活节奏</p>
-<p><img src="/We-Made-a-Beautiful-Bouquet/05.webp" alt="05"></p>
-<p>我们普通人所能借鉴的</p>
-<p>只是经营好自己的生活</p>
-<p>借用房客中乐瑶的名言</p>
-<p>希望我们每个人，都能做生活的高手</p>
-]]></content>
-      <categories>
-        <category>电影</category>
-      </categories>
-      <tags>
-        <tag>花束般的恋爱</tag>
-        <tag>有村架纯</tag>
-        <tag>电影</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL中如何执行一条select语句？</title>
-    <url>/How_to_execute_a_select_statement_in_MySQL.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>由一条select语句的执行流程，了解MySQL的内部结构！</p>
-<h2 id="MySQL架构"><a href="#MySQL架构" class="headerlink" title="MySQL架构"></a>MySQL架构</h2><p>下图是MySQL的整体架构，主要分为两层，Server层和存储引擎。</p>
-<img src="http://picgo.xuduyinuo.cn/imgs/20260104095558721.webp" alt="MySQL架构图" style="zoom: 25%;" />
-
-
-
-<p>Server层：负责建立连接、分析和执行 SQL</p>
-<p>包含核心功能模块：连接器、查询缓存（8.0版本移除）、解析器、预处理器、优化器、执行器、内置函数（如日期、时间、数学和加密函数等）和所有跨存储引擎的功能（存储过程、触发器、视图）。</p>
-<p>存储引擎：负责数据的存储和提取</p>
-<p>支持多种存储引擎，不同存储引擎共用同一个Server层，默认存储引擎为InnoDB。</p>
-<h2 id="连接器"><a href="#连接器" class="headerlink" title="连接器"></a>连接器</h2><p>使用MySQL之前需要先进行连接（登录）MySQL服务，然后才能执行SQL语句，连接语句如下：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="operator">-</span>h 指定 MySQL 服务得 IP 地址，如果是连接本地的 MySQL服务，可以不用这个参数；</span><br><span class="line"># <span class="operator">-</span>u 指定用户名，管理员角色名为 root；</span><br><span class="line"># <span class="operator">-</span>p 指定密码，如果命令行中不填写密码（为了密码安全，建议不要在命令行写密码），就需要在交互对话里面输入密码</span><br><span class="line">mysql <span class="operator">-</span>h$ip <span class="operator">-</span>u$<span class="keyword">user</span> <span class="operator">-</span>p</span><br></pre></td></tr></table></figure>
-
-<p>连接过程需要经过TCP三次握手，连接之前确保启动MySQL服务，使用正确的用户名和密码，连接成功如下</p>
-<img src="http://picgo.xuduyinuo.cn/imgs/20260104102100681.webp" alt="image-20260104102048666" style="zoom:50%;" />
-
-<p>连接成功后连接器就会获取该用户的权限，然后保存起来，后续该用户在此连接里的任何操作，都会基于连接开始时读到的权限进行权限逻辑的判断。所以，如果一个用户已经建立了连接，即使管理员中途修改了该用户的权限，也不会影响已经存在连接的权限。修改完成后，只有再新建的连接才会使用新的权限设置。</p>
-<p>查看当前MySQL服务被多少个客户端连接：show processlist</p>
-<p><img src="http://picgo.xuduyinuo.cn/imgs/20260104103235296.webp" alt="image-20260104103233284"></p>
-<p>空闲连接</p>
-<p>MySQL 定义了空闲连接的最大空闲时长，由 wait_timeout 参数控制的，默认值是 8 小时（28880秒），如果空闲连接超过了这个时间，连接器就会自动将它断开。</p>
-<p>使用的是 kill connection + id 命令手动断开空闲连接。</p>
-<p>MySQL 的连接数限制</p>
-<p>MySQL 服务支持的最大连接数由 max_connections 参数控制，默认是 151 。</p>
-<p>短连接和长连接</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span> 短连接</span><br><span class="line">连接 mysql 服务（TCP 三次握手）</span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">断开 mysql 服务（TCP 四次挥手）</span><br><span class="line"></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span> 长连接</span><br><span class="line">连接 mysql 服务（TCP 三次握手）</span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">执行<span class="keyword">sql</span></span><br><span class="line">....</span><br><span class="line">断开 mysql 服务（TCP 四次挥手）</span><br></pre></td></tr></table></figure>
-
-<p>长连接可以减少建立连接和断开连接的过程，所以一般是推荐使用长连接</p>
-<p>长连接后可能会占用内存增多，因为 MySQL 在执行查询过程中临时使用内存管理连接对象，这些连接对象资源只有在连接断开时才会释放。如果长连接累计很多，将导致 MySQL 服务占用内存太大，有可能会被系统强制杀掉，这样会发生 MySQL 服务异常重启的现象。</p>
-<p>总结连接器流程：</p>
-<p>1、与客户端进行 TCP 三次握手建立连接；</p>
-<p>2、校验客户端的用户名和密码，如果用户名或密码不对，则会报错；</p>
-<p>3、如果用户名和密码都对了，会读取该用户的权限，然后后面的权限逻辑判断都基于此时读取到的权限；</p>
-<h2 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h2><p>连接器得工作完成后，客户端就可以向 MySQL 服务发送 SQL 语句了，MySQL 服务收到 SQL 语句后，就会解析出 SQL 语句的第一个字段，看看是什么类型的语句。</p>
-<p>在8.0之前的版本中，如果SQL是select语句，MySQL会先进行查询缓存，如果命中则直接返回，未命中则继续执行。</p>
-<p>对于更新比较频繁的表，查询缓存的命中率很低的，因为只要一个表有更新操作，那么这个表的查询缓存就会被清空。</p>
-<h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><p>在正式执行 SQL 查询语句之前， MySQL 会先对 SQL 语句做解析。</p>
-<p>词法分析：</p>
-<p>把字符串切成 token，MySQL 会根据你输入的字符串识别出关键字</p>
-<p>语法分析：</p>
-<p>根据词法分析的结果，语法解析器会根据语法规则，判断你输入的这个 SQL 语句是否满足 MySQL 语法，如果没问题就会构建出 SQL 语法树，这样方便后面模块获取 SQL 类型、表名、字段名、 where 条件等等。</p>
-<img src="http://picgo.xuduyinuo.cn/imgs/20260104155413190.webp" alt="image-20260104155407094" style="zoom:50%;" />
-
-<h2 id="执行SQL流程"><a href="#执行SQL流程" class="headerlink" title="执行SQL流程"></a>执行SQL流程</h2><h3 id="预处理器"><a href="#预处理器" class="headerlink" title="预处理器"></a>预处理器</h3><p>检查 SQL 查询语句中的表或者字段是否存在；</p>
-<p>将 <code>select *</code> 中的 <code>*</code> 符号，扩展为表上的所有列；</p>
-<p>预处理器负责把解析器产出的语法结构“落到真实的库表对象上”，让一条语句从“语法正确”变成“语义可执行”。它会解析并确认语句里引用的库、表、列等对象是否存在且可访问（比如表不存在会在这一阶段直接报错），同时会把 <code>select *</code> 这类模糊表达展开成明确的列清单，必要时也会完成与权限、类型相关的基础校验。</p>
-<p>它的作用是尽早发现“对象&#x2F;语义层面”的问题并把查询规格化，为后续生成执行计划提供准确输入。</p>
-<h3 id="优化器"><a href="#优化器" class="headerlink" title="优化器"></a>优化器</h3><p>经过预处理阶段后，还需要为 SQL 查询语句先制定一个执行计划。</p>
-<p>优化器负责为这条 SQL 选择一条成本更低的执行计划，核心就是在多种可行访问路径之间做取舍，例如决定走主键索引、二级索引还是全表扫描，以及能否利用覆盖索引来避免回表、能否使用索引下推来减少不必要的回表与记录传递等。它会基于统计信息与代价模型评估不同方案的开销，最终确定执行过程中“怎么访问数据、以什么顺序和方式取数”的策略；</p>
-<p>它的作用是把同一个逻辑查询变成尽可能高效的物理执行方案，<code>EXPLAIN</code> 里看到的 key&#x2F;type&#x2F;Extra 等信息本质上就是优化器决策的外化结果。</p>
-<h3 id="执行器"><a href="#执行器" class="headerlink" title="执行器"></a>执行器</h3><p>经历完优化器后，就确定了执行方案，接下来 MySQL 就真正开始执行语句了，这个工作是由「执行器」完成的。在执行的过程中，执行器就会和存储引擎交互了，交互是以记录为单位的。根据执行计划执行 SQL 查询语句，从存储引擎读取记录，返回给客户端。</p>
-<p>负责按优化器给定的执行计划真正把查询跑起来，并在执行过程中以记录为单位与存储引擎交互：该走索引就调用引擎的索引读取接口定位第一条或下一条记录，该全表扫就让引擎顺序返回记录，然后在 Server 层对返回的记录做条件判断与表达式计算，满足条件的就逐步发送给客户端，直到读完或满足停止条件为止。在索引下推场景下，执行器会把部分原本由 Server 层做的过滤条件交给引擎在索引层先筛掉，从而减少回表次数与数据搬运。它的作用是把“计划”转化为具体的读、判、发动作，协调 Server 层与存储引擎完成整条语句的实际执行。</p>
-<p>三种方式：</p>
-<p>主键索引查询</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> product <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<p>以上面的SQL语句为例，这条查询语句的查询条件用到了主键索引，而且是等值查询，同时主键 id 是唯一，不会有 id 相同的记录，所以优化器决定选用访问类型为 const 进行查询，也就是使用主键索引查询一条记录，那么执行器与存储引擎的执行流程是这样的：</p>
-<blockquote>
-<p>1、执行器第一次查询，会调用 read_first_record 函数指针指向的函数，因为优化器选择的访问类型为 const，这个函数指针被指向为 InnoDB 引擎索引查询的接口，把条件 id &#x3D; 1 交给存储引擎，让存储引擎定位符合条件的第一条记录。</p>
-<p>2、存储引擎通过主键索引的 B+ 树结构定位到 id &#x3D; 1的第一条记录，如果记录是不存在的，就会向执行器上报记录找不到的错误，然后查询结束。如果记录是存在的，就会将记录返回给执行器；</p>
-<p>3、执行器从存储引擎读到记录后，接着判断记录是否符合查询条件，如果符合则发送给客户端，如果不符合则跳过该记录。</p>
-<p>4、执行器查询的过程是一个 while 循环，所以还会再查一次，但是这次因为不是第一次查询了，所以会调用 read_record 函数指针指向的函数，因为优化器选择的访问类型为 const，这个函数指针被指向为一个永远返回 - 1 的函数，所以当调用该函数的时候，执行器就退出循环，也就是结束查询了。</p>
-</blockquote>
-<p>全表扫描</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> product <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;iphone&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>以上面的SQL语句为例，这条查询语句的查询条件没有用到索引，所以优化器决定选用访问类型为 ALL 进行查询，也就是全表扫描的方式查询，那么这时执行器与存储引擎的执行流程是这样的：</p>
-<blockquote>
-<p>1、执行器第一次查询，会调用 read_first_record 函数指针指向的函数，因为优化器选择的访问类型为 all，这个函数指针被指向为 InnoDB 引擎全扫描的接口，让存储引擎读取表中的第一条记录；</p>
-<p>执行器会判断读到的这条记录的 name 是不是 iphone，如果不是则跳过；如果是则将记录发给客户的（是的没错，Server 层每从存储引擎读到一条记录就会发送给客户端，之所以客户端显示的时候是直接显示所有记录的，是因为客户端是等查询语句查询完成后，才会显示出所有的记录）。</p>
-<p>3、执行器查询的过程是一个 while 循环，所以还会再查一次，会调用 read_record 函数指针指向的函数，因为优化器选择的访问类型为 all，read_record 函数指针指向的还是 InnoDB 引擎全扫描的接口，所以接着向存储引擎层要求继续读刚才那条记录的下一条记录，存储引擎把下一条记录取出后就将其返回给执行器（Server层），执行器继续判断条件，不符合查询条件即跳过该记录，否则发送到客户端；</p>
-<p>4、一直重复上述过程，直到存储引擎把表中的所有记录读完，然后向执行器（Server层） 返回了读取完毕的信息；</p>
-<p>5、执行器收到存储引擎报告的查询完毕的信息，退出循环，停止查询。</p>
-</blockquote>
-<p>索引下推</p>
-<p>mysql 5.6 推出的查询优化策略。</p>
-<p>索引下推能够<strong>减少</strong> <strong>二级索引</strong> 在查询时的<strong>回表操作</strong>，提高查询效率，因为它将 server 层部分负责的事交给了存储引擎层去处理。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">有一个字段如下的表，且对 age 和 reward 字段建立了联合索引。</span><br><span class="line"> id    name     age      reward</span><br><span class="line"> </span><br><span class="line"> 有如下的查询语句</span><br><span class="line"> <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_user <span class="keyword">where</span> age <span class="operator">&gt;</span> <span class="number">20</span> <span class="keyword">and</span> reward <span class="operator">=</span> <span class="number">100000</span>;</span><br></pre></td></tr></table></figure>
-
-<p>联合索引当遇到范围查询 (&gt;、&lt;) 就会停止匹配，也就是 <strong>age 字段能用到联合索引，但是 reward 字段则无法利用到索引</strong>。</p>
-<p>不使用索引下推时（mysql 5.6版本之前），执行器与存储引擎的执行流程如下：</p>
-<blockquote>
-<p>1、Server 层首先调用存储引擎的接口定位到满足查询条件的第一条二级索引记录，也就是定位到 age &gt; 20 的第一条记录；</p>
-<p>2、存储引擎根据二级索引的 B+ 树快速定位到这条记录后，获取主键值，然后进行回表操作，将完整的记录返回给 Server 层；</p>
-<p>3、Server 层在判断该记录的 reward 是否等于 100000，如果成立则将其发送给客户端；否则跳过该记录；</p>
-<p>4、接着，继续向存储引擎索要下一条记录，存储引擎在二级索引定位到记录后，获取主键值，然后回表操作，将完整的记录返回给 Server 层；</p>
-<p>5、如此往复，直到存储引擎把表中的所有记录读完。</p>
-<p>可以看到，没有索引下推的时候，每查询到一条二级索引记录，都要进行回表操作，然后将记录返回给 Server，接着 Server 再判断该记录的 reward 是否等于 100000。</p>
-</blockquote>
-<p>而使用索引下推后，判断记录的 reward 是否等于 100000 的工作交给了存储引擎层，过程如下 ：</p>
-<blockquote>
-<p>1、Server 层首先调用存储引擎的接口定位到满足查询条件的第一条二级索引记录，也就是定位到 age &gt; 20 的第一条记录；</p>
-<p>存储引擎定位到二级索引后，先不执行回表操作，而是先判断一下该索引中包含的列（reward列）的条件（reward 是否等于 100000）是否成立。如果条件不成立，则直接跳过该二级索引。如果成立，则执行回表操作，将完成记录返回给 Server 层。</p>
-<p>3、Server 层在判断其他的查询条件（本次查询没有其他条件）是否成立，如果成立则将其发送给客户端；否则跳过该记录，然后向存储引擎索要下一条记录。</p>
-<p>4、如此往复，直到存储引擎把表中的所有记录读完。</p>
-<p>可以看到，使用了索引下推后，虽然 reward 列无法使用到联合索引，但是因为它包含在联合索引（age，reward）里，所以直接在存储引擎过滤出满足 reward &#x3D; 100000 的记录后，才去执行回表操作获取整个记录。相比于没有使用索引下推，节省了很多回表操作。</p>
-</blockquote>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>执行一条 SQL 查询语句，期间发生了什么？</p>
-<ul>
-<li>连接器：建立连接，管理连接、校验用户身份；</li>
-<li>查询缓存：查询语句如果命中查询缓存则直接返回，否则继续往下执行。MySQL 8.0 已删除该模块；</li>
-<li>解析 SQL，通过解析器对 SQL 查询语句进行词法分析、语法分析，然后构建语法树，方便后续模块读取表名、字段、语句类型；</li>
-<li>执行 SQL：执行 SQL 共有三个阶段：<ul>
-<li>预处理阶段：检查表或字段是否存在；将 <code>select *</code> 中的 <code>*</code> 符号扩展为表上的所有列。</li>
-<li>优化阶段：基于查询成本的考虑， 选择查询成本最小的执行计划；</li>
-<li>执行阶段：根据执行计划执行 SQL 查询语句，从存储引擎读取记录，返回给客户端；</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十大经典排序算法</title>
-    <url>/sort-algorithm.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><img src="/sort-algorithm/sort.png" alt="sort_algorithm"></p>
+    <url>/undefined/sort-algorithm/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><img src="/undefined/sort-algorithm/sort.png" alt="sort_algorithm"></p>
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>比较相邻元素，如果顺序不对就交换，每一轮都找到一个最大&#x2F;最小的数移动到末尾或开头</p>
 <p>重复完成剩余的待排序元素</p>
 <p>代码详解：</p>
