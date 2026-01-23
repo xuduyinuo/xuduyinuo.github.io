@@ -1,3 +1,9 @@
 User-agent: *
-Disallow: /
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Disallow: /js/
+Disallow: /css/
+
 Sitemap: https://blog.xuduyinuo.cn/sitemap.xml
