@@ -197,6 +197,20 @@
   </url>
   
   <url>
+    <loc>https://blog.xuduyinuo.cn/tags/JUC/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/tags/Java/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xuduyinuo.cn/tags/hexo/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -232,28 +246,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/JUC/</loc>
+    <loc>https://blog.xuduyinuo.cn/tags/algorithm/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/Java/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/tags/MySQL/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.xuduyinuo.cn/tags/sort/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -281,14 +281,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/algorithm/</loc>
+    <loc>https://blog.xuduyinuo.cn/tags/MySQL/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/tags/sort/</loc>
+    <loc>https://blog.xuduyinuo.cn/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -298,6 +298,13 @@
   
   <url>
     <loc>https://blog.xuduyinuo.cn/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xuduyinuo.cn/categories/Java/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -318,14 +325,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/categories/Java/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xuduyinuo.cn/categories/MySQL/</loc>
+    <loc>https://blog.xuduyinuo.cn/categories/algorithm/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -339,7 +339,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xuduyinuo.cn/categories/algorithm/</loc>
+    <loc>https://blog.xuduyinuo.cn/categories/MySQL/</loc>
     <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
