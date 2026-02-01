@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: xudu
-subtitle: blog
+title: Xudu's Blog
+subtitle:
 description: 把苦难当作恶魔果实！！！
 keywords:
 author: xudu
@@ -13,9 +13,10 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://blog.xuduyinuo.cn
+url: https://blog.xuduyinuo.cn
 root: /
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: post/:title
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -30,6 +31,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - 'google4531c679b0fb8e5e.html'
+  - 'baidu_verify_codeva-v1SYRJjGbb.html'
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -103,9 +106,42 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+search:
+  path: search.xml
+  field: post
+  format: html
+  content: true
+  limit: 10000
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repository: git@github.com:xuduyinuo/xuduyinuo.github.io.git
-  branch: main
+  - type: git
+    repository: git@github.com:xuduyinuo/xuduyinuo.github.io.git
+    branch: main
+  - type: baidu_url_submitter 
+
+aplayer:
+  meting: true
+  asset_inject: true
+  cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js  # 引用 APlayer.js 外部 CDN 地址
+  style_cdn: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css # 引用 APlayer.css 外部 CDN 地址
+
+# Auto Generate sitemap
+sitemap:
+  url: https://blog.xuduyinuo.cn
+  path: sitemap.xml
+baidusitemap:
+  url: https://blog.xuduyinuo.cn  # 自己的域名
+  path: baidusitemap.xml #站点地图文件名称 
+
+
+baidu_url_submit:
+  count: 1             # 提交最新的多少个链接
+  host: blog.xuduyinuo.cn    # 在百度站长平台中添加的域名，截图中对应的site
+  token: LL1QdwLNH5iFMZxj      # 秘钥  截图中对应的token
+  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
+
+
+

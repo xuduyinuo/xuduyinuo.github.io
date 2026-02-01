@@ -2,12 +2,12 @@
 title: 十大经典排序算法
 date: 2025-11-22 17:59:14
 tags: 
-	- algorithm
-	- sort
+  - algorithm
+  - sort
 categories: algorithm
 ---
 
-# 十大经典排序算法
+
 
 ![sort_algorithm](sort-algorithm/sort.png)
 
@@ -380,7 +380,67 @@ public class CountingSort implements IArraySort{
 
 ## 堆排序
 
-待续……
+堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。堆排序可以说是一种利用堆的概念来排序的选择排序。分为两种方法：大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列；小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列。
+```java
+/**
+ * @ClassName HeapSort
+ * @Description
+ * @Author xudu
+ * @Time 2026/1/4 21:06
+ */
+public class HeapSort implements IArraySort{
+    @Override
+    public int[] sort(int[] sourceArray) {
+        // 对 arr 进行拷贝，不改变参数内容
+        int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
+
+        int len = arr.length;
+      
+        for (int i = 0; i < len; i++) {
+            heapInsert(arr, i);
+        }
+        int size = arr.length;
+        while (size > 1) {
+            swap(arr,0, --size);
+            heapify1(arr,0, size);
+        }
+        return arr;
+    }
+
+    // i位置的数，向上调整大根堆
+    public void heapInsert(int[] arr, int i) {
+        while (i > 0 && arr[i] > arr[(i - 1) / 2]) {
+            swap(arr, i, (i - 1) / 2);
+            i = (i - 1) / 2;
+        }
+    }
+
+    // i位置的数，向下调整大根堆
+    // 当前堆的大小为size
+    public void heapify1(int[] arr, int i, int size) {
+        int l = i * 2 + 1;
+        while (l < size) {
+            int best = l + 1 < size && arr[l + 1] > arr[l] ? l + 1 : l;
+            best = arr[best] > arr[i] ? best : i;
+            if (best == i) {
+                break;
+            }
+            swap(arr, best, i);
+            i = best;
+            l = i * 2 + 1;
+        }
+    }
+
+
+    private void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+}
+```
+
+
 
 
 

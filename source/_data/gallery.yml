@@ -1,0 +1,17 @@
+- class_name: 生活点滴
+  class_desc: 记录一些日常内容
+  cover: /imgs/lanyangyang.png  # 使用以 / 开头的绝对路径
+  img_list:
+    - url: /imgs/lanyangyang.png
+      alt: 懒洋洋
+    - url: /imgs/index_img.png
+      alt: 主页图
+
+- class_name: AI 绘图
+  class_desc: 运行 Midjourney 生成的图片
+  cover: /imgs/index_img.png
+  img_list:
+    - url: /imgs/lanyangyang.png
+      alt: 懒洋洋
+    - url: /imgs/index_img.png
+      alt: 主页图
