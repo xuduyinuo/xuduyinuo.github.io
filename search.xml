@@ -978,4 +978,134 @@
         <tag>GraphRAG</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Tmux 使用教程</title>
+    <url>/post/tmux-tutorial/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>tmux（Terminal Multiplexer）是一个终端复用工具，它允许你在单个终端窗口中创建多个虚拟终端会话，并能保持这些会话在后台运行。与直接使用终端相比，tmux 提供了更强大的会话管理功能。</p>
+<h2 id="安装Tmux"><a href="#安装Tmux" class="headerlink" title="安装Tmux"></a>安装Tmux</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Ubuntu/Debian</span></span><br><span class="line">sudo apt-get install tmux</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">CentOS/RHEL</span></span><br><span class="line">sudo yum install tmux</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">macOS (使用 Homebrew)</span></span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure>
+
+<h2 id="理解-Tmux-的三层关系"><a href="#理解-Tmux-的三层关系" class="headerlink" title="理解 Tmux 的三层关系"></a>理解 Tmux 的三层关系</h2><ol>
+<li><strong>会话</strong>：一个独立的后台工作区。你关掉终端窗口，里面的程序<strong>继续运行</strong>。</li>
+<li><strong>窗口</strong>：会话里的不同标签页，相当于浏览器里打开了多个网页。</li>
+<li><strong>窗格</strong>：一个窗口内分割出来的小屏幕，方便你同时看日志、写代码、跑命令。</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">会话: 我的项目A</span><br><span class="line">  ├── 窗口1: 代码编辑器</span><br><span class="line">  │     ├── 窗格1: Vim 写代码</span><br><span class="line">  │     └── 窗格2: 运行测试脚本</span><br><span class="line">  └── 窗口2: 系统监控</span><br><span class="line">        └── 窗格1: htop 看性能</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Tmux-快捷键"><a href="#Tmux-快捷键" class="headerlink" title="Tmux 快捷键"></a>Tmux 快捷键</h2><p>Tmux 的所有命令都需要先按一个<strong>前缀键</strong>来唤醒，系统才知道你在命令 Tmux，而不是在打字。</p>
+<p>默认前缀键：Ctrl + b</p>
+<h3 id="1-会话管理"><a href="#1-会话管理" class="headerlink" title="1. 会话管理"></a>1. 会话管理</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">快捷键 &#x2F; 命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">新建会话</td>
+<td align="left"><code>tmux new -s 名字</code></td>
+<td align="left">给会话起个名，方便找回</td>
+</tr>
+<tr>
+<td align="left"><strong>脱离会话</strong></td>
+<td align="left"><code>Ctrl + b + d</code></td>
+<td align="left"><strong>程序后台运行，窗口随便关</strong></td>
+</tr>
+<tr>
+<td align="left">查看会话列表</td>
+<td align="left"><code>tmux ls</code></td>
+<td align="left">终端里直接敲，不用进 Tmux</td>
+</tr>
+<tr>
+<td align="left"><strong>重新接入</strong></td>
+<td align="left"><code>tmux attach -t 名字</code></td>
+<td align="left"><strong>回到刚才的工作现场</strong></td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">杀死会话</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用会话编号</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux kill-session -t 0</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">使用会话名称</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tmux kill-session -t &lt;session-name&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-窗口管理"><a href="#2-窗口管理" class="headerlink" title="2. 窗口管理"></a>2. 窗口管理</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">快捷键</th>
+<th align="left">记忆技巧</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>新建窗口</strong></td>
+<td align="left"><code>Ctrl + b + c</code></td>
+<td align="left"><strong>C</strong>reate</td>
+</tr>
+<tr>
+<td align="left">切换下一个窗口</td>
+<td align="left"><code>Ctrl + b + n</code></td>
+<td align="left"><strong>N</strong>ext</td>
+</tr>
+<tr>
+<td align="left">切换上一个窗口</td>
+<td align="left"><code>Ctrl + b + p</code></td>
+<td align="left"><strong>P</strong>revious</td>
+</tr>
+<tr>
+<td align="left">显示窗口列表</td>
+<td align="left"><code>Ctrl + b + w</code></td>
+<td align="left"><strong>W</strong>indows（可视化选择）</td>
+</tr>
+<tr>
+<td align="left">关闭当前窗口</td>
+<td align="left"><code>exit</code> 或 <code>Ctrl + d</code></td>
+<td align="left">窗格&#x2F;窗口内没有程序就关了</td>
+</tr>
+</tbody></table>
+<h3 id="3-窗格管理"><a href="#3-窗格管理" class="headerlink" title="3. 窗格管理"></a>3. 窗格管理</h3><table>
+<thead>
+<tr>
+<th align="left">操作</th>
+<th align="left">快捷键</th>
+<th align="left">记忆技巧</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>左右分屏</strong></td>
+<td align="left"><code>Ctrl + b + %</code></td>
+<td align="left">像一个<strong>百分比</strong>竖线 &#96;</td>
+</tr>
+<tr>
+<td align="left"><strong>上下分屏</strong></td>
+<td align="left"><code>Ctrl + b + &quot;</code></td>
+<td align="left">像一个<strong>双引号</strong>横线 <code>—</code></td>
+</tr>
+<tr>
+<td align="left"><strong>切换光标</strong></td>
+<td align="left"><code>Ctrl + b + 方向键</code></td>
+<td align="left">上下左右移动焦点</td>
+</tr>
+<tr>
+<td align="left">关闭当前窗格</td>
+<td align="left"><code>exit</code> 或 <code>Ctrl + d</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">最大化&#x2F;还原窗格</td>
+<td align="left"><code>Ctrl + b + z</code></td>
+<td align="left"><strong>Z</strong>oom，再按一次还原</td>
+</tr>
+</tbody></table>
+<h2 id="Tmux-配置文件"><a href="#Tmux-配置文件" class="headerlink" title="Tmux 配置文件"></a>Tmux 配置文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">编辑配置文件，设置 Tmux 一直支持鼠标操作</span></span><br><span class="line">vim ~/.tmux.conf</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在配置文件中添加以下配置</span></span><br><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure>
+
+<p>在已经打开的Tmux会话中需要输入以下命令才会生效，之后打开的Tmux会话自动生效</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 按 Ctrl+b :</span><br><span class="line">2. 在底部出现的命令栏中输入source-file ~/.tmux.conf，然后按回车即可</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>tutorial</tag>
+        <tag>tmux</tag>
+      </tags>
+  </entry>
 </search>
