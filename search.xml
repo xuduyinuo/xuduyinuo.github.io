@@ -1099,6 +1099,22 @@
 
 <p>在已经打开的Tmux会话中需要输入以下命令才会生效，之后打开的Tmux会话自动生效</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 按 Ctrl+b :</span><br><span class="line">2. 在底部出现的命令栏中输入source-file ~/.tmux.conf，然后按回车即可</span><br></pre></td></tr></table></figure>
+
+
+
+<p>怎么配置mac使用终端连接远程服务器，在终端中使用tmux怎么复制tmux中的信息到本机的剪切板中</p>
+<p>因为mac自带的终端不支持OSC 52协议，所以在该教程中使用Clipper工具进行复制tmux会话中的内容至本机剪切板</p>
+<p>原理：</p>
+<p>Clipper在本机 Mac 上作为后台服务运行，把<strong>本机剪切板</strong>通过 socket 暴露出来；在远程服务器里的 tmux&#x2F;vim 把内容写到这个 socket，经 SSH 的 <code>RemoteForward</code> 转回本机，最后进入 Mac 剪切板。</p>
+<p>安装并启动Clipper</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install clipper</span><br><span class="line"></span><br><span class="line">brew services start clipper</span><br></pre></td></tr></table></figure>
+
+<p>配置本机ssh转发 （配置文件~&#x2F;.ssh&#x2F;config）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Host myserver(取一个唯一的名字，后续通过ssh连接时只需要输入该名字即可，不用输入ip地址)</span><br><span class="line">  HostName 你的服务器IP或域名</span><br><span class="line">  User 你的用户名</span><br><span class="line">  RemoteForward 8377 localhost:8377（clipper默认监听端口是8377）</span><br></pre></td></tr></table></figure>
+
+<p>配置远程服务器的tmux配置文件（~&#x2F;.tmux.conf）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set -g mouse on</span><br><span class="line">setw -g mode-keys vi</span><br><span class="line"></span><br><span class="line">bind -T copy-mode-vi v send -X begin-selection</span><br><span class="line">bind -T copy-mode-vi y send -X copy-pipe-and-cancel &quot;nc -N localhost 8377&quot;</span><br><span class="line">bind -T copy-mode-vi Enter send -X copy-pipe-and-cancel &quot;nc -N localhost 8377&quot;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>教程</category>
