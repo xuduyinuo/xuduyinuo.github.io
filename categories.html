@@ -1,0 +1,14 @@
+---
+layout: index-list
+title: 分类
+permalink: /categories/
+---
+{% assign categories = site.categories | sort %}
+{% for category in categories %}
+  {% assign group_id = 'category-' | append: forloop.index %}
+  {% assign category_name = category[0] %}
+  {% assign category_posts = category[1] | sort: 'date' | reverse %}
+  {% include index-group.html id=group_id title=category_name posts=category_posts %}
+{% else %}
+  <p class="empty-state">暂无分类。</p>
+{% endfor %}

@@ -1,0 +1,12 @@
+<section class="index-group" id="{{ include.id }}" aria-labelledby="{{ include.id }}-title">
+  <header class="index-group-heading">
+    <svg class="index-group-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7.5h6l2-2h7a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7.5Z"/><path d="M3 10h17M6 7.5V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v1.5"/></svg>
+    <h2 id="{{ include.id }}-title">{{ include.title | escape }}</h2>
+    <span class="index-group-count" aria-label="{{ include.posts.size }} 篇文章">{{ include.posts.size }}</span>
+  </header>
+  <ul class="index-posts">
+    {% for post in include.posts %}
+    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y/%m/%d' }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

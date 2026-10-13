@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<h1 class="visually-hidden">全部文章</h1>
+{% assign posts = page.pagination.posts | default: site.posts %}
+{% include post-list.html posts=posts %}
+{% include pagination.html %}

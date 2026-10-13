@@ -1,0 +1,12 @@
+---
+layout: index-list
+title: 归档
+permalink: /archive/
+---
+{% assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+{% for year in years %}
+  {% assign group_id = 'year-' | append: year.name %}
+  {% include index-group.html id=group_id title=year.name posts=year.items %}
+{% else %}
+  <p class="empty-state">暂无文章。</p>
+{% endfor %}

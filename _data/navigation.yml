@@ -1,0 +1,12 @@
+- title: 首页
+  url: /
+  icon: home
+- title: 分类
+  icon: categories
+  url: /categories/
+- title: 归档
+  icon: archive
+  url: /archive/
+- title: 关于
+  icon: about
+  url: /about/

@@ -1,0 +1,16 @@
+{% assign pagination = page.pagination %}
+{% if pagination.total_pages > 1 %}
+<nav class="pagination" aria-label="文章分页">
+  {% if pagination.previous_path %}<a class="pagination-direction" href="{{ pagination.previous_path | relative_url }}" rel="prev">← 上一页</a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true">← 上一页</span>{% endif %}
+  <div class="pagination-pages">
+    {% assign last_number = 0 %}
+    {% for entry in pagination.pages %}
+      {% assign gap = entry.number | minus: last_number %}
+      {% if gap > 1 %}<span class="pagination-gap" aria-hidden="true">…</span>{% endif %}
+      {% if entry.number == pagination.page %}<span class="pagination-number is-current" aria-current="page" aria-label="第 {{ entry.number }} 页">{{ entry.number }}</span>{% else %}<a class="pagination-number" href="{{ entry.path | relative_url }}" aria-label="第 {{ entry.number }} 页">{{ entry.number }}</a>{% endif %}
+      {% assign last_number = entry.number %}
+    {% endfor %}
+  </div>
+  {% if pagination.next_path %}<a class="pagination-direction" href="{{ pagination.next_path | relative_url }}" rel="next">下一页 →</a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true">下一页 →</span>{% endif %}
+</nav>
+{% endif %}
