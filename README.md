@@ -71,3 +71,15 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4001 --destination /tmp/xudu-bl
 ## 发布到 GitHub Pages
 
 部署步骤见 [DEPLOY.md](DEPLOY.md)。已提供 `.github/workflows/deploy.yml`，通过 GitHub Actions 构建与发布，支持本地分页插件；工作流自动读取实际网站域名和仓库子路径。
+
+## 从 Hexo 迁入的文章
+
+已迁入 Hexo 的 9 篇文章，并为现有 KG-R1 补充原分类和标签。原发布日期保留，文件名符合 `YYYY-MM-DD-slug.md`，使用显式 `permalink` 保留文章名称和大小写。
+
+文章图片统一保存在 `images/文章名称/`，包括 MySQL 文章原先使用的 4 张外链图片。Markdown 图片和 HTML `<img>` 均通过 `relative_url` 引用，例如：
+
+```liquid
+![示意图]({{ '/images/GCR/build_KG_trie.png' | relative_url }})
+```
+
+含空格或中文的图片路径采用 URL 编码。新增图片时沿用相同目录结构；文章含公式时在头部设置 `math: true`。

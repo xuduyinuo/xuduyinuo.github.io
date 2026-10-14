@@ -11,7 +11,7 @@ A personal blog can be more than a place to publish finished ideas. It can be a 
 
 <!-- more -->
 
-*This is a long sample essay for comparing English and Chinese typography. Read the [Chinese version]({{ '/2026/10/13/thinking-in-public-zh/' | relative_url }}) with the same structure and examples.*
+*This is a long sample essay for comparing English and Chinese typography. Read the [Chinese version]({{ '/thinking-in-public-zh/' | relative_url }}) with the same structure and examples.*
 
 ## 1. A page is a place to begin
 
