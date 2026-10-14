@@ -9,7 +9,7 @@ url: "https://xuduyinuo.github.io"
 baseurl: ""
 email: ""
 github_username: ""
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 # 使用项目内的布局和样式，不依赖外部主题。
 plugins:
   - jekyll-feed

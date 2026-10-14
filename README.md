@@ -30,6 +30,8 @@ math: false
 ---
 ```
 
+文章地址使用 `https://xuduyinuo.github.io/slug/`，不包含日期。例如 `2026-10-13-small-tools.md` 对应 `/small-tools/`。需要指定路径或保留大小写时，在文章头部添加 `permalink: /The-Second-Half/`。
+
 正文使用 Markdown。用 `<!-- more -->` 分开首页摘要与正文。分类直接填写任意名称，如 `categories: [Database]` 或 `categories: [Linux, Web]`。分类页从文章自动生成所有分组和篇数，不需要创建分类页面或修改导航；归档按年份自动分组，并与分类页共用同一套列表样式。不要使用未来日期，Jekyll 默认不发布未来文章。
 
 数学公式按文章开启 `math: true`，行内用 `$...$`，独立公式用 `$$...$$`；MathJax 3.2.2 通过 jsDelivr 加载，需要网络。代码块、表格和图片不依赖外部脚本。图片放在 `assets/images/`，通过 `{{ '/assets/images/example.png' | relative_url }}` 引用。
