@@ -12,11 +12,13 @@ cover: "/images/sql-statement-guide/20260104095558721.webp"
 
 由一条select语句的执行流程，了解MySQL的内部结构！
 
+<!-- more -->
+
 ## MySQL架构
 
 下图是MySQL的整体架构，主要分为两层，Server层和存储引擎。
 
-<img src="{{ '/images/sql-statement-guide/20260104095558721.webp' | relative_url }}" alt="MySQL架构图" style="zoom: 25%;" />
+<img src="../images/sql-statement-guide/20260104095558721.webp" alt="MySQL架构图" style="zoom: 25%;" />
 
 
 
@@ -43,7 +45,7 @@ mysql -h$ip -u$user -p
 
 连接过程需要经过TCP三次握手，连接之前确保启动MySQL服务，使用正确的用户名和密码，连接成功如下
 
-<img src="{{ '/images/sql-statement-guide/20260104102100681.webp' | relative_url }}" alt="image-20260104102048666" style="zoom:50%;" />
+<img src="../images/sql-statement-guide/20260104102100681.webp" alt="image-20260104102048666" style="zoom:50%;" />
 
 连接成功后连接器就会获取该用户的权限，然后保存起来，后续该用户在此连接里的任何操作，都会基于连接开始时读到的权限进行权限逻辑的判断。所以，如果一个用户已经建立了连接，即使管理员中途修改了该用户的权限，也不会影响已经存在连接的权限。修改完成后，只有再新建的连接才会使用新的权限设置。
 
@@ -51,7 +53,7 @@ mysql -h$ip -u$user -p
 
 查看当前MySQL服务被多少个客户端连接：show processlist
 
-![image-20260104103233284]({{ '/images/sql-statement-guide/20260104103235296.webp' | relative_url }})
+![image-20260104103233284](../images/sql-statement-guide/20260104103235296.webp)
 
 
 
@@ -126,7 +128,7 @@ MySQL 服务支持的最大连接数由 max_connections 参数控制，默认是
 
 根据词法分析的结果，语法解析器会根据语法规则，判断你输入的这个 SQL 语句是否满足 MySQL 语法，如果没问题就会构建出 SQL 语法树，这样方便后面模块获取 SQL 类型、表名、字段名、 where 条件等等。
 
-<img src="{{ '/images/sql-statement-guide/20260104155413190.webp' | relative_url }}" alt="image-20260104155407094" style="zoom:50%;" />
+<img src="../images/sql-statement-guide/20260104155413190.webp" alt="image-20260104155407094" style="zoom:50%;" />
 
 ## 执行SQL流程
 

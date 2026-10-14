@@ -1,8 +1,9 @@
 <div class="post-list">
+{% assign excerpt_image_prefix = '/images/' | relative_url | prepend: 'src="' %}
 {% for post in include.posts %}
   <article class="post-preview">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-    <div class="post-excerpt">{{ post.excerpt }}</div>
+    <div class="post-excerpt">{{ post.excerpt | replace: 'src="../images/', excerpt_image_prefix }}</div>
     <a class="read-more" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">Read More</a>
   </article>
 {% else %}

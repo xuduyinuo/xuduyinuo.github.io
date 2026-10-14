@@ -76,10 +76,22 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4001 --destination /tmp/xudu-bl
 
 已迁入 Hexo 的 9 篇文章，并为现有 KG-R1 补充原分类和标签。原发布日期保留，文件名符合 `YYYY-MM-DD-slug.md`，使用显式 `permalink` 保留文章名称和大小写。
 
-文章图片统一保存在 `images/文章名称/`，包括 MySQL 文章原先使用的 4 张外链图片。Markdown 图片和 HTML `<img>` 均通过 `relative_url` 引用，例如：
+文章图片统一保存在 `images/文章名称/`，包括 MySQL 文章原先使用的 4 张外链图片。Markdown 图片和 HTML `<img>` 均使用 `../images/` 相对路径引用，例如：
 
-```liquid
-![示意图]({{ '/images/GCR/build_KG_trie.png' | relative_url }})
+```markdown
+![示意图](../images/GCR/build_KG_trie.png)
 ```
 
 含空格或中文的图片路径采用 URL 编码。新增图片时沿用相同目录结构；文章含公式时在头部设置 `math: true`。
+
+## 代码框
+
+代码框显示语言和行数，右上角提供一键复制，复制内容包含折叠隐藏的完整代码。超过 `code_fold_lines`（默认 20）行时默认折叠，保留 `code_preview_lines`（默认 12）行预览，点击按钮可展开和收起。两项设置在 `_config.yml`。禁用 JavaScript 或打印时显示完整代码。
+
+## giscus 评论
+
+文章底部嵌入 giscus 官方评论组件，中文、浅色主题，按文章路径（`pathname`）严格匹配讨论，滚动到评论区附近再加载。评论与回复保存在博客仓库的 GitHub Discussions，读者需登录 GitHub 后评论。
+
+博客仓库已开启 Discussions，giscus GitHub App 已获此仓库的 Discussions 读写权限，使用 `Announcements` 分类。若以后更换评论仓库，需为新仓库启用 Discussions 并单独授权。在 https://giscus.app/zh-CN 填入 `xuduyinuo/xuduyinuo.github.io`，选择 `Announcements` 分类，将官方生成的 `data-category-id` 填入 `_config.yml` 的 `giscus.category_id`。配置不完整时不加载评论组件。
+
+全站关闭：设置 `giscus.enabled: false`。单篇关闭：在文章头部添加 `comments: false`。不要修改既有文章路径，否则评论关联会改变。

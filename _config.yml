@@ -5,7 +5,7 @@ lang: zh-CN
 timezone: Asia/Shanghai
 author: Xudu
 # GitHub Pages 个人主页；工作流会读取 Pages 设置并覆盖构建时的域名。
-url: "https://xuduyinuo.github.io"
+url: "https://blog.xuduyinuo.cn"
 baseurl: ""
 email: ""
 github_username: ""
@@ -14,6 +14,9 @@ permalink: /:title/
 plugins:
   - jekyll-feed
 posts_per_page: 10
+# 超过此行数的代码默认折叠，预览前 12 行。
+code_fold_lines: 20
+code_preview_lines: 12
 pagination_path: "/page/:num/"
 excerpt_separator: "<!-- more -->"
 markdown: kramdown
@@ -32,3 +35,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+# giscus 评论：仅授权博客仓库，评论保存在 Announcements 分类。
+giscus:
+  enabled: true
+  repo: "xuduyinuo/xuduyinuo.github.io"
+  repo_id: "R_kgDOQPt5qw"
+  category: "Announcements"
+  category_id: "DIC_kwDOQPt5q84DIZZn"
+  theme: "light"

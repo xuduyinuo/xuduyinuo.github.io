@@ -8,6 +8,10 @@ categories: ["Notes"]
 description: "How to write related work"
 ---
 
+如何撰写相关工作部分
+
+<!-- more -->
+
 参考链接：https://guidetogradschoolsurvival.wordpress.com/2011/04/08/how-to-write-related-work/
 
 相关工作部分通常在引言之后，有些论文也会放在实验章节后面。相关工作又称为“小综述”，用较短的篇幅介绍与你自己研究有所关联的他人成ß果——可能是你研究的基础，也可能是其他人针对同一问题提出的不同解决方案。

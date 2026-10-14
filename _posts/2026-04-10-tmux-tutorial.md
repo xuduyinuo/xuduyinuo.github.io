@@ -8,7 +8,11 @@ categories: ["教程"]
 description: "Tmux 一个终端复用工具~"
 ---
 
-tmux（Terminal Multiplexer）是一个终端复用工具，它允许你在单个终端窗口中创建多个虚拟终端会话，并能保持这些会话在后台运行。与直接使用终端相比，tmux 提供了更强大的会话管理功能。
+tmux（Terminal Multiplexer）是一个终端复用工具，它允许你在单个终端窗口中创建多个虚拟终端会话，并能保持这些会话在后台运行。
+
+<!-- more -->
+
+与直接使用终端相比，tmux 提供了更强大的会话管理功能。
 
 ## 安装Tmux
 

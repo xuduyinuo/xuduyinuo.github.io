@@ -7,7 +7,11 @@ tags: ["algorithm", "sort"]
 categories: ["algorithm"]
 ---
 
-![sort_algorithm]({{ '/images/sort-algorithm/sort.png' | relative_url }})
+排序算法
+
+<!-- more -->
+
+![sort_algorithm](../images/sort-algorithm/sort.png)
 
 ## 冒泡排序
 

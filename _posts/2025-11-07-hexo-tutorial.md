@@ -8,7 +8,9 @@ categories: ["教程"]
 description: "使用hexo搭建个人博客的详细教程~~~"
 ---
 
-# 从零开始，使用Hexo搭建个人博客~
+使用hexo搭建个人博客的详细教程~~~
+
+<!-- more -->
 
 > 参考文章：https://blog.fiveth.cc/p/bb32/
 
@@ -132,7 +134,7 @@ hexo s
 
 在本地下载并安装hexo之后会生成的目录结构如下图
 
-![hexo文件夹内容]({{ '/images/hexo-tutorial/01.png' | relative_url }})
+![hexo文件夹内容](../images/hexo-tutorial/01.png)
 
 
 
@@ -276,7 +278,7 @@ marked:
 
 修改完成后，在终端新建文章时，会自动生成一个和文章同名的资源文件夹，如下图所示
 
-![文章及其资源文件夹]({{ '/images/hexo-tutorial/02.png' | relative_url }})
+![文章及其资源文件夹](../images/hexo-tutorial/02.png)
 
 >注意：如果文章名称有空格，需要使用双引号引起来
 
@@ -349,7 +351,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 
 
-![]({{ '/images/hexo-tutorial/03.png' | relative_url }})
+![](../images/hexo-tutorial/03.png)
 
 > 使用git命令安装的主题保存在themes文件夹中，使用npm命令安装的主题保存在node_modules文件夹中
 
@@ -567,7 +569,7 @@ limit:
 ---
 ```
 
-![Page Front-matter参数详解]({{ '/images/hexo-tutorial/04.png' | relative_url }})
+![Page Front-matter参数详解](../images/hexo-tutorial/04.png)
 
 
 
@@ -603,7 +605,7 @@ noticeOutdate:
 ---
 ```
 
-![Post Front-matter参数详解]({{ '/images/hexo-tutorial/05.png' | relative_url }})
+![Post Front-matter参数详解](../images/hexo-tutorial/05.png)
 
 
 
@@ -668,13 +670,13 @@ tags:
 
 当使用 hexo n title 命令新建文章时，如果title是中文标题，则在文章结尾的文章链接中会出现中文乱码问题，如下
 
-![中文标题文章连接乱码]({{ '/images/hexo-tutorial/07.png' | relative_url }})
+![中文标题文章连接乱码](../images/hexo-tutorial/07.png)
 
 解决方案：
 
 在使用hexo n title 命令新建文章时，title使用英文
 
-![测试英文标题文章链接不乱码]({{ '/images/hexo-tutorial/06.png' | relative_url }})
+![测试英文标题文章链接不乱码](../images/hexo-tutorial/06.png)
 
 然后进入生成的文章的md页面，修改post front-matter部分中title为中文标题
 

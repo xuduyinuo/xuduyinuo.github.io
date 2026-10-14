@@ -15,9 +15,5 @@ layout: default
       {% endfor %}
     {% endfor %}
   </div>
-  <nav class="post-navigation" aria-label="文章导航">
-    <a href="{{ '/' | relative_url }}">← 全部文章</a>
-    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}">上一篇：{{ page.previous.title | escape }}</a>{% endif %}
-    {% if page.next %}<a href="{{ page.next.url | relative_url }}">下一篇：{{ page.next.title | escape }}</a>{% endif %}
-  </nav>
+  {% include comments.html %}
 </article>

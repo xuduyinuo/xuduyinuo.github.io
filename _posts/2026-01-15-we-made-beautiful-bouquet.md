@@ -13,7 +13,9 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 最后却以遗憾结束……
 
-![00]({{ '/images/we-made-beautiful-bouquet/00.webp' | relative_url }})
+<!-- more -->
+
+![00](../images/we-made-beautiful-bouquet/00.webp)
 
 ## 邂逅、同频
 
@@ -35,7 +37,7 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 渐生情愫
 
-![01]({{ '/images/we-made-beautiful-bouquet/01.webp' | relative_url }})
+![01](../images/we-made-beautiful-bouquet/01.webp)
 
 
 
@@ -61,7 +63,7 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 我的人生目标就是，一直跟你过现在这样的生活。
 
-![02]({{ '/images/we-made-beautiful-bouquet/02.webp' | relative_url }})
+![02](../images/we-made-beautiful-bouquet/02.webp)
 
 
 
@@ -105,7 +107,7 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 最后发现并不容易
 
-![03]({{ '/images/we-made-beautiful-bouquet/03.webp' | relative_url }})
+![03](../images/we-made-beautiful-bouquet/03.webp)
 
 
 
@@ -131,7 +133,7 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 决定分手
 
-![04]({{ '/images/we-made-beautiful-bouquet/04.webp' | relative_url }})
+![04](../images/we-made-beautiful-bouquet/04.webp)
 
 电影好似绝大多数情侣的真实写照
 
@@ -153,7 +155,7 @@ cover: "/images/we-made-beautiful-bouquet/02.webp"
 
 可能也有其他插曲来干扰正常的生活节奏
 
-![05]({{ '/images/we-made-beautiful-bouquet/05.webp' | relative_url }})
+![05](../images/we-made-beautiful-bouquet/05.webp)
 
 我们普通人所能借鉴的
 

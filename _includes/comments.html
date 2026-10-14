@@ -1,0 +1,24 @@
+{% assign comments = site.giscus %}
+{% if comments.enabled and page.comments != false and comments.repo and comments.repo != empty and comments.repo_id and comments.repo_id != empty and comments.category_id and comments.category_id != empty %}
+<section class="post-comments" aria-labelledby="comments-heading">
+  <h2 id="comments-heading">评论</h2>
+  <div class="giscus"></div>
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ comments.repo | escape }}"
+          data-repo-id="{{ comments.repo_id | escape }}"
+          data-category="{{ comments.category | escape }}"
+          data-category-id="{{ comments.category_id | escape }}"
+          data-mapping="pathname"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="{{ comments.theme | default: 'light' | escape }}"
+          data-lang="zh-CN"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>请启用 JavaScript 查看评论，或前往 <a href="https://github.com/{{ comments.repo | escape }}/discussions">GitHub Discussions</a> 参与讨论。</noscript>
+</section>
+{% endif %}
