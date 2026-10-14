@@ -4,8 +4,8 @@ description: 记录技术探索、观影感受与日常思考。
 lang: zh-CN
 timezone: Asia/Shanghai
 author: Xudu
-# 部署时填写域名；项目站点使用 baseurl: "/blog"，个人主页使用 ""。
-url: ""
+# GitHub Pages 个人主页；工作流会读取 Pages 设置并覆盖构建时的域名。
+url: "https://xuduyinuo.github.io"
 baseurl: ""
 email: ""
 github_username: ""

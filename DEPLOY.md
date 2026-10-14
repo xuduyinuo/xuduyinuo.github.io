@@ -2,6 +2,15 @@
 
 本项目使用自定义分页插件，通过 `.github/workflows/deploy.yml` 在 GitHub Actions 中运行完整 Jekyll 构建，然后发布到 GitHub Pages。每次向 `main` 推送提交，网站都会自动更新。
 
+## 当前部署
+
+- 仓库：https://github.com/xuduyinuo/xuduyinuo.github.io
+- 网站：https://xuduyinuo.github.io/
+- 发布分支：`main`
+- Pages 来源：GitHub Actions
+
+日常更新在本目录提交后运行 `git push`，等待部署工作流完成。下面保留通用部署步骤作为参考。
+
 ## 1. 创建空仓库
 
 在 GitHub 右上角 `+` → `New repository` 创建仓库。免费账户选择 `Public`。不要勾选创建 README、.gitignore 或 License，项目已有本地文件，使用空仓库可直接首次推送。

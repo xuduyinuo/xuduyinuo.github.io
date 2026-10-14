@@ -14,7 +14,7 @@ bundle exec jekyll serve --host 127.0.0.1
 
 在 `_config.yml` 修改 `title`、`author`、`subtitle`、`description`。`email` 和 `github_username` 留空时不显示链接。个人介绍在 `about.markdown`，导航在 `_data/navigation.yml`，样式在 `assets/css/style.css`。
 
-发布前将 `url` 设置为实际域名，例如 `https://YOURNAME.github.io`。仓库项目站点将 `baseurl` 设置为 `/blog`；根域名站点保留空字符串。站内链接均使用 `relative_url`，支持两种路径。当前没有自动部署或创建远程仓库。
+发布前将 `url` 设置为实际域名，例如 `https://YOURNAME.github.io`。仓库项目站点将 `baseurl` 设置为 `/blog`；根域名站点保留空字符串。站内链接均使用 `relative_url`，支持两种路径。当前部署仓库为 `xuduyinuo/xuduyinuo.github.io`，通过 GitHub Actions 自动发布到 https://xuduyinuo.github.io/。
 
 ## 写文章
 
@@ -34,7 +34,7 @@ math: false
 
 数学公式按文章开启 `math: true`，行内用 `$...$`，独立公式用 `$$...$$`；MathJax 3.2.2 通过 jsDelivr 加载，需要网络。代码块、表格和图片不依赖外部脚本。图片放在 `assets/images/`，通过 `{{ '/assets/images/example.png' | relative_url }}` 引用。
 
-默认欢迎文章已改成中文写作示例；发布自己的文章后可以删除或替换它。当前目录没有 Git 仓库，需要部署时再初始化并连接自己的远程仓库。
+默认欢迎文章已改成中文写作示例；发布自己的文章后可以删除或替换它。当前目录已连接部署仓库，向 `main` 推送提交会自动更新网站。
 
 ## 样式来源与示例内容
 
