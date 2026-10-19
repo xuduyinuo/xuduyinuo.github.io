@@ -134,7 +134,7 @@ hexo s
 
 在本地下载并安装hexo之后会生成的目录结构如下图
 
-![hexo文件夹内容](../images/hexo-tutorial/01.png)
+![hexo文件夹内容](../images/hexo-tutorial/01.webp)
 
 
 
@@ -278,7 +278,7 @@ marked:
 
 修改完成后，在终端新建文章时，会自动生成一个和文章同名的资源文件夹，如下图所示
 
-![文章及其资源文件夹](../images/hexo-tutorial/02.png)
+![文章及其资源文件夹](../images/hexo-tutorial/02.webp)
 
 >注意：如果文章名称有空格，需要使用双引号引起来
 
@@ -351,7 +351,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 
 
-![](../images/hexo-tutorial/03.png)
+![](../images/hexo-tutorial/03.webp)
 
 > 使用git命令安装的主题保存在themes文件夹中，使用npm命令安装的主题保存在node_modules文件夹中
 
@@ -569,7 +569,7 @@ limit:
 ---
 ```
 
-![Page Front-matter参数详解](../images/hexo-tutorial/04.png)
+![Page Front-matter参数详解](../images/hexo-tutorial/04.webp)
 
 
 
@@ -605,7 +605,7 @@ noticeOutdate:
 ---
 ```
 
-![Post Front-matter参数详解](../images/hexo-tutorial/05.png)
+![Post Front-matter参数详解](../images/hexo-tutorial/05.webp)
 
 
 
@@ -670,13 +670,13 @@ tags:
 
 当使用 hexo n title 命令新建文章时，如果title是中文标题，则在文章结尾的文章链接中会出现中文乱码问题，如下
 
-![中文标题文章连接乱码](../images/hexo-tutorial/07.png)
+![中文标题文章连接乱码](../images/hexo-tutorial/07.webp)
 
 解决方案：
 
 在使用hexo n title 命令新建文章时，title使用英文
 
-![测试英文标题文章链接不乱码](../images/hexo-tutorial/06.png)
+![测试英文标题文章链接不乱码](../images/hexo-tutorial/06.webp)
 
 然后进入生成的文章的md页面，修改post front-matter部分中title为中文标题
 

@@ -4,7 +4,7 @@ title: "MySQL中如何执行一条select语句？"
 date: "2026-01-04 16:04:27 +0800"
 permalink: "/sql-statement-guide/"
 tags: ["MySQL", "学习笔记"]
-categories: ["MySQL"]
+categories: ["八股文"]
 description: "由一条select语句的执行流程，了解MySQL的内部结构！"
 math: true
 cover: "/images/sql-statement-guide/20260104095558721.webp"

@@ -4,14 +4,14 @@ title: "十大经典排序算法"
 date: "2025-11-22 17:59:14 +0800"
 permalink: "/sort-algorithm/"
 tags: ["algorithm", "sort"]
-categories: ["algorithm"]
+categories: ["算法"]
 ---
 
 排序算法
 
 <!-- more -->
 
-![sort_algorithm](../images/sort-algorithm/sort.png)
+![sort_algorithm](../images/sort-algorithm/sort.webp)
 
 ## 冒泡排序
 

@@ -4,9 +4,9 @@ title: "Java并发编程"
 date: "2025-12-18 20:22:20 +0800"
 permalink: "/Multithreading/"
 tags: ["JUC", "Java"]
-categories: ["Java"]
+categories: ["八股文"]
 description: "Java并发编程"
-cover: "/images/Multithreading/thread-status.png"
+cover: "/images/Multithreading/thread-status.webp"
 ---
 
 多线程是指在一个程序中同时执行多个线程，每个线程都有自己独立的执行路径。在多线程中，程序的执行可以同时进行多个任务，从而提高系统的资源利用率和响应性能。
@@ -23,11 +23,11 @@ cover: "/images/Multithreading/thread-status.png"
 
 操作系统层面划分线程状态
 
-![操作系统层面划分线程状态](../images/Multithreading/thread-status.png)
+![操作系统层面划分线程状态](../images/Multithreading/thread-status.webp)
 
 java代码层面划分线程状态
 
-![java代码层面划分线程状态](../images/Multithreading/thread-status-java.png)
+![java代码层面划分线程状态](../images/Multithreading/thread-status-java.webp)
 
 
 
@@ -471,7 +471,7 @@ public ThreadPoolExecutor(int corePoolSize,
 
 ### 线程池工作流
 
-![线程池工作流](../images/Multithreading/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.png)
+![线程池工作流](../images/Multithreading/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E4%BD%9C%E6%B5%81.webp)
 
 
 

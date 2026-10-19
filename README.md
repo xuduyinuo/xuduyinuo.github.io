@@ -79,7 +79,7 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4001 --destination /tmp/xudu-bl
 文章图片统一保存在 `images/文章名称/`，包括 MySQL 文章原先使用的 4 张外链图片。Markdown 图片和 HTML `<img>` 均使用 `../images/` 相对路径引用，例如：
 
 ```markdown
-![示意图](../images/GCR/build_KG_trie.png)
+![示意图](../images/GCR/build_KG_trie.webp)
 ```
 
 含空格或中文的图片路径采用 URL 编码。新增图片时沿用相同目录结构；文章含公式时在头部设置 `math: true`。

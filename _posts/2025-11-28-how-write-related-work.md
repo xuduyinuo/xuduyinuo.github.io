@@ -4,7 +4,7 @@ title: "How to write related work"
 date: "2025-11-28 20:08:48 +0800"
 permalink: "/how-write-related-work/"
 tags: ["thought", "blog", "related work"]
-categories: ["Notes"]
+categories: ["论文笔记"]
 description: "How to write related work"
 ---
 
