@@ -38,7 +38,7 @@ a:focus-visible {
   background:#dce9f5
 }
 .wrapper {
-  max-width:1000px;
+  max-width:920px;
   margin:0 auto;
   padding:0 20px
 }
@@ -124,16 +124,29 @@ main {
   min-height:48vh
 }
 .post-preview {
-  padding:0 0 36px;
-  margin-top:30px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  justify-items:start;
+  padding:36px 0;
+  margin:0;
+  text-align:left;
   border-bottom:1px solid var(--line)
+}
+.post-preview > * {
+  min-width:0;
+  margin-inline:0;
+  padding-inline:0;
+  text-indent:0
+}
+.post-preview-title,.post-excerpt {
+  width:100%
 }
 .post-preview:last-child {
   border-bottom:0;
   padding-bottom:18px
 }
 .post-list {
-  padding-top:20px
+  padding-top:12px
 }
 h1,h2,h3,h4 {
   font-family:var(--heading);
@@ -151,12 +164,20 @@ h3 {
   font-size:20px
 }
 .post-preview h2 {
-  margin:0 0 15px;
-  font-size:30px;
-  line-height:1.7
+  margin:0;
+  font-family:var(--body);
+  font-size:28px;
+  font-weight:600;
+  line-height:1.4;
+  text-wrap:pretty;
+  word-break:normal;
+  overflow-wrap:anywhere
 }
 .post-preview h2 a {
   color:#222
+}
+.post-preview h2 a:hover {
+  color:var(--link)
 }
 .post-meta {
   display:flex;
@@ -167,18 +188,39 @@ h3 {
   letter-spacing:.3px
 }
 .post-excerpt p {
-  margin:15px 0
+  margin:12px 0
 }
 .post-excerpt {
-  overflow-wrap:anywhere
+  margin:16px 0 18px;
+  color:#555;
+  font-size:17px;
+  overflow-wrap:anywhere;
+  line-height:1.7
+}
+.post-excerpt > :first-child {
+  margin-top:0
+}
+.post-excerpt > :last-child {
+  margin-bottom:0
 }
 .read-more {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  min-height:28px;
   font-size:15px;
-  text-transform:uppercase
+  font-weight:400;
+  letter-spacing:normal
 }
 .read-more span {
-  display:inline-block;
-  margin-left:4px
+  font-size:16px;
+  line-height:1
+}
+@media(max-width:640px) {
+  .post-list { padding-top:8px; }
+  .post-preview { padding:28px 0; }
+  .post-preview h2 { font-size:24px; }
+  .post-excerpt { margin:14px 0 16px; font-size:16px; }
 }
 .site-footer {
   border-top:1px solid var(--line);
@@ -217,18 +259,21 @@ h3 {
 .empty-state a {
   font-size:14px
 }
-/* Article rules follow the upstream post layout and body typography. */
+/* Article header and section hierarchy share the site's reading width. */
 .post {
-  padding-top:50px;
+  padding-top:40px;
 }
 .post-heading {
-  padding:0;
+  padding:0 0 24px;
+  margin-bottom:24px;
+  border-bottom:1px solid var(--line);
 }
 .post-heading h1 {
-  margin:0 0 15px;
-  font-size:30px;
+  margin:0 0 14px;
+  font-size:28px;
   font-weight:700;
-  line-height:1.7;
+  line-height:1.3;
+  text-wrap:pretty;
   letter-spacing:normal;
 }
 .prose {
@@ -242,7 +287,7 @@ h3 {
 }
 .post .prose p,.post .prose li {
   text-align:justify;
-  text-align-last:auto;
+  text-align-last:left;
   text-justify:auto;
 }
 .prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6 {
@@ -275,13 +320,54 @@ h3 {
   font-style:italic;
 }
 .post-date {
-  margin-top:15px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:8px 16px;
+  margin:0;
   color:var(--muted);
-  font-size:18px;
-  line-height:1.4;
-  font-style:italic;
+  font-size:14px;
+  line-height:1.6;
 }
-.post-date a { margin-left:15px; }
+.post .prose {
+  font-size:15px;
+  line-height:1.8;
+}
+.post .prose p { margin:14px 0; }
+.post .post-lead {
+  color:var(--muted);
+  font-size:16px;
+}
+.post .post-lead > :first-child { margin-top:0; }
+.post .prose :is(h1,h2,h3,h4,h5,h6) {
+  line-height:1.45;
+  scroll-margin-top:24px;
+}
+.post .prose :is(h1,h2) {
+  margin:28px 0 14px;
+  padding-bottom:8px;
+  border-bottom:1px solid var(--line);
+}
+.post .prose h1 { font-size:26px; }
+.post .prose h2 { font-size:22px; }
+.post .prose h3 { margin:24px 0 12px; font-size:19px; }
+.post .prose h4 { margin:20px 0 10px; font-size:17px; color:#333; }
+.post .prose :is(h5,h6) { margin:18px 0 10px; font-size:16px; }
+.post .prose li { margin:4px 0; }
+.post .prose :is(ul,ol) { margin:14px 0; }
+.post .prose :is(ul,ol) :is(ul,ol) { margin:4px 0; }
+.post .prose blockquote {
+  margin:16px 0;
+  padding:4px 0 4px 16px;
+  border-left:3px solid #dce3ec;
+  color:#555;
+  font-size:inherit;
+  font-style:normal;
+  line-height:1.8;
+}
+.post .prose blockquote p { margin:10px 0; }
+.post .prose blockquote > :first-child { margin-top:0; }
+.post .prose blockquote > :last-child { margin-bottom:0; }
 .prose img,.post-excerpt img {
   max-width:100%;
   height:auto
@@ -445,12 +531,19 @@ mjx-container[display="true"] {
 .site-subtitle {
   margin:3px 0
 }
-h1,h2,h3,h4,.post-preview h2 {
+h1,h2,h3,h4 {
   line-height:1.4
 }
-.post-heading h1,.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6 {
+.prose h1,.prose h2,.prose h3,.prose h4,.prose h5,.prose h6 {
   line-height:1.4;
 }
+.post { padding-top:32px; }
+.post-heading { padding-bottom:24px; margin-bottom:24px; }
+.post-heading h1 { font-size:24px; }
+.post .prose :is(h1,h2) { margin-top:24px; }
+.post .prose h1 { font-size:24px; }
+.post .prose h2 { font-size:20px; }
+.post .prose h3 { font-size:18px; }
 .site-footer {
   margin-top:38px
 }

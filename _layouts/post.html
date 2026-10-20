@@ -4,16 +4,23 @@ layout: default
 <article class="post">
   <header class="post-heading">
     <h1>{{ page.title | escape }}</h1>
-  </header>
-  <div class="prose">{{ content }}</div>
-  <div class="post-date">
-    <time datetime="{{ page.date | date_to_xmlschema }}">写于 {{ page.date | date: '%Y年%m月%d日' }}</time>
-    {% assign categories = site.categories | sort %}
-    {% for category in page.categories %}
-      {% for group in categories %}
-        {% if group[0] == category %}<a href="{{ '/categories/' | relative_url }}#category-{{ forloop.index }}">{{ category | escape }}</a>{% endif %}
+    <div class="post-date">
+      <time datetime="{{ page.date | date_to_xmlschema }}">写于 {{ page.date | date: '%Y年%m月%d日' }}</time>
+      {% assign categories = site.categories | sort %}
+      {% for category in page.categories %}
+        {% for group in categories %}
+          {% if group[0] == category %}<a href="{{ '/categories/' | relative_url }}#category-{{ forloop.index }}">{{ category | escape }}</a>{% endif %}
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
+    </div>
+  </header>
+  <div class="prose">
+    {% assign lead_separator = page.excerpt_separator | default: site.excerpt_separator %}
+    {% if lead_separator != empty and lead_separator != nil and content contains lead_separator %}
+      <div class="post-lead">{{ content | replace_first: lead_separator, '</div>' }}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </div>
   {% include comments.html %}
 </article>

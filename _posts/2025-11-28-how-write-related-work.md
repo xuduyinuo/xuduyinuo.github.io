@@ -1,14 +1,14 @@
 ---
 layout: "post"
-title: "How to write related work"
+title: "Related Work：如何组织文献并写好相关工作"
 date: "2025-11-28 20:08:48 +0800"
 permalink: "/how-write-related-work/"
 tags: ["thought", "blog", "related work"]
 categories: ["论文笔记"]
-description: "How to write related work"
+description: "从文献筛选到段落组织，梳理渐进叙述、方法归类与对比总结三种写法。围绕“这项研究与我的工作有什么关联”，让相关工作形成清晰的论述。"
 ---
 
-如何撰写相关工作部分
+从文献筛选到段落组织，梳理渐进叙述、方法归类与对比总结三种写法。围绕“这项研究与我的工作有什么关联”，让相关工作形成清晰的论述。
 
 <!-- more -->
 
