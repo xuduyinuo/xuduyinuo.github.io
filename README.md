@@ -72,6 +72,21 @@ bundle exec jekyll serve --host 127.0.0.1 --port 4001 --destination /tmp/xudu-bl
 
 部署步骤见 [DEPLOY.md](DEPLOY.md)。已提供 `.github/workflows/deploy.yml`，通过 GitHub Actions 构建与发布，支持本地分页插件；工作流自动读取实际网站域名和仓库子路径。
 
+## Google 搜索收录
+
+每次发布自动生成 `/sitemap.xml`，包含公开文章、首页、分页、分类、归档和关于页面；`/robots.txt` 允许抓取并声明 sitemap 地址。页面已有 canonical 和摘要。404 页面设为 `noindex`，不会进入 sitemap。无需逐篇手动维护 URL 或安装额外依赖。
+
+首次上线后，在 [Google Search Console](https://search.google.com/search-console) 完成一次设置：
+
+1. 确认 GitHub Pages 的自定义域名为 `xuduyinuo.cn`，并启用 HTTPS；部署工作流以 Pages 设置中的实际域名生成 sitemap 和 canonical。
+2. 添加网址前缀资源 `https://xuduyinuo.cn/`，选择「HTML 标记」验证，将 Google 给出的 `content` 值填入 `_config.yml` 的 `google_site_verification`，发布后点击验证。也可以选择网域资源并使用 DNS TXT 验证，无须填写该配置。
+3. 在「站点地图」提交 `https://xuduyinuo.cn/sitemap.xml`。以后发布文章时，地图自动更新，Google 自行安排重新抓取。
+4. 可用「网址检查」检查首页或新文章，必要时请求编入索引；在「网页索引编制」中查看未收录原因。
+
+文章实质更新后，可在 front matter 添加或修改 `last_modified_at: 2026-10-22 12:00:00 +0800`。只在有真实更新日期时输出 `lastmod`，不要把每次构建时间当成内容更新时间。需要隐藏索引的页面设置 `noindex: true`，同时会从 sitemap 排除；仅排除地图可设置 `sitemap: false`（这不禁止搜索收录，也不限制访问）。
+
+Google 不保证抓取时间或收录结果；sitemap 帮助发现内容。旧的 sitemap ping 接口已停用，本项目不使用该接口。参见 [Google sitemap 文档](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) 和 [ping 接口停用说明](https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping)。
+
 ## 从 Hexo 迁入的文章
 
 已迁入 Hexo 的 9 篇文章，并为现有 KG-R1 补充原分类和标签。原发布日期保留，文件名符合 `YYYY-MM-DD-slug.md`，使用显式 `permalink` 保留文章名称和大小写。

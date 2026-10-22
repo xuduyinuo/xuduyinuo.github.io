@@ -1,0 +1,32 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for post in site.posts %}
+  {%- unless post.sitemap == false or post.noindex %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    {%- if post.last_modified_at %}
+    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless %}
+  {%- endfor %}
+  {%- for item in site.pages %}
+  {%- assign extension = item.url | split: '.' | last %}
+  {%- assign last_character = item.url | slice: -1, 1 %}
+  {%- if extension == 'html' or last_character == '/' %}
+  {%- unless item.sitemap == false or item.noindex %}
+  <url>
+    <loc>{{ item.url | absolute_url | xml_escape }}</loc>
+    {%- if item.last_modified_at %}
+    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless %}
+  {%- endif %}
+  {%- endfor %}
+</urlset>

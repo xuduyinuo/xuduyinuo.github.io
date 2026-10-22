@@ -7,6 +7,8 @@ author: Xudu
 # GitHub Pages 个人主页；工作流会读取 Pages 设置并覆盖构建时的域名。
 url: "https://xuduyinuo.cn"
 baseurl: ""
+# Search Console 的 HTML 标记验证：仅填写 content 中的验证码。
+google_site_verification: ""
 email: ""
 github_username: ""
 permalink: /:title/

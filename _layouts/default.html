@@ -6,6 +6,8 @@
   <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if site.url != empty %}<link rel="canonical" href="{{ page.url | absolute_url }}">{% endif %}
+  {% if site.google_site_verification and site.google_site_verification != empty %}<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">{% endif %}
+  {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script defer src="{{ '/assets/js/code-blocks.js' | relative_url }}" data-fold-lines="{{ site.code_fold_lines | default: 20 }}" data-preview-lines="{{ site.code_preview_lines | default: 12 }}"></script>
   <link rel="icon" href="{{ '/favicon.ico' | relative_url | append: '?v=flying-deer' }}" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
