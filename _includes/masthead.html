@@ -8,7 +8,7 @@
     {% assign masthead_image = site.clean_blog.home_background %}
   {% endif %}
 {% endunless %}
-<header class="masthead{% if page.layout == 'post' %} masthead-post{% endif %}">
+<header class="masthead{% if page.layout == 'post' %} masthead-post{% elsif page.layout == 'home' %} masthead-home{% endif %}">
   <img class="masthead-image" src="{{ masthead_image | relative_url }}" alt="" fetchpriority="high">
   <div class="reading-container masthead-content">
     {% if page.layout == 'home' %}

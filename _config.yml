@@ -15,7 +15,7 @@ github_username: ""
 permalink: /:title/
 # 使用项目内的布局和样式，不依赖外部主题。
 clean_blog:
-  home_background: /lanyangyang.webp
+  home_background: /william.webp
   about_background: /assets/images/clean-blog/about-bg.jpg
   post_background: /funingna.webp
 plugins:

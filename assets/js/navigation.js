@@ -18,5 +18,50 @@
   navigation.querySelectorAll('.site-nav a').forEach(link => {
     link.addEventListener('click', () => setExpanded(false));
   });
-  window.matchMedia('(min-width: 992px)').addEventListener('change', () => setExpanded(false));
+  const desktop = window.matchMedia('(min-width: 992px)');
+  let scrollAnchor = window.scrollY;
+  let pending = false;
+  const updateScrollState = () => {
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    const currentY = Math.max(0, Math.min(window.scrollY, maxScroll));
+    if (!desktop.matches || currentY <= navigation.offsetHeight) {
+      navigation.classList.remove('is-fixed', 'is-visible');
+      scrollAnchor = currentY;
+      return;
+    }
+
+    const hasFocus = navigation.contains(document.activeElement);
+    if (!navigation.classList.contains('is-fixed')) {
+      navigation.classList.add('is-fixed');
+      navigation.classList.toggle('is-visible', hasFocus);
+      scrollAnchor = currentY;
+      return;
+    }
+    const delta = currentY - scrollAnchor;
+    if (Math.abs(delta) >= 8) {
+      navigation.classList.toggle('is-visible', delta < 0 || hasFocus);
+      scrollAnchor = currentY;
+    }
+  };
+  window.addEventListener('scroll', () => {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(() => {
+      updateScrollState();
+      pending = false;
+    });
+  }, { passive: true });
+  navigation.addEventListener('focusin', () => {
+    if (desktop.matches && navigation.classList.contains('is-fixed')) {
+      navigation.classList.add('is-visible');
+    }
+  });
+  desktop.addEventListener('change', () => {
+    setExpanded(false);
+    navigation.classList.remove('is-fixed', 'is-visible');
+    scrollAnchor = window.scrollY;
+    updateScrollState();
+  });
+  window.addEventListener('pageshow', updateScrollState);
+  updateScrollState();
 })();
