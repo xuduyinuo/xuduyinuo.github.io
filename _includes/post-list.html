@@ -1,10 +1,14 @@
 <div class="post-list">
-{% assign excerpt_image_prefix = '/images/' | relative_url | prepend: 'src="' %}
 {% for post in include.posts %}
-  <article class="post-preview">
-    <h2 class="post-preview-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-    <div class="post-excerpt">{{ post.excerpt | replace: 'src="../images/', excerpt_image_prefix }}</div>
-    <a class="read-more" href="{{ post.url | relative_url }}" aria-label="阅读全文：{{ post.title | escape }}">阅读全文 <span aria-hidden="true">→</span></a>
+  {% assign is_latest = false %}
+  {% if forloop.first and post == site.posts.first %}{% assign is_latest = true %}{% endif %}
+  <article class="post-preview{% if is_latest %} post-preview-latest{% endif %}">
+    <a class="post-preview-link" href="{{ post.url | relative_url }}">
+      <h2 class="post-preview-title">{{ post.title | escape }}</h2>
+      {% assign summary = post.subtitle | default: post.excerpt | strip_html | normalize_whitespace %}
+      {% if summary != empty %}<p class="post-subtitle">{{ summary | truncate: 140 | escape }}</p>{% endif %}
+    </a>
+    <p class="post-meta">由 <a href="{{ '/about/' | relative_url }}">{{ post.author | default: site.author | escape }}</a> 发布于 <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</time></p>
   </article>
 {% else %}
   <div class="empty-state"><p>这里还没有文章。</p><a href="{{ '/' | relative_url }}">返回首页 <span aria-hidden="true">→</span></a></div>

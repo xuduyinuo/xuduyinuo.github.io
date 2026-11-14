@@ -1,6 +1,7 @@
 ---
 layout: page
 title: 关于
+subtitle: 记录技术探索、观影感受与日常思考。
 permalink: /about/
 ---
 

@@ -1,0 +1,45 @@
+{% assign masthead_image = page.background %}
+{% unless masthead_image %}
+  {% if page.layout == 'post' %}
+    {% assign masthead_image = site.clean_blog.post_background %}
+  {% elsif page.url == '/about/' %}
+    {% assign masthead_image = site.clean_blog.about_background %}
+  {% else %}
+    {% assign masthead_image = site.clean_blog.home_background %}
+  {% endif %}
+{% endunless %}
+<header class="masthead{% if page.layout == 'post' %} masthead-post{% endif %}">
+  <img class="masthead-image" src="{{ masthead_image | relative_url }}" alt="" fetchpriority="high">
+  <div class="reading-container masthead-content">
+    {% if page.layout == 'home' %}
+    <div class="site-heading">
+      <h1>{{ site.title | escape }}</h1>
+      <p class="subheading">{% if site.subtitle_alternate and site.subtitle_alternate != empty %}<span class="rotating-subtitle">
+        <span class="subtitle-phrase is-active" aria-hidden="false">{{ site.subtitle | default: site.description | escape }}</span>
+        <span class="subtitle-phrase" aria-hidden="true" lang="en">{{ site.subtitle_alternate | escape }}</span>
+      </span>{% else %}{{ site.subtitle | default: site.description | escape }}{% endif %}</p>
+    </div>
+    {% elsif page.layout == 'post' %}
+    <div class="post-heading">
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.categories.size > 0 %}
+      <div class="post-categories" aria-label="文章分类">
+        {% assign categories = site.categories | sort %}
+        {% for category in page.categories %}
+          {% for group in categories %}
+            {% if group[0] == category %}<a href="{{ '/categories/' | relative_url }}#category-{{ forloop.index }}">{{ category | escape }}</a>{% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if page.subtitle %}<p class="subheading">{{ page.subtitle | escape }}</p>{% endif %}
+      <p class="post-meta">由 <a href="{{ '/about/' | relative_url }}">{{ page.author | default: site.author | escape }}</a> 发布于 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y年%m月%d日' }}</time></p>
+    </div>
+    {% else %}
+    <div class="page-heading">
+      <h1>{{ page.title | escape }}</h1>
+      {% if page.subtitle %}<p class="subheading">{{ page.subtitle | escape }}</p>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</header>

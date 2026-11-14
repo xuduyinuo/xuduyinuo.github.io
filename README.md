@@ -1,6 +1,6 @@
 # xudu 的个人博客
 
-基于现有 Jekyll 4 项目定制，参考 https://ysymyth.github.io/blog/ 的极简文字布局。没有复制参考站的文章或个人资料。使用项目内的布局、样式与分页插件，不依赖外部主题。
+基于现有 Jekyll 4 项目适配 [Start Bootstrap Clean Blog](https://startbootstrap.github.io/startbootstrap-clean-blog/)。使用官方背景图、Open Sans / Lora 字体、大图页头和单栏文章布局，保留本站文章与中文导航。布局、样式、字体和背景图片都在项目内，不需要安装额外主题。
 
 ## 本地预览
 
@@ -13,6 +13,8 @@ bundle exec jekyll serve --host 127.0.0.1
 ## 个性化
 
 在 `_config.yml` 修改 `title`、`author`、`subtitle`、`description`。`email` 和 `github_username` 留空时不显示链接。个人介绍在 `about.markdown`，导航在 `_data/navigation.yml`，样式在 `assets/css/style.css`。
+
+首页副标题使用 `subtitle` 与 `subtitle_alternate` 两句文字，每 4 秒淡入淡出交替显示。鼠标停在文字上时暂停，切到后台时暂停计时；两句共用固定的排版区域，切换不改变页头高度。清空 `subtitle_alternate` 即恢复单句显示。关闭 JavaScript 时显示第一句，系统开启减少动态效果时取消淡入淡出。修改 `_config.yml` 后需重启本地预览服务。
 
 发布前将 `url` 设置为实际域名，例如 `https://YOURNAME.github.io`。仓库项目站点将 `baseurl` 设置为 `/blog`；根域名站点保留空字符串。站内链接均使用 `relative_url`，支持两种路径。当前部署仓库为 `xuduyinuo/xuduyinuo.github.io`，通过 GitHub Actions 自动发布到 https://xuduyinuo.github.io/。
 
@@ -38,25 +40,33 @@ math: false
 
 默认欢迎文章已改成中文写作示例；发布自己的文章后可以删除或替换它。当前目录已连接部署仓库，向 `main` 推送提交会自动更新网站。
 
-## 样式来源与示例内容
+## Clean Blog 主题
 
-字体、字号、行高、容器宽度、首页文章间距及颜色直接参照 [ysymyth/ysymyth.github.io 的 style.scss](https://github.com/ysymyth/ysymyth.github.io/blob/master/style.scss) 和 `_sass/_variables.scss`：Helvetica 正文 18px / 1.4，Helvetica Neue 标题 30px / 1.7，容器最大宽度 1000px（左右各 20px 内边距），站名 28px / 300，链接 #4183C4。640px 以下标题行高 1.4。保留本站中文导航、文章元信息、归档与 RSS。
+主题参考 [Start Bootstrap Clean Blog](https://startbootstrap.github.io/startbootstrap-clean-blog/)，首页背景使用项目根目录的 `lanyangyang.webp`，文章页背景使用 `funingna.webp`，关于页采用官方海岸背景图。页头和导航使用 Open Sans，日期使用 Lora，首页内容与文章正文使用 Helvetica Neue / 系统中文无衬线字体；字体文件保存在 `assets/fonts/`，预览无需连接 Google Fonts。上游及字体许可证见 `THIRD_PARTY_NOTICES.md`。
 
-新增四篇示例覆盖技术、影评与杂记（含中英文标题），正文均明确标注示例。可直接修改或删除 `_posts` 中对应文件。上游 MIT 许可证见 `THIRD_PARTY_NOTICES.md`。
+内容排版参考 [Tracy 的博客](https://tracy07.github.io/) 的[公开样式](https://github.com/Tracy07/tracy07.github.io/blob/master/css/clean-blog.css)：桌面端首页标题 26px / 1.45、600 字重，摘要 14px / 1.9；最新一篇标题 30px、摘要 15px，让列表有轻微的阅读层次，不添加分类提示。摘要最大宽度 760px，文章之间增加留白，使用浅色分隔线与轻微悬停反馈，点击标题或摘要进入正文。文章正文保持 16px / 1.7、段落间距 30px。首页作者与日期使用 12px 常规无衬线字，比摘要更小。正文容器最大宽度为 860px（含左右各 24px 留白，可用宽度 812px），文章页头与正文共用相同宽度和左右留白，使标题与正文左对齐，页头作者链接显示为白色。手机端首页标题 21px、摘要 13px，最新一篇标题 24px、摘要 14px，正文 16px / 1.75，左右各留白 20px。
 
-文章详情页同样按上游 `_layouts/post.html` 与正文规则对齐：正文 18px/1.4、段落上下 15px；h1/h2/h3/h4 为 30/24/20/18px，标题行高 1.7；列表缩进 30px 且列表项不额外留白；引用 22px 斜体、灰色 2px 左边框；代码采用上游 `_highlights.scss`。日期和分类放在正文末尾。
+在 `_config.yml` 的 `clean_blog` 配置中修改首页、关于页和文章页背景。单个页面或文章也可在 front matter 中设置 `background: /assets/images/example.jpg` 覆盖默认背景，以及 `subtitle` 设置页头副标题。首页保留站名 Xudu，并使用站点 `subtitle` 或 `description` 作为副标题。网站图标和飞鹿标识保留。
 
-导航固定为首页、分类、归档、关于。分类分组按名称排序，组内文章按日期倒序；文章末尾的分类链接直达分类页相应分组。分组模板为 `_includes/index-group.html`。
+首页文章显示标题、纯文本摘要、作者与日期，点击标题或摘要进入正文。详情页保留 Markdown、数学公式、图片、代码高亮、复制与折叠、评论。导航固定为首页、分类、归档、关于，手机端通过“菜单”按钮展开；不启用 JavaScript 时导航仍可访问。
+
+分类按名称排序，组内文章按日期倒序；文章分类以无边框文字链接显示在页头标题下方，固定左对齐，点击直达分类页相应分组。标题仍与正文左对齐。归档按年份分组，与分类页共用 `_includes/index-group.html`。
+
+## 文章目录
+
+文章右下角提供“显示目录”按钮，目录默认隐藏，每次打开或刷新文章均从隐藏状态开始。点击后，宽屏在正文右侧显示目录栏，不改变正文宽度，目录初始位置与正文起点对齐，向下滚动后以 CSS sticky 吸附在距视口顶部 32px 的位置；窄屏以右侧浮层显示。长目录在内部滚动，顶部标题与收起按钮始终可见，不通过滚动脚本反复计算目录位置或高度。可以再次点击按钮、点击目录中的“收起”或按 Escape 关闭。
+
+目录自动读取正文中的 h1–h6 标题并保留层级，不需要逐篇维护。默认只显示一级目录（以文章实际标题层级为准，正文从 h2 开始时，h2 即为一级目录）；点击章节名称会跳转并展开其子目录，点击右侧箭头可独立展开或收起子目录。页面滚动不会自动展开子目录，当前章节隐藏时会标记它可见的上级目录。缺失或重复的标题锚点会自动补齐。没有标题的文章不显示目录入口。不启用 JavaScript 时文章照常阅读，打印时不显示目录与切换按钮。
 
 ## 首页分页
 
-首页每页显示 10 篇，超过 10 篇时自动生成 `/page/2/` 等静态页面，并显示上一页、页码和下一页。在 `_config.yml` 修改 `posts_per_page` 调整数量，修改后重启预览服务。分类和归档显示完整列表。分页由 `_plugins/home_pagination.rb` 在构建时生成，部署需要运行完整的 Jekyll 构建（如 GitHub Actions）；`--safe` 模式不加载本地插件。
+首页每页显示 10 篇，超过 10 篇时自动生成 `/page/2/` 等静态页面。分页采用白底、浅灰细边框、深灰文字的矩形按钮，悬停时变为青蓝底白字：左侧“← 更新的文章”，右侧“更早的文章 →”；只有存在对应页面时才显示按钮，不显示数字页码。
 
-导航使用内嵌 SVG 图标，悬停可见名称，屏幕阅读器可读取中文标签。底部不再显示 RSS 订阅入口。
+在 `_config.yml` 修改 `posts_per_page` 调整数量，修改后重启预览服务。分类和归档显示完整列表。分页由 `_plugins/home_pagination.rb` 在构建时生成，部署需要运行完整的 Jekyll 构建（如 GitHub Actions）；`--safe` 模式不加载本地插件。
 
 ## Logo 与网站图标
 
-Logo 为黑色飞鹿剪影，位于 `assets/images/xudu-flying-deer.png`，以透明背景用于页头。`favicon.ico` 使用同一只飞鹿，包含 16、24、32、48、64、128、256px 七种尺寸；同时提供 PNG 网站图标与 180px Apple Touch Icon。图标采用白色底板，使深浅两种浏览器标签栏均能辨认。
+Logo 为黑色飞鹿剪影，位于 `assets/images/xudu-flying-deer.png`，以透明背景用于顶部导航。`favicon.ico` 使用同一只飞鹿，包含 16、24、32、48、64、128、256px 七种尺寸；同时提供 PNG 网站图标与 180px Apple Touch Icon。图标采用白色底板，使深浅两种浏览器标签栏均能辨认。
 
 飞鹿素材使用内置 imagegen 生成。设计提示：一只腾跃的飞鹿，清楚的鹿角、简化翅膀、纯黑剪影、透明背景；不包含文字、字母、边框或渐变。
 

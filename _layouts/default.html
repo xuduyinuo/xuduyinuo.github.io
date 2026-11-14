@@ -9,6 +9,9 @@
   {% if site.google_site_verification and site.google_site_verification != empty %}<meta name="google-site-verification" content="{{ site.google_site_verification | escape }}">{% endif %}
   {% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+  {% if page.layout == 'home' and site.subtitle_alternate and site.subtitle_alternate != empty %}<script defer src="{{ '/assets/js/subtitle.js' | relative_url }}"></script>{% endif %}
+  {% if page.layout == 'post' %}<script defer src="{{ '/assets/js/article-toc.js' | relative_url }}"></script>{% endif %}
   <script defer src="{{ '/assets/js/code-blocks.js' | relative_url }}" data-fold-lines="{{ site.code_fold_lines | default: 20 }}" data-preview-lines="{{ site.code_preview_lines | default: 12 }}"></script>
   <link rel="icon" href="{{ '/favicon.ico' | relative_url | append: '?v=flying-deer' }}" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
   <link rel="icon" href="{{ '/assets/images/favicon-256.png' | relative_url }}" type="image/png" sizes="256x256">
@@ -21,23 +24,24 @@
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
-  <div class="wrapper">
-    <header class="site-header">
-      <div class="identity">
+    <nav class="site-navigation" aria-label="主导航">
+      <div class="nav-container">
         <a class="site-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/images/xudu-flying-deer.png' | relative_url }}" alt="" width="42" height="42"><span>{{ site.title | escape }}</span></a>
-        <p class="site-subtitle">{{ site.subtitle | escape }}</p>
-      </div>
-      <nav class="site-nav" aria-label="主导航">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" hidden>菜单 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 3h14M1 8h14M1 13h14"/></svg></button>
+        <div class="site-nav" id="site-menu">
         {% for item in site.data.navigation %}
-        <a href="{{ item.url | relative_url }}" aria-label="{{ item.title }}" title="{{ item.title }}"{% if page.url == item.url or page.layout == 'home' and item.icon == 'home' %} aria-current="page"{% endif %}>{% include nav-icon.html name=item.icon %}<span class="visually-hidden">{{ item.title }}</span></a>
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url or page.layout == 'home' and item.icon == 'home' %} aria-current="page"{% endif %}>{{ item.title }}</a>
         {% endfor %}
-      </nav>
-    </header>
-    <main id="main" tabindex="-1">{{ content }}</main>
+        </div>
+      </div>
+    </nav>
+    {% include masthead.html %}
+    <main id="main" class="reading-container" tabindex="-1">{{ content }}</main>
     <footer class="site-footer">
-      <span>© {{ site.time | date: '%Y' }} {{ site.author | escape }}</span>
-      <div>{% if site.email != empty %}<a href="mailto:{{ site.email | escape }}">邮件</a>{% endif %}{% if site.github_username != empty %}<a href="https://github.com/{{ site.github_username | escape }}">GitHub</a>{% endif %}</div>
+      {% if site.email != empty or site.github_username != empty %}
+      <div class="footer-links">{% if site.email != empty %}<a href="mailto:{{ site.email | escape }}">邮件</a>{% endif %}{% if site.github_username != empty %}<a href="https://github.com/{{ site.github_username | escape }}">GitHub</a>{% endif %}</div>
+      {% endif %}
+      <p>Copyright &copy; {{ site.author | escape }} {{ site.time | date: '%Y' }}</p>
     </footer>
-  </div>
 </body>
 </html>

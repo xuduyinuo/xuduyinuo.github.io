@@ -1,6 +1,6 @@
 # Third-party notices
 
-Typography and layout rules adapted from https://github.com/ysymyth/ysymyth.github.io (Jekyll Now): `style.scss`, `_sass/_variables.scss`, `blog.html`, `_layouts/post.html`, and `_sass/_highlights.scss`.
+The previous theme included typography and layout rules adapted from https://github.com/ysymyth/ysymyth.github.io (Jekyll Now): `style.scss`, `_sass/_variables.scss`, `blog.html`, `_layouts/post.html`, and `_sass/_highlights.scss`.
 
 The MIT License (MIT)
 
@@ -22,3 +22,11 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Clean Blog
+
+Theme layout and styling adapted from [Start Bootstrap Clean Blog](https://github.com/StartBootstrap/startbootstrap-clean-blog), with its official `home-bg.jpg`, `about-bg.jpg`, and `post-bg.jpg` assets. The original MIT license is preserved in `assets/images/clean-blog/LICENSE`.
+
+## Fonts
+
+Open Sans and Lora are bundled locally as Latin variable WOFF2 files from Fontsource. Both are licensed under the SIL Open Font License 1.1. Full copyright and license notices are preserved in `assets/fonts/Open-Sans-OFL.txt` and `assets/fonts/Lora-OFL.txt`. Chinese glyphs use system fallback fonts.
