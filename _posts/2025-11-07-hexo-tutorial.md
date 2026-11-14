@@ -6,6 +6,7 @@ permalink: "/hexo-tutorial/"
 tags: ["hexo", "blog", "tutorial"]
 categories: ["教程"]
 description: "使用hexo搭建个人博客的详细教程~~~"
+cover: "/images/hexo-tutorial/01.webp"
 ---
 
 使用hexo搭建个人博客的详细教程~~~

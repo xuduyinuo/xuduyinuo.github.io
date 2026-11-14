@@ -1,14 +1,18 @@
+{% assign is_site_masthead = false %}
+{% if page.layout == 'home' or page.url == '/categories/' or page.url == '/archive/' or page.url == '/about/' %}
+  {% assign is_site_masthead = true %}
+{% endif %}
 {% assign masthead_image = page.background %}
-{% unless masthead_image %}
+{% if is_site_masthead %}
+  {% assign masthead_image = site.clean_blog.home_background %}
+{% elsif masthead_image == nil %}
   {% if page.layout == 'post' %}
     {% assign masthead_image = site.clean_blog.post_background %}
-  {% elsif page.url == '/about/' %}
-    {% assign masthead_image = site.clean_blog.about_background %}
   {% else %}
     {% assign masthead_image = site.clean_blog.home_background %}
   {% endif %}
-{% endunless %}
-<header class="masthead{% if page.layout == 'post' %} masthead-post{% elsif page.layout == 'home' %} masthead-home{% endif %}">
+{% endif %}
+<header class="masthead{% if page.layout == 'post' %} masthead-post{% elsif is_site_masthead %} masthead-site{% if page.layout == 'home' %} masthead-home{% else %} masthead-page{% endif %}{% endif %}">
   <img class="masthead-image" src="{{ masthead_image | relative_url }}" alt="" fetchpriority="high">
   <div class="reading-container masthead-content">
     {% if page.layout == 'home' %}

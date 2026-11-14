@@ -6,6 +6,7 @@ permalink: "/how-write-related-work/"
 tags: ["thought", "blog", "related work"]
 categories: ["论文笔记"]
 description: "从文献筛选到段落组织，梳理渐进叙述、方法归类与对比总结三种写法。围绕“这项研究与我的工作有什么关联”，让相关工作形成清晰的论述。"
+cover: "/assets/images/clean-blog/home-bg.jpg"
 ---
 
 从文献筛选到段落组织，梳理渐进叙述、方法归类与对比总结三种写法。围绕“这项研究与我的工作有什么关联”，让相关工作形成清晰的论述。

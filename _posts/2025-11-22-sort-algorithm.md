@@ -5,6 +5,7 @@ date: "2025-11-22 17:59:14 +0800"
 permalink: "/sort-algorithm/"
 tags: ["algorithm", "sort"]
 categories: ["算法"]
+cover: "/images/sort-algorithm/sort.webp"
 ---
 
 排序算法

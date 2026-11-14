@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="night" x2="1" y2="1"><stop stop-color="#1e4059"/><stop offset="1" stop-color="#0b1d2d"/></linearGradient>
+    <linearGradient id="ribbon" x2="1" y2="1"><stop stop-color="#159080" stop-opacity=".55"/><stop offset="1" stop-color="#166487" stop-opacity=".05"/></linearGradient>
+    <linearGradient id="window" x2="0" y2="1"><stop stop-color="#132e42"/><stop offset="1" stop-color="#0a2132"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="170%"><feGaussianBlur stdDeviation="17"/></filter>
+  </defs>
+  <path fill="url(#night)" d="M0 0H900V600H0Z"/>
+  <path d="M-80 527 543 0H777L57 600H-80Z" fill="url(#ribbon)"/>
+  <path d="M-80 527 543 0M57 600 777 0M440 600 900 214" fill="none" stroke="#238c9c" stroke-opacity=".38"/>
+  <rect x="141" y="132" width="630" height="376" rx="20" fill="#06121f" opacity=".45" filter="url(#shadow)"/>
+  <rect x="135" y="110" width="630" height="376" rx="17" fill="url(#window)" stroke="#698da4" stroke-width="2"/>
+  <path d="M135 159H765M491 159V486M491 321H765" fill="none" stroke="#238d9e" stroke-width="2"/>
+  <g><circle cx="164" cy="135" r="8" fill="#ff7169"/><circle cx="191" cy="135" r="8" fill="#f7d564"/><circle cx="218" cy="135" r="8" fill="#52cb82"/></g>
+  <g fill="#50c6b2" font-family="monospace" font-size="23"><text x="165" y="201">$</text><text x="518" y="201">$</text><text x="518" y="359">$</text></g>
+  <g stroke="#269e87" stroke-width="7" stroke-linecap="round">
+    <path d="M196 195H306M168 222H354M168 246H241M196 270H329M168 294H281M196 321H392M168 345H297M168 369H345M196 393H269M168 417H326M168 441H242"/>
+    <path d="M548 353H661M520 379H693M520 405H619M548 431H681M520 457H592"/>
+  </g>
+  <g stroke="#258cb5" stroke-width="7" stroke-linecap="round"><path d="M548 195H674M520 222H715M520 246H636M548 270H697M520 294H606"/></g>
+</svg>

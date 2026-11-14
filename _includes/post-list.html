@@ -1,12 +1,18 @@
 <div class="post-list">
 {% for post in include.posts %}
+  {% assign cover = post.cover | default: '/assets/images/clean-blog/home-bg.jpg' %}
+  {% assign summary = post.subtitle | default: post.excerpt | strip_html | normalize_whitespace %}
   <article class="post-preview">
-    <a class="post-preview-link" href="{{ post.url | relative_url }}">
-      <h2 class="post-preview-title">{{ post.title | escape }}</h2>
-      {% assign summary = post.subtitle | default: post.excerpt | strip_html | normalize_whitespace %}
-      {% if summary != empty %}<p class="post-subtitle">{{ summary | truncate: 140 | escape }}</p>{% endif %}
+    <a class="post-preview-link" href="{{ post.url | relative_url }}" aria-labelledby="post-preview-{{ post.slug | escape }}">
+      <div class="post-preview-cover">
+        <img src="{{ cover | relative_url }}" alt="" loading="lazy" decoding="async" width="900" height="600">
+      </div>
+      <div class="post-preview-content">
+        <h2 class="post-preview-title" id="post-preview-{{ post.slug | escape }}" title="{{ post.title | escape }}">{{ post.title | escape }}</h2>
+        {% if summary != empty %}<p class="post-subtitle">{{ summary | truncate: 140 | escape }}</p>{% endif %}
+        <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</time></p>
+      </div>
     </a>
-    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y年%m月%d日' }}</time></p>
   </article>
 {% else %}
   <div class="empty-state"><p>这里还没有文章。</p><a href="{{ '/' | relative_url }}">返回首页 <span aria-hidden="true">→</span></a></div>

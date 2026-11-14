@@ -36,7 +36,7 @@
       </div>
     </nav>
     {% include masthead.html %}
-    <main id="main" class="reading-container" tabindex="-1">{{ content }}</main>
+    <main id="main" class="reading-container{% if page.layout == 'home' %} home-reading{% endif %}" tabindex="-1">{{ content }}</main>
     <footer class="site-footer">
       {% if site.email != empty or site.github_username != empty %}
       <div class="footer-links">{% if site.email != empty %}<a href="mailto:{{ site.email | escape }}">邮件</a>{% endif %}{% if site.github_username != empty %}<a href="https://github.com/{{ site.github_username | escape }}">GitHub</a>{% endif %}</div>
