@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% assign gallery = content | strip %}
+{% if gallery != empty %}
+<section class="photo-wall" aria-label="照片">{{ gallery }}</section>
+<dialog class="photo-viewer" aria-label="照片大图">
+  <img alt="">
+</dialog>
+<script defer src="{{ '/assets/js/photo-wall.js' | relative_url }}"></script>
+{% else %}
+<p class="empty-state">照片墙还没有照片。</p>
+{% endif %}

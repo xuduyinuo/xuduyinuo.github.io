@@ -30,13 +30,13 @@
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" hidden>菜单 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 3h14M1 8h14M1 13h14"/></svg></button>
         <div class="site-nav" id="site-menu">
         {% for item in site.data.navigation %}
-        <a href="{{ item.url | relative_url }}"{% if page.url == item.url or page.layout == 'home' and item.icon == 'home' %} aria-current="page"{% endif %}>{{ item.title }}</a>
+        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% elsif page.layout == 'home' and item.icon == 'home' %} aria-current="page"{% endif %}>{{ item.title }}</a>
         {% endfor %}
         </div>
       </div>
     </nav>
     {% include masthead.html %}
-    <main id="main" class="reading-container{% if page.layout == 'home' %} home-reading{% endif %}" tabindex="-1">{{ content }}</main>
+    <main id="main" class="reading-container{% if page.layout == 'home' %} home-reading{% elsif page.url == '/photos/' %} photos-reading{% endif %}" tabindex="-1">{{ content }}</main>
     <footer class="site-footer">
       {% if site.email != empty or site.github_username != empty %}
       <div class="footer-links">{% if site.email != empty %}<a href="mailto:{{ site.email | escape }}">邮件</a>{% endif %}{% if site.github_username != empty %}<a href="https://github.com/{{ site.github_username | escape }}">GitHub</a>{% endif %}</div>

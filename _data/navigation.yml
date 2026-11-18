@@ -7,6 +7,8 @@
 - title: 归档
   icon: archive
   url: /archive/
+- title: 照片墙
+  url: /photos/
 - title: 关于
   icon: about
   url: /about/

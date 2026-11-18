@@ -18,6 +18,17 @@ bundle exec jekyll serve --host 127.0.0.1
 
 发布前将 `url` 设置为实际域名，例如 `https://YOURNAME.github.io`。仓库项目站点将 `baseurl` 设置为 `/blog`；根域名站点保留空字符串。站内链接均使用 `relative_url`，支持两种路径。当前部署仓库为 `xuduyinuo/xuduyinuo.github.io`，通过 GitHub Actions 自动发布到 https://xuduyinuo.github.io/。
 
+## 维护照片墙
+
+编辑根目录的 `photos.md`，在列表中每行添加一张图片。方括号里填写照片描述，圆括号里填写图片地址，例如：
+
+```markdown
+- ![傍晚的天空](../images/photos/01.webp)
+- ![海边日落](https://example.com/sunset.jpg)
+```
+
+站内照片可以放在 `images/photos/`；外部照片使用能直接打开图片的链接。列表顺序就是照片墙的排列顺序。
+
 ## 写文章
 
 在 `_posts` 下添加 `YYYY-MM-DD-slug.md`：
