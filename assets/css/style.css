@@ -59,8 +59,12 @@ main.home-reading { max-width:960px; }
 .masthead-site :is(.site-heading,.page-heading) h1::after { content:""; display:block; width:64px; height:2px; margin:20px auto 18px; background:rgba(255,255,255,.85); }
 .masthead-site .subheading { margin:0; font-size:20px; line-height:1.5; letter-spacing:.02em; }
 .rotating-subtitle { display:grid; }
-.subtitle-phrase { grid-area:1 / 1; opacity:0; visibility:hidden; transition:opacity .45s ease,visibility .45s ease; }
-.subtitle-phrase.is-active { opacity:1; visibility:visible; }
+.subtitle-phrase,.subtitle-typed { grid-area:1 / 1; }
+.subtitle-phrase:not(.is-active),.is-typing .subtitle-phrase { opacity:0; pointer-events:none; user-select:none; }
+.subtitle-typed { display:none; }
+.is-typing .subtitle-typed { display:block; }
+.subtitle-typed::after { content:""; display:inline-block; height:1em; margin-left:.08em; border-left:2px solid currentColor; vertical-align:-.1em; animation:subtitle-caret 1s step-end infinite; }
+@keyframes subtitle-caret { 50% { opacity:0; } }
 .masthead-post h1 { font-size:50px; line-height:1.3; text-wrap:pretty; }
 .masthead-post .subheading { margin:16px 0 24px; font-size:30px; font-weight:600; }
 .masthead .post-meta { margin:24px 0 0; color:#fff; font-size:20px; }
@@ -107,9 +111,10 @@ main:focus { outline:none; }
 .site-footer { margin-top:48px; padding:48px 24px; border-top:1px solid var(--line); text-align:center; color:var(--muted); font:italic 17.5px/1.6 var(--body); }
 .site-footer p { margin:0; }
 .footer-links { display:flex; justify-content:center; gap:24px; margin-bottom:24px; font-family:var(--heading); font-style:normal; }
-.prose { color:#404040; font:400 16px/1.7 var(--content); overflow-wrap:anywhere; }
+.prose { color:#404040; font:400 16px/1.625 var(--content); overflow-wrap:anywhere; }
 .prose > :first-child,.post-lead > :first-child { margin-top:0; }
-.prose p { margin:30px 0; }
+.prose p { margin:.625em 0; }
+.post .prose p { text-align:justify; text-align-last:start; }
 .prose a { text-decoration:underline; }
 .prose h1 { font-size:32px; }
 .prose h2 { font-size:28px; }
@@ -245,8 +250,6 @@ mjx-container[display="true"] { overflow-x:auto; overflow-y:hidden; padding:4px 
   .masthead-site :is(.site-heading,.page-heading) h1::after { width:48px; margin:16px auto 14px; }
   .masthead .subheading { font-size:20px; }
   .masthead .post-meta { font-size:17px; }
-  .prose { line-height:1.75; }
-  .prose p { margin:24px 0; }
   .prose :is(h1,h2,h3,h4,h5,h6) { margin:30px 0 16px; }
   .prose h1 { font-size:28px; }
   .prose h2 { font-size:24px; }

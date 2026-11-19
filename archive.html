@@ -1,7 +1,6 @@
 ---
 layout: index-list
 title: 归档
-subtitle: 沿着时间，回看每一次记录。
 permalink: /archive/
 ---
 {% assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}

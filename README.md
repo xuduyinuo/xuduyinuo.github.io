@@ -14,7 +14,7 @@ bundle exec jekyll serve --host 127.0.0.1
 
 在 `_config.yml` 修改 `title`、`author`、`subtitle`、`description`。`email` 和 `github_username` 留空时不显示链接。个人介绍在 `about.markdown`，导航在 `_data/navigation.yml`，样式在 `assets/css/style.css`。
 
-首页副标题使用 `subtitle` 与 `subtitle_alternate` 两句文字，每 4 秒淡入淡出交替显示。鼠标停在文字上时暂停，切到后台时暂停计时；两句共用固定的排版区域，切换不改变页头高度。清空 `subtitle_alternate` 即恢复单句显示。关闭 JavaScript 时显示第一句，系统开启减少动态效果时取消淡入淡出。修改 `_config.yml` 后需重启本地预览服务。
+首页、分类、归档、照片墙和关于页共用站点副标题 `subtitle` 与 `subtitle_alternate`。文字跟随光标逐字出现，整句停留后回删，再输入下一句。鼠标悬停或切到后台时暂停打字。清空 `subtitle_alternate`、关闭 JavaScript 或开启系统的「减少动态效果」时，静态显示第一句。修改 `_config.yml` 后需重启本地预览服务。
 
 发布前将 `url` 设置为实际域名，例如 `https://YOURNAME.github.io`。仓库项目站点将 `baseurl` 设置为 `/blog`；根域名站点保留空字符串。站内链接均使用 `relative_url`，支持两种路径。当前部署仓库为 `xuduyinuo/xuduyinuo.github.io`，通过 GitHub Actions 自动发布到 https://xuduyinuo.github.io/。
 

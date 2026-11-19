@@ -2,7 +2,6 @@
 layout: photo-wall
 title: 照片墙
 permalink: /photos/
-subtitle: 记录生活
 ---
 
 - ![照片 01](../images/photos/01.webp)

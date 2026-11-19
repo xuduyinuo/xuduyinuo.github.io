@@ -15,13 +15,14 @@
 <header class="masthead{% if page.layout == 'post' %} masthead-post{% elsif is_site_masthead %} masthead-site{% if page.layout == 'home' %} masthead-home{% else %} masthead-page{% endif %}{% endif %}">
   <img class="masthead-image" src="{{ masthead_image | relative_url }}" alt="" fetchpriority="high">
   <div class="reading-container masthead-content">
-    {% if page.layout == 'home' %}
-    <div class="site-heading">
-      <h1>{{ site.title | escape }}</h1>
+    {% if is_site_masthead %}
+    <div class="{% if page.layout == 'home' %}site-heading{% else %}page-heading{% endif %}">
+      <h1>{% if page.layout == 'home' %}{{ site.title | escape }}{% else %}{{ page.title | escape }}{% endif %}</h1>
       <p class="subheading">{% if site.subtitle_alternate and site.subtitle_alternate != empty %}<span class="rotating-subtitle">
         <span class="subtitle-phrase is-active" aria-hidden="false">{{ site.subtitle | default: site.description | escape }}</span>
         <span class="subtitle-phrase" aria-hidden="true" lang="en">{{ site.subtitle_alternate | escape }}</span>
       </span>{% else %}{{ site.subtitle | default: site.description | escape }}{% endif %}</p>
+      {% if site.subtitle_alternate and site.subtitle_alternate != empty %}<script defer src="{{ '/assets/js/subtitle.js' | relative_url }}"></script>{% endif %}
     </div>
     {% elsif page.layout == 'post' %}
     <div class="post-heading">
