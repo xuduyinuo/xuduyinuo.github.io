@@ -6,7 +6,7 @@ permalink: "/tmux-tutorial/"
 tags: ["tmux", "tutorial"]
 categories: ["教程"]
 description: "Tmux 一个终端复用工具~"
-cover: "/assets/images/covers/tmux.svg"
+cover: "/images/tmux-tutorial/tmux.svg"
 ---
 
 tmux（Terminal Multiplexer）是一个终端复用工具，它允许你在单个终端窗口中创建多个虚拟终端会话，并能保持这些会话在后台运行。

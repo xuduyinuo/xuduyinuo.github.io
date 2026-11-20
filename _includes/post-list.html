@@ -1,6 +1,6 @@
 <div class="post-list">
 {% for post in include.posts %}
-  {% assign cover = post.cover | default: '/assets/images/clean-blog/home-bg.jpg' %}
+  {% assign cover = post.cover | default: '/images/how-write-related-work/home-bg.jpg' %}
   {% assign summary = post.subtitle | default: post.excerpt | strip_html | normalize_whitespace %}
   <article class="post-preview">
     <a class="post-preview-link" href="{{ post.url | relative_url }}" aria-labelledby="post-preview-{{ post.slug | escape }}">

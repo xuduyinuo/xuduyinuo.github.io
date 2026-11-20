@@ -12,9 +12,9 @@
   <script defer src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
   {% if page.layout == 'post' %}<script defer src="{{ '/assets/js/article-toc.js' | relative_url }}"></script>{% endif %}
   <script defer src="{{ '/assets/js/code-blocks.js' | relative_url }}" data-fold-lines="{{ site.code_fold_lines | default: 20 }}" data-preview-lines="{{ site.code_preview_lines | default: 12 }}"></script>
-  <link rel="icon" href="{{ '/favicon.ico' | relative_url | append: '?v=flying-deer' }}" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/images/favicon-256.png' | relative_url }}" type="image/png" sizes="256x256">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}" sizes="180x180">
+  <link rel="icon" href="{{ '/assets/static/favicon.ico' | relative_url | append: '?v=flying-deer' }}" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
+  <link rel="icon" href="{{ '/assets/static/favicon-256.png' | relative_url }}" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="{{ '/assets/static/apple-touch-icon.png' | relative_url }}" sizes="180x180">
   {% feed_meta %}
   {% if page.math %}
   <script src="{{ '/assets/js/math.js' | relative_url }}"></script>
@@ -25,7 +25,7 @@
   <a class="skip-link" href="#main">跳到正文</a>
     <nav class="site-navigation" aria-label="主导航">
       <div class="nav-container">
-        <a class="site-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/images/xudu-flying-deer.png' | relative_url }}" alt="" width="42" height="42"><span>{{ site.title | escape }}</span></a>
+        <a class="site-title" href="{{ '/' | relative_url }}"><img class="site-logo" src="{{ '/assets/static/xudu-flying-deer.png' | relative_url }}" alt="" width="42" height="42"><span>{{ site.title | escape }}</span></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" hidden>菜单 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 3h14M1 8h14M1 13h14"/></svg></button>
         <div class="site-nav" id="site-menu">
         {% for item in site.data.navigation %}

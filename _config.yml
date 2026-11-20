@@ -15,9 +15,8 @@ github_username: ""
 permalink: /:title/
 # 使用项目内的布局和样式，不依赖外部主题。
 clean_blog:
-  home_background: /william.webp
-  about_background: /assets/images/clean-blog/about-bg.jpg
-  post_background: /funingna.webp
+  home_background: /assets/static/william.webp
+  post_background: /assets/static/funingna.webp
 plugins:
   - jekyll-feed
 posts_per_page: 10
@@ -38,7 +37,6 @@ defaults:
       layout: post
 exclude:
   - README.md
-  - DEPLOY.md
   - Gemfile
   - Gemfile.lock
   - vendor
